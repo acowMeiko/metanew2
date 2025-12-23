@@ -11,6 +11,11 @@ lora_model_path = os.getenv('LORA_MODEL_PATH', "/home/models/qwen_dpo2_lora")  #
 MAX_MODEL_LEN = 4096
 MEMORY_FILE =os.path.join(Project_ROOT, 'memory', 'memory.json')  #Memory文件路径
 
+# ==================== 强模型API配置（用于生成Chosen） ====================
+STRONG_MODEL_NAME = os.getenv('STRONG_MODEL_NAME', 'DeepSeek-R1')
+STRONG_MODEL_API_URL = os.getenv('STRONG_MODEL_API_URL', 'https://llmapi.paratera.com/v1/')
+STRONG_MODEL_KEY = os.getenv('STRONG_MODEL_KEY', 'sk-0tKGY03c9OJPODlWGzAGPw')
+
 DEFAULT_TEMPERATURE = float(os.getenv('DEFAULT_TEMPERATURE', '0.9'))
 DEFAULT_TOP_P = float(os.getenv('DEFAULT_TOP_P', '0.7'))
 # 提升默认生成长度，避免接口截断；如需更短可通过环境变量覆盖
