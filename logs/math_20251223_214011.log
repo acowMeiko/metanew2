@@ -1,0 +1,211 @@
+==========================================
+MATH 数据集 DPO 数据生成
+==========================================
+数据集: math
+数据路径: dataset/math/test.jsonl
+GPU: 2,3
+批次大小: 128
+并发数: 30
+输出文件: output/dpo_math.jsonl
+==========================================
+
+开始生成 DPO 数据...
+
+2025-12-23 21:40:11,591 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,591 - __main__ - INFO - 数据集名称: math
+2025-12-23 21:40:11,591 - __main__ - INFO - 数据集路径: dataset/math/test.jsonl
+2025-12-23 21:40:11,592 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,592 - __main__ - INFO - 使用数据集适配层加载: math
+2025-12-23 21:40:11,592 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,592 - __main__ - INFO - [数据集适配层] 开始加载数据集: math
+2025-12-23 21:40:11,592 - __main__ - INFO - [数据集适配层] 文件路径: dataset/math/test.jsonl
+2025-12-23 21:40:11,592 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,595 - __main__ - INFO - [数据集适配层] 已加载 JSONL 文件: 500 条
+2025-12-23 21:40:11,595 - __main__ - INFO - 预处理 MATH 数据集: 500 条
+2025-12-23 21:40:11,595 - __main__ - INFO - [数据集适配层] 预处理完成: 500 条有效数据
+2025-12-23 21:40:11,595 - __main__ - INFO - [数据集适配层] 数据格式已统一为: {'question': str, 'answer': str}
+2025-12-23 21:40:11,595 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,595 - __main__ - INFO - 数据集加载成功，共 500 条数据
+2025-12-23 21:40:11,595 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,595 - __main__ - INFO - Step 1: 开始生成DPO数据
+2025-12-23 21:40:11,595 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,595 - __main__ - INFO - 未发现已有进度，将从头开始处理
+2025-12-23 21:40:11,595 - __main__ - INFO - 共需处理 500 条数据，批次大小: 64
+2025-12-23 21:40:11,595 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,595 - __main__ - INFO - 阶段1/3: vLLM分批本地推理（所有数据）
+2025-12-23 21:40:11,595 - __main__ - INFO - ============================================================
+2025-12-23 21:40:11,595 - __main__ - INFO - 处理批次 [1-128/500]
+2025-12-23 21:40:11,595 - __main__ - INFO -   → 生成Baseline答案 (128 条)...
+2025-12-23 21:40:11,595 - __main__ - INFO - 批量生成Baseline答案: 128 条
+INFO 12-23 21:40:15 [__init__.py:239] Automatically detected platform cuda.
+2025-12-23 21:40:16,050 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 2,3
+2025-12-23 21:40:16,050 - inference.local_inference - INFO - ============================================================
+2025-12-23 21:40:16,050 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-23 21:40:16,050 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-23 21:40:16,050 - inference.local_inference - INFO - ============================================================
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 12-23 21:40:22 [config.py:585] This model supports multiple tasks: {'reward', 'embed', 'classify', 'score', 'generate'}. Defaulting to 'generate'.
+INFO 12-23 21:40:22 [config.py:1519] Defaulting to use mp for distributed inference
+INFO 12-23 21:40:22 [config.py:1697] Chunked prefill is enabled with max_num_batched_tokens=8192.
+INFO 12-23 21:40:23 [core.py:54] Initializing a V1 LLM engine (v0.8.2) with config: model='/home/models/qwen_dpo2_lora', speculative_config=None, tokenizer='/home/models/qwen_dpo2_lora', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=/home/models/qwen_dpo2_lora, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
+WARNING 12-23 21:40:23 [multiproc_worker_utils.py:306] Reducing Torch parallelism from 64 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+INFO 12-23 21:40:23 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1], buffer_handle=(2, 10485760, 10, 'psm_cc662d0c'), local_subscribe_addr='ipc:///tmp/9a68a553-470c-4e2b-a969-2ab0ebc3f9dc', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-23 21:40:24 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7fd0616cd450>
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:24 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_b003d82a'), local_subscribe_addr='ipc:///tmp/681e03da-92cc-4b81-b1c0-02df11d86ea2', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-23 21:40:24 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7fcee5b58510>
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:24 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_16f5d63b'), local_subscribe_addr='ipc:///tmp/b1545ed3-3e97-4a09-93d7-dd7107f04391', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:25 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:25 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:25 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[1], buffer_handle=(1, 4194304, 6, 'psm_ca8be2a9'), local_subscribe_addr='ipc:///tmp/764dc03e-30e7-4022-8ebd-09bcb69908d9', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:25 [parallel_state.py:954] rank 1 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 1
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [parallel_state.py:954] rank 0 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 0
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:25 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:25 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:25 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m WARNING 12-23 21:40:25 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m WARNING 12-23 21:40:25 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/6 [00:00<?, ?it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards:  17% Completed | 1/6 [00:00<00:03,  1.43it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards:  33% Completed | 2/6 [00:01<00:02,  1.39it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards:  50% Completed | 3/6 [00:02<00:02,  1.39it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards:  67% Completed | 4/6 [00:02<00:01,  1.45it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards:  83% Completed | 5/6 [00:03<00:00,  1.43it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:04<00:00,  1.51it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:04<00:00,  1.46it/s]
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m 
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:29 [loader.py:447] Loading weights took 4.13 seconds
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:29 [loader.py:447] Loading weights took 4.13 seconds
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:30 [gpu_model_runner.py:1186] Model loading took 13.9281 GB and 4.322499 seconds
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:30 [gpu_model_runner.py:1186] Model loading took 13.9281 GB and 4.332207 seconds
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:40 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/25a18384dd/rank_0_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:40 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/25a18384dd/rank_1_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:40 [backends.py:425] Dynamo bytecode transform time: 10.00 s
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:40 [backends.py:425] Dynamo bytecode transform time: 10.00 s
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:40 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:40 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:40:49 [monitor.py:33] torch.compile takes 10.00 s in total
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:40:49 [monitor.py:33] torch.compile takes 10.00 s in total
+INFO 12-23 21:40:50 [kv_cache_utils.py:566] GPU KV cache size: 552,176 tokens
+INFO 12-23 21:40:50 [kv_cache_utils.py:569] Maximum concurrency for 4,096 tokens per request: 134.81x
+INFO 12-23 21:40:50 [kv_cache_utils.py:566] GPU KV cache size: 552,176 tokens
+INFO 12-23 21:40:50 [kv_cache_utils.py:569] Maximum concurrency for 4,096 tokens per request: 134.81x
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:41:11 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:41:11 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=1 pid=27915)[0;0m INFO 12-23 21:41:11 [gpu_model_runner.py:1534] Graph capturing finished in 21 secs, took 0.72 GiB
+[1;36m(VllmWorker rank=0 pid=27903)[0;0m INFO 12-23 21:41:11 [gpu_model_runner.py:1534] Graph capturing finished in 21 secs, took 0.72 GiB
+INFO 12-23 21:41:11 [core.py:151] init engine (profile, create kv cache, warmup model) took 41.76 seconds
+2025-12-23 21:41:11,878 - inference.local_inference - INFO - vLLM模型初始化完成
+2025-12-23 21:41:48,858 - __main__ - INFO -   → 生成差异分析 (128 条)...
+2025-12-23 21:41:48,859 - __main__ - INFO - 批量生成差异分析: 128 条
+2025-12-23 21:44:11,674 - __main__ - INFO -   → 生成Rejected原则 (128 条)...
+2025-12-23 21:44:11,674 - __main__ - INFO - 批量生成原则（弱模型）: 128 条
+2025-12-23 21:45:57,029 - __main__ - INFO - 批次 [1-128] 本地推理完成
+2025-12-23 21:45:57,029 - __main__ - INFO - 处理批次 [129-256/500]
+2025-12-23 21:45:57,030 - __main__ - INFO -   → 生成Baseline答案 (128 条)...
+2025-12-23 21:45:57,030 - __main__ - INFO - 批量生成Baseline答案: 128 条
+2025-12-23 21:46:32,801 - __main__ - INFO -   → 生成差异分析 (128 条)...
+2025-12-23 21:46:32,801 - __main__ - INFO - 批量生成差异分析: 128 条
+2025-12-23 21:48:54,932 - __main__ - INFO -   → 生成Rejected原则 (128 条)...
+2025-12-23 21:48:54,932 - __main__ - INFO - 批量生成原则（弱模型）: 128 条
+2025-12-23 21:50:41,585 - __main__ - INFO - 批次 [129-256] 本地推理完成
+2025-12-23 21:50:41,585 - __main__ - INFO - 处理批次 [257-384/500]
+2025-12-23 21:50:41,585 - __main__ - INFO -   → 生成Baseline答案 (128 条)...
+2025-12-23 21:50:41,585 - __main__ - INFO - 批量生成Baseline答案: 128 条
+2025-12-23 21:51:46,404 - __main__ - INFO -   → 生成差异分析 (128 条)...
+2025-12-23 21:51:46,404 - __main__ - INFO - 批量生成差异分析: 128 条
+2025-12-23 21:51:46,465 - inference.local_inference - ERROR - 批量推理失败: Prompt length of 4383 is longer than the maximum model length of 4096.
+Traceback (most recent call last):
+  File "/home/metanew2/inference/local_inference.py", line 118, in batch_inference
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/utils.py", line 1072, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 457, in generate
+    self._validate_and_add_requests(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 1308, in _validate_and_add_requests
+    self._add_request(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 1326, in _add_request
+    self.llm_engine.add_request(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py", line 184, in add_request
+    request = self.processor.process_inputs(request_id, prompt, params,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/processor.py", line 207, in process_inputs
+    self._validate_model_inputs(processed_inputs, lora_request)
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/processor.py", line 322, in _validate_model_inputs
+    raise ValueError(
+ValueError: Prompt length of 4383 is longer than the maximum model length of 4096.
+2025-12-23 21:51:46,468 - __main__ - ERROR - 生成DPO数据时发生错误: Prompt length of 4383 is longer than the maximum model length of 4096.
+Traceback (most recent call last):
+  File "/home/metanew2/stage_first.py", line 434, in prepare_stage1
+    diffs = batch_generate_differences(questions, baseline_answers, labels)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/metanew2/stage_first.py", line 343, in batch_generate_differences
+    return batch_generate_difference_list(questions, preds, labels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/metanew2/module/plan_module.py", line 78, in batch_generate_difference_list
+    return batch_inference(prompts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/metanew2/inference/local_inference.py", line 118, in batch_inference
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/utils.py", line 1072, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 457, in generate
+    self._validate_and_add_requests(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 1308, in _validate_and_add_requests
+    self._add_request(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 1326, in _add_request
+    self.llm_engine.add_request(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py", line 184, in add_request
+    request = self.processor.process_inputs(request_id, prompt, params,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/processor.py", line 207, in process_inputs
+    self._validate_model_inputs(processed_inputs, lora_request)
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/processor.py", line 322, in _validate_model_inputs
+    raise ValueError(
+ValueError: Prompt length of 4383 is longer than the maximum model length of 4096.
+Traceback (most recent call last):
+  File "/home/metanew2/stage_first.py", line 655, in <module>
+    main()
+  File "/home/metanew2/stage_first.py", line 651, in main
+    prepare_stage1(dataset)
+  File "/home/metanew2/stage_first.py", line 434, in prepare_stage1
+    diffs = batch_generate_differences(questions, baseline_answers, labels)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/metanew2/stage_first.py", line 343, in batch_generate_differences
+    return batch_generate_difference_list(questions, preds, labels)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/metanew2/module/plan_module.py", line 78, in batch_generate_difference_list
+    return batch_inference(prompts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/metanew2/inference/local_inference.py", line 118, in batch_inference
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/utils.py", line 1072, in inner
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 457, in generate
+    self._validate_and_add_requests(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 1308, in _validate_and_add_requests
+    self._add_request(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/entrypoints/llm.py", line 1326, in _add_request
+    self.llm_engine.add_request(
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/llm_engine.py", line 184, in add_request
+    request = self.processor.process_inputs(request_id, prompt, params,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/processor.py", line 207, in process_inputs
+    self._validate_model_inputs(processed_inputs, lora_request)
+  File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/engine/processor.py", line 322, in _validate_model_inputs
+    raise ValueError(
+ValueError: Prompt length of 4383 is longer than the maximum model length of 4096.
+2025-12-23 21:51:47,539 - inference.local_inference - INFO - 清理vLLM模型...
+2025-12-23 21:51:47,539 - inference.local_inference - INFO - CUDA缓存已清理
+
+==========================================
+✅ MATH 数据集处理完成
+==========================================
+⚠️  警告: 未生成输出文件
+
+日志文件: logs/math_20251223_214011.log
+🎉 完成！

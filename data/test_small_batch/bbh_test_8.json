@@ -1,0 +1,34 @@
+[
+  {
+    "question": "not ( True ) and ( True ) is",
+    "answer": "False"
+  },
+  {
+    "question": "True and not not ( not False ) is",
+    "answer": "True"
+  },
+  {
+    "question": "not True or False or ( False ) is",
+    "answer": "False"
+  },
+  {
+    "question": "False or not ( True ) and False is",
+    "answer": "False"
+  },
+  {
+    "question": "True or not False and True and False is",
+    "answer": "True"
+  },
+  {
+    "question": "False or not not not False and True is",
+    "answer": "True"
+  },
+  {
+    "question": "not True and ( False or True ) is",
+    "answer": "False"
+  },
+  {
+    "question": "True and not False or ( True ) is",
+    "answer": "True"
+  }
+]

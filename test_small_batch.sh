@@ -14,7 +14,7 @@ echo "  - 快速验证端到端功能"
 echo ""
 
 # 测试批次大小
-BATCH_SIZE=128
+BATCH_SIZE=8
 
 # 定义数据集
 declare -A DATASETS=(

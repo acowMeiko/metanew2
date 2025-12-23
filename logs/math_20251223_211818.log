@@ -1,0 +1,140 @@
+==========================================
+MATH 数据集 DPO 数据生成
+==========================================
+数据集: math
+数据路径: dataset/math/test.jsonl
+GPU: 2,3
+批次大小: 128
+并发数: 30
+输出文件: output/dpo_math.jsonl
+==========================================
+
+开始生成 DPO 数据...
+
+2025-12-23 21:18:18,317 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,317 - __main__ - INFO - 数据集名称: math
+2025-12-23 21:18:18,317 - __main__ - INFO - 数据集路径: dataset/math/test.jsonl
+2025-12-23 21:18:18,317 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,317 - __main__ - INFO - 使用数据集适配层加载: math
+2025-12-23 21:18:18,317 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,318 - __main__ - INFO - [数据集适配层] 开始加载数据集: math
+2025-12-23 21:18:18,318 - __main__ - INFO - [数据集适配层] 文件路径: dataset/math/test.jsonl
+2025-12-23 21:18:18,318 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,321 - __main__ - INFO - [数据集适配层] 已加载 JSONL 文件: 500 条
+2025-12-23 21:18:18,321 - __main__ - INFO - 预处理 MATH 数据集: 500 条
+2025-12-23 21:18:18,321 - __main__ - INFO - [数据集适配层] 预处理完成: 500 条有效数据
+2025-12-23 21:18:18,321 - __main__ - INFO - [数据集适配层] 数据格式已统一为: {'question': str, 'answer': str}
+2025-12-23 21:18:18,321 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,321 - __main__ - INFO - 数据集加载成功，共 500 条数据
+2025-12-23 21:18:18,321 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,321 - __main__ - INFO - Step 1: 开始生成DPO数据
+2025-12-23 21:18:18,321 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,321 - __main__ - INFO - 未发现已有进度，将从头开始处理
+2025-12-23 21:18:18,323 - __main__ - INFO - 共需处理 500 条数据，批次大小: 64
+2025-12-23 21:18:18,323 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,323 - __main__ - INFO - 阶段1/3: vLLM分批本地推理（所有数据）
+2025-12-23 21:18:18,323 - __main__ - INFO - ============================================================
+2025-12-23 21:18:18,323 - __main__ - INFO - 处理批次 [1-128/500]
+2025-12-23 21:18:18,323 - __main__ - INFO -   → 生成Baseline答案 (128 条)...
+2025-12-23 21:18:18,323 - __main__ - INFO - 批量生成Baseline答案: 128 条
+INFO 12-23 21:18:22 [__init__.py:239] Automatically detected platform cuda.
+2025-12-23 21:18:22,920 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 2,3
+2025-12-23 21:18:22,920 - inference.local_inference - INFO - ============================================================
+2025-12-23 21:18:22,920 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-23 21:18:22,920 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-23 21:18:22,920 - inference.local_inference - INFO - ============================================================
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 12-23 21:18:28 [config.py:585] This model supports multiple tasks: {'classify', 'generate', 'embed', 'reward', 'score'}. Defaulting to 'generate'.
+INFO 12-23 21:18:29 [config.py:1519] Defaulting to use mp for distributed inference
+INFO 12-23 21:18:29 [config.py:1697] Chunked prefill is enabled with max_num_batched_tokens=8192.
+INFO 12-23 21:18:30 [core.py:54] Initializing a V1 LLM engine (v0.8.2) with config: model='/home/models/qwen_dpo2_lora', speculative_config=None, tokenizer='/home/models/qwen_dpo2_lora', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=4096, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=/home/models/qwen_dpo2_lora, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
+WARNING 12-23 21:18:30 [multiproc_worker_utils.py:306] Reducing Torch parallelism from 64 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+INFO 12-23 21:18:30 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1], buffer_handle=(2, 10485760, 10, 'psm_e7335b00'), local_subscribe_addr='ipc:///tmp/b419c3aa-7cc9-4445-90bb-6065d75429e3', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-23 21:18:30 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f548122a290>
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:30 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_492100f7'), local_subscribe_addr='ipc:///tmp/1c8ab98f-492c-4be9-92d0-6319cdbe0693', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-23 21:18:31 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f548122a110>
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:31 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_0ae18d07'), local_subscribe_addr='ipc:///tmp/dd46edde-7c6c-4e23-af62-298d42e01198', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:32 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:32 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:32 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:32 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:32 [custom_all_reduce_utils.py:206] generating GPU P2P access cache in /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:46 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:46 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_2,3.json
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:46 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[1], buffer_handle=(1, 4194304, 6, 'psm_0bb64e75'), local_subscribe_addr='ipc:///tmp/45af0b08-1756-4d1c-9f30-5ae0b4ef7233', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:46 [parallel_state.py:954] rank 1 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 1
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:46 [parallel_state.py:954] rank 0 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 0
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:46 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:46 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=0 pid=321997)[0;0m INFO 12-23 21:18:46 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m INFO 12-23 21:18:46 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m WARNING 12-23 21:18:47 [config.py:3692] `torch.compile` is turned on, but the model /home/models/qwen_dpo2_lora does not support it. Please open an issue on GitHub if you want it to be supported.
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m Process ForkProcess-1:2:
+CRITICAL 12-23 21:18:47 [multiproc_executor.py:49] MulitprocExecutor got fatal signal from worker processes, shutting down. See stack trace above for root cause issue.
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m Traceback (most recent call last):
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.run()
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/multiprocessing/process.py", line 108, in run
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self._target(*self._args, **self._kwargs)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/executor/multiproc_executor.py", line 312, in worker_main
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     worker = WorkerProc(*args, **kwargs)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/executor/multiproc_executor.py", line 245, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.worker.load_model()
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/worker/gpu_worker.py", line 136, in load_model
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.model_runner.load_model()
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/v1/worker/gpu_model_runner.py", line 1177, in load_model
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.model = get_model(vllm_config=self.vllm_config)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/model_loader/__init__.py", line 14, in get_model
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     return loader.load_model(vllm_config=vllm_config)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 441, in load_model
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     model = _initialize_model(vllm_config=vllm_config)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/model_loader/loader.py", line 127, in _initialize_model
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     return model_class(vllm_config=vllm_config, prefix=prefix)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 431, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.model = Qwen2Model(vllm_config=vllm_config,
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/compilation/decorators.py", line 151, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     old_init(self, vllm_config=vllm_config, prefix=prefix, **kwargs)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 300, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.start_layer, self.end_layer, self.layers = make_layers(
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                                                     ^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 567, in make_layers
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     [PPMissingLayer() for _ in range(start_layer)] + [
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                                                      ^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/utils.py", line 568, in <listcomp>
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     maybe_offload_to_cpu(layer_fn(prefix=f"{prefix}.{idx}"))
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 302, in <lambda>
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     lambda prefix: Qwen2DecoderLayer(config=config,
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 218, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.mlp = Qwen2MLP(
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                ^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/models/qwen2.py", line 75, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.gate_up_proj = MergedColumnParallelLinear(
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 533, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     super().__init__(input_size=input_size,
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 398, in __init__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     self.quant_method.create_weights(
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/vllm/model_executor/layers/linear.py", line 178, in create_weights
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     weight = Parameter(torch.empty(sum(output_partition_sizes),
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m   File "/root/miniconda3/envs/llm/lib/python3.11/site-packages/torch/utils/_device.py", line 104, in __torch_function__
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m     return func(*args, **kwargs)
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m            ^^^^^^^^^^^^^^^^^^^^^
+[1;36m(VllmWorker rank=1 pid=322009)[0;0m torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 136.00 MiB. GPU 1 has a total capacity of 79.33 GiB of which 130.62 MiB is free. Process 187870 has 65.17 GiB memory in use. Process 188533 has 14.02 GiB memory in use. Of the allocated memory 13.09 GiB is allocated by PyTorch, and 6.99 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+CRITICAL 12-23 21:18:47 [core_client.py:269] Got fatal signal from worker processes, shutting down. See stack trace above for root cause issue.
+
+==========================================
+✅ MATH 数据集处理完成
+==========================================
+⚠️  警告: 未生成输出文件
+
+日志文件: logs/math_20251223_211818.log
+🎉 完成！
