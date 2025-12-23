@@ -25,7 +25,8 @@ DEFAULT_MAX_TOKENS = int(os.getenv('DEFAULT_MAX_TOKENS', '8192'))
  
 SAVE_FREQUENCY = int(os.getenv('SAVE_FREQUENCY', '50'))  # 保存频率
 # ==================== 日志配置 ====================
-LOG_FILE = Project_ROOT / "logs"
+LOG_DIR = Project_ROOT / "logs"
+LOG_FILE = LOG_DIR / "stage_first.log"  # 默认日志文件
 LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
 LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 

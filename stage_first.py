@@ -57,6 +57,10 @@ from tqdm import tqdm
 # ==================== 常量定义 ====================
 OUTPUTS_DIR = Path(config.output_dir)
 
+# 确保日志目录存在
+log_dir = Path(config.LOG_FILE).parent
+log_dir.mkdir(parents=True, exist_ok=True)
+
 logging.basicConfig(
     level=getattr(logging, config.LOG_LEVEL),
     format=config.LOG_FORMAT,
