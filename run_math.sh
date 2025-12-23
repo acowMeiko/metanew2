@@ -7,7 +7,7 @@
 set -e  # 遇到错误立即退出
 
 # ==================== GPU 配置 ====================
-export CUDA_VISIBLE_DEVICES="3,4"  # 使用 GPU 3,4
+export CUDA_VISIBLE_DEVICES="2,3"  # 使用 GPU 2,3
 export BATCH_SIZE=128              # vLLM 批处理大小（2张A800优化）
 export MAX_WORKERS=30              # API 并发数（2张A800优化）
 
