@@ -18,8 +18,8 @@ OUTPUT_DIR="output"
 LOG_DIR="logs"
 
 # 创建输出和日志目录
-mkdir -p "${OUTPUT_DIR}"
-mkdir -p "${LOG_DIR}"
+mkdir -p "${OUTPUT_DIR}" 2>/dev/null || true
+mkdir -p "${LOG_DIR}" 2>/dev/null || true
 
 # 时间戳
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
