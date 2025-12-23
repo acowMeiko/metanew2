@@ -41,7 +41,8 @@ SIMILARITY_THRESHOLD = float(os.getenv('SIMILARITY_THRESHOLD', '0.6'))
 original_data_file = os.path.join(data_dir, 'original_data', 'merged_all_levels.json')  #原始数据集文件路径
 dpo_progress_file = os.path.join(check_root, 'dpo_progress.json')  #进度文件路径
 memory_checkpoint_file = os.path.join(check_root, 'memory_progress.json')  #Memory断点文件路径
-dpo_final_file = os.path.join(output_dir, 'dpo_final.jsonl')  #最终DPO数据文件路径
+# 支持通过环境变量自定义输出文件名
+dpo_final_file = os.getenv('DPO_OUTPUT_FILE', os.path.join(output_dir, 'dpo_final.jsonl'))  #最终DPO数据文件路径
 data_levels_file = os.path.join(data_dir, 'dpo_llamafactory', 'dpo_level_level2_llamafactory.json')  #数据级别文件路径
 
 # 超参数

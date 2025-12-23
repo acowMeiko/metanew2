@@ -558,7 +558,7 @@ def prepare_stage1(dataset):
                         "content": chosen
                     }
                 ],
-                "rejected_response": rejected
+                "rejected": rejected
             }
             
             # 写入JSONL格式（每行一个JSON对象）
