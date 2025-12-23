@@ -475,16 +475,58 @@ def prepare_stage1(dataset):
         
         logger.info(f"API批次 [{api_batch_idx+1}-{api_batch_end}/{len(all_questions)}] 开始处理...")
         batch_chosen = concurrent_generate_chosen(batch_questions, batch_diffs, max_workers=config.MAX_WORKERS)
+        
+        # 验证返回长度
+        assert len(batch_chosen) == len(batch_questions), \
+            f"API批次返回长度不匹配: 期望 {len(batch_questions)}, 实际 {len(batch_chosen)}"
+        
+        # 检查空值比例
+        empty_count = sum(1 for c in batch_chosen if not c)
+        if empty_count > 0:
+            logger.warning(f"⚠️  批次中有 {empty_count}/{len(batch_chosen)} 个空响应")
+        
         all_chosen.extend(batch_chosen)
         
         logger.info(f"API批次 [{api_batch_idx+1}-{api_batch_end}] 完成")
     
     logger.info(f"阶段2完成: 共生成 {len(all_chosen)} 条Chosen结果")
     
+    # ✅ 全局验证
+    logger.info("开始数据质量检查...")
+    assert len(all_chosen) == len(all_data), \
+        f"Chosen数量不匹配: 期望 {len(all_data)}, 实际 {len(all_chosen)}"
+    
+    # 检查空值
+    empty_indices = [i for i, c in enumerate(all_chosen) if not c]
+    if empty_indices:
+        logger.error(f"❌ 发现 {len(empty_indices)} 个空chosen值")
+        logger.error(f"   空值索引（前10个）: {empty_indices[:10]}")
+        raise ValueError(f"有 {len(empty_indices)} 个chosen为空，无法生成有效DPO数据")
+    
+    logger.info(f"✅ 数据质量检查通过: {len(all_chosen)} 条chosen全部非空")
+    
     # ===== 阶段3: 组装所有DPO数据并保存为JSONL =====
     logger.info("=" * 60)
     logger.info("阶段3/3: 组装DPO数据并保存为JSONL格式")
     logger.info("=" * 60)
+    
+    # ✅ 预检查所有列表长度
+    logger.info("预检查数据完整性...")
+    assert len(all_data) == len(all_diffs) == len(all_rejected) == len(all_chosen), \
+        f"数据长度不一致: data={len(all_data)}, diffs={len(all_diffs)}, " \
+        f"rejected={len(all_rejected)}, chosen={len(all_chosen)}"
+    
+    # 检查非空率
+    non_empty_chosen = sum(1 for c in all_chosen if c)
+    non_empty_rejected = sum(1 for r in all_rejected if r)
+    logger.info(f"Chosen非空率: {non_empty_chosen}/{len(all_chosen)} ({non_empty_chosen/len(all_chosen)*100:.1f}%)")
+    logger.info(f"Rejected非空率: {non_empty_rejected}/{len(all_rejected)} ({non_empty_rejected/len(all_rejected)*100:.1f}%)")
+    
+    if non_empty_chosen < len(all_chosen) * 0.9:
+        logger.error(f"❌ Chosen非空率过低: {non_empty_chosen/len(all_chosen)*100:.1f}%")
+        raise ValueError("Chosen数据质量不足，建议检查API配置")
+    
+    logger.info("✅ 数据完整性检查通过")
     
     # 确保输出目录存在
     dpo_file.parent.mkdir(parents=True, exist_ok=True)
