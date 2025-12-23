@@ -18,6 +18,8 @@ OUTPUT_DIR="output"
 LOG_DIR="logs"
 
 # 创建输出和日志目录
+[ -f "${OUTPUT_DIR}" ] && rm -f "${OUTPUT_DIR}"
+[ -f "${LOG_DIR}" ] && rm -f "${LOG_DIR}"
 mkdir -p "${OUTPUT_DIR}" 2>/dev/null || true
 mkdir -p "${LOG_DIR}" 2>/dev/null || true
 
