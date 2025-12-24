@@ -13,7 +13,7 @@ export MAX_WORKERS=30              # API 并发数（2张A800优化）
 
 # ==================== 数据集配置 ====================
 export DATASET_NAME="mmlu"
-DATASET_DIR="dataset/mmlu_json"  # 使用 mmlu_json 目录
+DATASET_DIR="dataset/mmlu"  # MMLU数据集目录
 OUTPUT_DIR="output"
 LOG_DIR="logs"
 

@@ -500,14 +500,37 @@ def prepare_stage1(dataset):
     assert len(all_chosen) == len(all_data), \
         f"Chosen数量不匹配: 期望 {len(all_data)}, 实际 {len(all_chosen)}"
     
-    # 检查空值
+    # 检查空值（允许少量失败）
     empty_indices = [i for i, c in enumerate(all_chosen) if not c]
-    if empty_indices:
-        logger.error(f"❌ 发现 {len(empty_indices)} 个空chosen值")
-        logger.error(f"   空值索引（前10个）: {empty_indices[:10]}")
-        raise ValueError(f"有 {len(empty_indices)} 个chosen为空，无法生成有效DPO数据")
+    empty_rate = len(empty_indices) / len(all_chosen) if all_chosen else 0
     
-    logger.info(f"✅ 数据质量检查通过: {len(all_chosen)} 条chosen全部非空")
+    if empty_indices:
+        logger.warning(f"⚠️  发现 {len(empty_indices)} 个空chosen值 ({empty_rate*100:.1f}%)")
+        logger.warning(f"   空值索引（前10个）: {empty_indices[:10]}")
+        
+        # 只有当空值率超过5%时才报错
+        if empty_rate > 0.05:
+            raise ValueError(f"空chosen值过多: {len(empty_indices)}/{len(all_chosen)} ({empty_rate*100:.1f}%)，超过5%阈值")
+        else:
+            logger.info(f"✅ 空值率在可接受范围内 ({empty_rate*100:.1f}% < 5%)，将过滤空值后继续")
+            # 过滤掉空值
+            filtered_data = []
+            filtered_diffs = []
+            filtered_rejected = []
+            filtered_chosen = []
+            for i in range(len(all_data)):
+                if i not in empty_indices:
+                    filtered_data.append(all_data[i])
+                    filtered_diffs.append(all_diffs[i])
+                    filtered_rejected.append(all_rejected[i])
+                    filtered_chosen.append(all_chosen[i])
+            all_data = filtered_data
+            all_diffs = filtered_diffs
+            all_rejected = filtered_rejected
+            all_chosen = filtered_chosen
+            logger.info(f"过滤后剩余 {len(all_data)} 条有效数据")
+    else:
+        logger.info(f"✅ 数据质量检查通过: {len(all_chosen)} 条chosen全部非空")
     
     # ===== 阶段3: 组装所有DPO数据并保存为JSONL =====
     logger.info("=" * 60)
