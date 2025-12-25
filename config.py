@@ -16,8 +16,8 @@ STRONG_MODEL_NAME = os.getenv('STRONG_MODEL_NAME', 'DeepSeek-R1')
 STRONG_MODEL_API_URL = os.getenv('STRONG_MODEL_API_URL', 'https://llmapi.paratera.com/v1/')
 STRONG_MODEL_KEY = os.getenv('STRONG_MODEL_KEY', 'sk-0tKGY03c9OJPODlWGzAGPw')
 
-DEFAULT_TEMPERATURE = float(os.getenv('DEFAULT_TEMPERATURE', '0.9'))
-DEFAULT_TOP_P = float(os.getenv('DEFAULT_TOP_P', '0.7'))
+DEFAULT_TEMPERATURE = float(os.getenv('DEFAULT_TEMPERATURE', '0.1'))
+DEFAULT_TOP_P = float(os.getenv('DEFAULT_TOP_P', '25'))
 # 提升默认生成长度，避免接口截断；如需更短可通过环境变量覆盖
 DEFAULT_MAX_TOKENS = int(os.getenv('DEFAULT_MAX_TOKENS', '8192'))
 
