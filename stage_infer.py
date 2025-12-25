@@ -182,12 +182,27 @@ def inference_with_memory(dataset):
         questions = []
         
         for item in dataset:
-            question = item.get("problem", "")
+            # 优先从 messages 中提取 question（JSONL DPO 格式）
+            question = None
+            if "messages" in item:
+                for msg in item.get("messages", []):
+                    if msg.get("role") == "user":
+                        content = msg.get("content", "")
+                        # 从 "Input: Question: ..." 格式中提取
+                        match = re.search(r'Question:\s*(.+?)(?:\nError Points:|$)', content, re.DOTALL)
+                        if match:
+                            question = match.group(1).strip()
+                            break
+            
+            # 如果没有 messages，尝试原有的 problem 字段
+            if not question:
+                question = item.get("problem", "")
+            
             if question:
                 valid_items.append(item)
                 questions.append(question)
             else:
-                logger.warning("数据项缺少problem，跳过")
+                logger.warning("数据项缺少 question/problem，跳过")
         
         logger.info(f"有效数据: {len(valid_items)} 条")
         
@@ -437,18 +452,28 @@ def inference_with_memory(dataset):
         raise
 
 def main():
-    # Load dataset - JSON格式 (test_filter.json)
+    # Load dataset - 支持 JSON 和 JSONL 格式
     # 可以通过命令行参数指定，默认使用 test_filter.json
     import sys
     input_file = Path(os.getenv('TEST_FILE', 'data/test/test_filter.json'))
     try:
         logger.info(f"加载数据集: {input_file}")
         
-        # JSON格式：整个文件是一个JSON数组
-        with open(input_file, 'r', encoding='utf-8') as f:
-            dataset = json.load(f)
-        
-        logger.info(f"数据集加载成功，共 {len(dataset)} 条数据")
+        # 根据文件扩展名判断格式
+        if input_file.suffix == '.jsonl':
+            # JSONL格式：每行一个JSON对象
+            dataset = []
+            with open(input_file, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line:
+                        dataset.append(json.loads(line))
+            logger.info(f"数据集加载成功（JSONL格式），共 {len(dataset)} 条数据")
+        else:
+            # JSON格式：整个文件是一个JSON数组
+            with open(input_file, 'r', encoding='utf-8') as f:
+                dataset = json.load(f)
+            logger.info(f"数据集加载成功（JSON格式），共 {len(dataset)} 条数据")
         
         # 显示数据格式信息
         if dataset:
