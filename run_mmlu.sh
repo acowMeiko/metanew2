@@ -7,9 +7,10 @@
 # 不使用 set -e，允许单个文件失败后继续
 
 # ==================== GPU 配置 ====================
-export CUDA_VISIBLE_DEVICES="6,7"  # 使用 GPU 6,7
+export CUDA_VISIBLE_DEVICES="6,7"  # 使用 GPU 6,7 (MMLU专用，与BBH的0,1不冲突)
 export BATCH_SIZE=128              # vLLM 批处理大小（2张A800优化）
 export MAX_WORKERS=30              # API 并发数（2张A800优化）
+export VLLM_WORKER_MULTIPROC_METHOD="spawn"  # 多进程方法
 
 # ==================== 数据集配置 ====================
 export DATASET_NAME="mmlu"

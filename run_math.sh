@@ -7,9 +7,10 @@
 set -e  # 遇到错误立即退出
 
 # ==================== GPU 配置 ====================
-export CUDA_VISIBLE_DEVICES="2,3"  # 使用 GPU 2,3
+export CUDA_VISIBLE_DEVICES="4,5"  # 使用 GPU 4,5 (MATH专用，与其他数据集不冲突)
 export BATCH_SIZE=128              # vLLM 批处理大小（2张A800优化）
 export MAX_WORKERS=30              # API 并发数（2张A800优化）
+export VLLM_WORKER_MULTIPROC_METHOD="spawn"  # 多进程方法
 
 # ==================== 数据集配置 ====================
 export DATASET_NAME="math"

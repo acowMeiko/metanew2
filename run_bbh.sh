@@ -7,9 +7,10 @@
 # 不使用 set -e，允许单个任务失败后继续
 
 # ==================== GPU 配置 ====================
-export CUDA_VISIBLE_DEVICES="0,1"  # 使用 GPU 0,1
+export CUDA_VISIBLE_DEVICES="0,1"  # 使用 GPU 0,1 (BBH专用)
 export BATCH_SIZE=128              # vLLM 批处理大小（2张A800优化）
 export MAX_WORKERS=30              # API 并发数（2张A800优化）
+export VLLM_WORKER_MULTIPROC_METHOD="spawn"  # 多进程方法
 
 # ==================== 数据集配置 ====================
 export DATASET_NAME="bbh"
@@ -114,6 +115,11 @@ for task in "${BBH_TASKS[@]}"; do
     else
         echo "❌ 失败: ${task}" | tee -a "${LOG_FILE}"
         ((fail_count++))
+    fi
+    
+    echo "" | tee -a "${LOG_FILE}"
+done
+
 # 统计结果
 echo "" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
@@ -125,11 +131,6 @@ echo "总数据量: ${total_lines} 条" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 echo "生成的文件列表:" | tee -a "${LOG_FILE}"
 ls -lh "${OUTPUT_DIR}"/dpo_*.jsonl 2>/dev/null | awk '{print $9, $5}' | tee -a "${LOG_FILE}"
-
-echo "" | tee -a "${LOG_FILE}"
-echo "日志文件: ${LOG_FILE}" | tee -a "${LOG_FILE}"
-echo "🎉 完成！" | tee -a "${LOG_FILE}""${LOG_FILE}"
-fi
 
 echo "" | tee -a "${LOG_FILE}"
 echo "日志文件: ${LOG_FILE}" | tee -a "${LOG_FILE}"
