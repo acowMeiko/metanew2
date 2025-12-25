@@ -14,7 +14,7 @@ export MAX_WORKERS=30              # API 并发数（2张A800优化）
 # ==================== 数据集配置 ====================
 export DATASET_NAME="svamp"
 export DATASET_PATH="dataset/svamp/test.json"  # 使用测试集
-OUTPUT_DIR="output"
+OUTPUT_DIR="output/svamp"  # SVAMP数据保存在output/svamp文件夹中
 LOG_DIR="logs"
 
 # 创建输出和日志目录

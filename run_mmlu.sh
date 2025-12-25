@@ -14,7 +14,7 @@ export MAX_WORKERS=30              # API 并发数（2张A800优化）
 # ==================== 数据集配置 ====================
 export DATASET_NAME="mmlu"
 DATASET_DIR="dataset/mmlu"  # MMLU数据集目录
-OUTPUT_DIR="output"
+OUTPUT_DIR="output/mmlu"  # MMLU数据保存在output/mmlu文件夹中
 LOG_DIR="logs"
 
 # 创建输出和日志目录
@@ -27,16 +27,13 @@ mkdir -p "${LOG_DIR}" 2>/dev/null || true
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOG_FILE="${LOG_DIR}/mmlu_${TIMESTAMP}.log"
 
-# 输出文件
-export DPO_OUTPUT_FILE="${OUTPUT_DIR}/dpo_mmlu_all.jsonl"
-
 echo "==========================================" | tee -a "${LOG_FILE}"
-echo "MMLU 数据集 DPO 数据生成" | tee -a "${LOG_FILE}"
+echo "MMLU 数据集 DPO 数据生成 (每个文件独立保存)" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "GPU: ${CUDA_VISIBLE_DEVICES}" | tee -a "${LOG_FILE}"
 echo "批次大小: ${BATCH_SIZE}" | tee -a "${LOG_FILE}"
 echo "并发数: ${MAX_WORKERS}" | tee -a "${LOG_FILE}"
-echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
+echo "输出目录: ${OUTPUT_DIR}" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 
@@ -50,18 +47,21 @@ MMLU_FILES=(
 
 echo "MMLU 共有 ${#MMLU_FILES[@]} 个数据文件" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
-
-# 清空输出文件（如果存在）
-> "${DPO_OUTPUT_FILE}"
+echo "MMLU 共有 ${#MMLU_FILES[@]} 个文件 (每个文件独立保存)" | tee -a "${LOG_FILE}"
+echo "" | tee -a "${LOG_FILE}"
 
 # 处理每个 MMLU 文件
 success_count=0
 fail_count=0
+total_lines=0
 
 for file in "${MMLU_FILES[@]}"; do
     echo "----------------------------------------" | tee -a "${LOG_FILE}"
     echo "处理文件 [$((success_count + fail_count + 1))/${#MMLU_FILES[@]}]: ${file}" | tee -a "${LOG_FILE}"
     echo "----------------------------------------" | tee -a "${LOG_FILE}"
+    
+    # 为每个文件设置独立的输出文件
+    export DPO_OUTPUT_FILE="${OUTPUT_DIR}/dpo_${file}.jsonl"
     
     # 设置数据集路径
     export DATASET_PATH="${DATASET_DIR}/${file}.json"
@@ -73,17 +73,21 @@ for file in "${MMLU_FILES[@]}"; do
         continue
     fi
     
-    # 运行数据生成（输出会追加到同一个文件）
+    # 运行数据生成（每个文件独立输出）
     echo "开始生成 DPO 数据..." | tee -a "${LOG_FILE}"
+    echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
     
     # 使用 || true 确保即使失败也继续
     if python stage_first.py 2>&1 | tee -a "${LOG_FILE}" || true; then
-        # 检查是否真的成功（通过检查输出文件）
-        if grep -q "DPO数据生成完成" "${LOG_FILE}" 2>/dev/null; then
-            echo "✅ 完成: ${file}" | tee -a "${LOG_FILE}"
+        # 检查输出文件是否存在且有内容
+        if [ -f "${DPO_OUTPUT_FILE}" ] && [ -s "${DPO_OUTPUT_FILE}" ]; then
+            file_lines=$(wc -l < "${DPO_OUTPUT_FILE}")
+            file_size=$(du -h "${DPO_OUTPUT_FILE}" | cut -f1)
+            echo "✅ 完成: ${file} (${file_lines} 条, ${file_size})" | tee -a "${LOG_FILE}"
             ((success_count++))
+            total_lines=$((total_lines + file_lines))
         else
-            echo "⚠️  可能失败: ${file}" | tee -a "${LOG_FILE}"
+            echo "⚠️  可能失败: ${file} (输出文件为空或不存在)" | tee -a "${LOG_FILE}"
             ((fail_count++))
         fi
     else
@@ -101,16 +105,10 @@ echo "MMLU 数据集处理完成" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "成功: ${success_count}/${#MMLU_FILES[@]}" | tee -a "${LOG_FILE}"
 echo "失败: ${fail_count}/${#MMLU_FILES[@]}" | tee -a "${LOG_FILE}"
-
-if [ -f "${DPO_OUTPUT_FILE}" ]; then
-    line_count=$(wc -l < "${DPO_OUTPUT_FILE}")
-    file_size=$(du -h "${DPO_OUTPUT_FILE}" | cut -f1)
-    echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
-    echo "总数据量: ${line_count} 条" | tee -a "${LOG_FILE}"
-    echo "文件大小: ${file_size}" | tee -a "${LOG_FILE}"
-else
-    echo "⚠️  警告: 未生成输出文件" | tee -a "${LOG_FILE}"
-fi
+echo "总数据量: ${total_lines} 条" | tee -a "${LOG_FILE}"
+echo "" | tee -a "${LOG_FILE}"
+echo "生成的文件列表:" | tee -a "${LOG_FILE}"
+ls -lh "${OUTPUT_DIR}"/dpo_*.jsonl 2>/dev/null | awk '{print $9, $5}' | tee -a "${LOG_FILE}"
 
 echo "" | tee -a "${LOG_FILE}"
 echo "日志文件: ${LOG_FILE}" | tee -a "${LOG_FILE}"

@@ -14,7 +14,7 @@ export MAX_WORKERS=30              # API 并发数（2张A800优化）
 # ==================== 数据集配置 ====================
 export DATASET_NAME="bbh"
 DATASET_DIR="dataset/bbh"
-OUTPUT_DIR="output"
+OUTPUT_DIR="output/bbh"  # BBH数据保存在output/bbh文件夹中
 LOG_DIR="logs"
 
 # 创建输出和日志目录
@@ -27,16 +27,13 @@ mkdir -p "${LOG_DIR}" 2>/dev/null || true
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOG_FILE="${LOG_DIR}/bbh_${TIMESTAMP}.log"
 
-# 输出文件
-export DPO_OUTPUT_FILE="${OUTPUT_DIR}/dpo_bbh_all.jsonl"
-
 echo "==========================================" | tee -a "${LOG_FILE}"
-echo "BBH 数据集 DPO 数据生成" | tee -a "${LOG_FILE}"
+echo "BBH 数据集 DPO 数据生成 (每个任务独立保存)" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "GPU: ${CUDA_VISIBLE_DEVICES}" | tee -a "${LOG_FILE}"
 echo "批次大小: ${BATCH_SIZE}" | tee -a "${LOG_FILE}"
 echo "并发数: ${MAX_WORKERS}" | tee -a "${LOG_FILE}"
-echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
+echo "输出目录: ${OUTPUT_DIR}" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 
@@ -71,20 +68,21 @@ BBH_TASKS=(
     "word_sorting"
 )
 
-echo "BBH 共有 ${#BBH_TASKS[@]} 个任务" | tee -a "${LOG_FILE}"
+echo "BBH 共有 ${#BBH_TASKS[@]} 个任务 (每个任务独立保存)" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
-
-# 清空输出文件（如果存在）
-> "${DPO_OUTPUT_FILE}"
 
 # 处理每个 BBH 任务
 success_count=0
 fail_count=0
+total_lines=0
 
 for task in "${BBH_TASKS[@]}"; do
     echo "----------------------------------------" | tee -a "${LOG_FILE}"
     echo "处理任务 [$((success_count + fail_count + 1))/${#BBH_TASKS[@]}]: ${task}" | tee -a "${LOG_FILE}"
     echo "----------------------------------------" | tee -a "${LOG_FILE}"
+    
+    # 为每个任务设置独立的输出文件
+    export DPO_OUTPUT_FILE="${OUTPUT_DIR}/dpo_${task}.jsonl"
     
     # 设置数据集路径
     export DATASET_PATH="${DATASET_DIR}/${task}.json"
@@ -96,27 +94,26 @@ for task in "${BBH_TASKS[@]}"; do
         continue
     fi
     
-    # 运行数据生成（输出会追加到同一个文件）
+    # 运行数据生成（每个任务独立输出文件）
     echo "开始生成 DPO 数据..." | tee -a "${LOG_FILE}"
+    echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
     
     # 使用 || true 确保即使失败也继续
     if python stage_first.py 2>&1 | tee -a "${LOG_FILE}" || true; then
-        # 检查是否真的成功（通过检查输出文件）
-        if grep -q "DPO数据生成完成" "${LOG_FILE}" 2>/dev/null; then
-            echo "✅ 完成: ${task}" | tee -a "${LOG_FILE}"
+        # 检查输出文件是否存在且有内容
+        if [ -f "${DPO_OUTPUT_FILE}" ] && [ -s "${DPO_OUTPUT_FILE}" ]; then
+            task_lines=$(wc -l < "${DPO_OUTPUT_FILE}")
+            task_size=$(du -h "${DPO_OUTPUT_FILE}" | cut -f1)
+            echo "✅ 完成: ${task} (${task_lines} 条, ${task_size})" | tee -a "${LOG_FILE}"
             ((success_count++))
+            total_lines=$((total_lines + task_lines))
         else
-            echo "⚠️  可能失败: ${task}" | tee -a "${LOG_FILE}"
+            echo "⚠️  可能失败: ${task} (输出文件为空或不存在)" | tee -a "${LOG_FILE}"
             ((fail_count++))
         fi
     else
         echo "❌ 失败: ${task}" | tee -a "${LOG_FILE}"
         ((fail_count++))
-    fi
-    
-    echo "" | tee -a "${LOG_FILE}"
-done
-
 # 统计结果
 echo "" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
@@ -124,15 +121,14 @@ echo "BBH 数据集处理完成" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "成功: ${success_count}/${#BBH_TASKS[@]}" | tee -a "${LOG_FILE}"
 echo "失败: ${fail_count}/${#BBH_TASKS[@]}" | tee -a "${LOG_FILE}"
+echo "总数据量: ${total_lines} 条" | tee -a "${LOG_FILE}"
+echo "" | tee -a "${LOG_FILE}"
+echo "生成的文件列表:" | tee -a "${LOG_FILE}"
+ls -lh "${OUTPUT_DIR}"/dpo_*.jsonl 2>/dev/null | awk '{print $9, $5}' | tee -a "${LOG_FILE}"
 
-if [ -f "${DPO_OUTPUT_FILE}" ]; then
-    line_count=$(wc -l < "${DPO_OUTPUT_FILE}")
-    file_size=$(du -h "${DPO_OUTPUT_FILE}" | cut -f1)
-    echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
-    echo "总数据量: ${line_count} 条" | tee -a "${LOG_FILE}"
-    echo "文件大小: ${file_size}" | tee -a "${LOG_FILE}"
-else
-    echo "⚠️  警告: 未生成输出文件" | tee -a "${LOG_FILE}"
+echo "" | tee -a "${LOG_FILE}"
+echo "日志文件: ${LOG_FILE}" | tee -a "${LOG_FILE}"
+echo "🎉 完成！" | tee -a "${LOG_FILE}""${LOG_FILE}"
 fi
 
 echo "" | tee -a "${LOG_FILE}"
