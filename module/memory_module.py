@@ -10,7 +10,6 @@ import json
 import numpy as np
 import re
 import os
-from sentence_transformers import SentenceTransformer
 
 class MemoryManager:
     def __init__(self, path=None, similarity_threshold: float = None):
@@ -20,9 +19,7 @@ class MemoryManager:
         
         self.path = path or str(config.MEMORY_FILE)
         self.memory = self.load()
-        # === 新增：加载嵌入模型 + 阈值 ===
-        # 使用 cuda:0（因为 CUDA_VISIBLE_DEVICES 设置后，cuda:0 实际是物理GPU 0）
-        self.embedder = SentenceTransformer(config.SENTENCE_TRANSFORMER_MODEL, device='cuda:0')
+        # 不再使用 SentenceTransformer，改用 vLLM 模型进行语义匹配
         self.similarity_threshold = similarity_threshold or config.SIMILARITY_THRESHOLD
 
     def load(self):
@@ -51,39 +48,44 @@ class MemoryManager:
         with open(self.path, "w", encoding="utf-8") as f:
             json.dump(self.memory, f, indent=2, ensure_ascii=False)
 
-    def _cosine_similarity(self, vec1, vec2):
-        """计算余弦相似度"""
-        dot_product = np.dot(vec1, vec2)
-        norm1 = np.linalg.norm(vec1)
-        norm2 = np.linalg.norm(vec2)
-        if norm1 == 0 or norm2 == 0:
-            return 0.0
-        return dot_product / (norm1 * norm2)
+    def _semantic_match_with_llm(self, query_task: str, candidate_task: str) -> bool:
+        """
+        使用 vLLM 判断两个任务描述是否是同一个意思
+        返回 True (匹配) 或 False (不匹配)
+        """
+        prompt = f"""请判断以下两个任务描述是否表达相同的意思。只回答"是"或"否"，不要有任何其他文字。
+
+任务1: {query_task}
+任务2: {candidate_task}
+
+是否相同:"""
+        
+        try:
+            response = single_inference(prompt, temperature=0.0, max_tokens=5)
+            response_clean = response.strip().lower()
+            # 判断是否包含肯定词
+            if '是' in response_clean or 'yes' in response_clean or '相同' in response_clean:
+                return True
+            else:
+                return False
+        except Exception as e:
+            logging.error(f"LLM 语义匹配失败: {e}")
+            return False
 
     def retrieve(self, task_desc: str):
-        """先精确匹配 → 否则走语义相似度 ≥ 阈值"""
+        """使用 vLLM 进行语义匹配"""
         normalized_task = task_desc.strip()
 
-        # 1. 精确匹配
-        # for task, principles in self.memory.items():
-        #     if task.strip() == normalized_task:
-        #         return task, principles
-
-        # 2. 语义相似度匹配
+        # 如果 memory 为空，直接返回
         if not self.memory:
             return None, []
 
-        input_vec = self.embedder.encode(normalized_task, convert_to_tensor=False)
-        best_task, best_principles, best_score = None, [], -1
-
+        # 遍历所有已存储的任务，使用 LLM 判断是否匹配
         for task, principles in self.memory.items():
-            task_vec = self.embedder.encode(task, convert_to_tensor=False)
-            score = self._cosine_similarity(input_vec, task_vec)
-            if score > best_score:
-                best_task, best_principles, best_score = task, principles, score
+            if self._semantic_match_with_llm(normalized_task, task):
+                return task, principles
 
-        if best_score >= self.similarity_threshold:
-            return best_task, best_principles
+        # 没有找到匹配的任务
         return None, []
 
     def add_task(self, task_desc: str, principles: list):
