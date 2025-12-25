@@ -111,14 +111,57 @@ def batch_inference(
     
     logger.debug(f"批量推理: {len(prompts)} 条数据")
     
+    # 获取tokenizer检查prompt长度
+    tokenizer = model.get_tokenizer()
+    max_model_length = getattr(model.llm_engine.model_config, 'max_model_len', 4096)
+    
+    # 过滤并记录超长prompts
+    valid_prompts = []
+    valid_indices = []
+    skipped_count = 0
+    
+    for idx, prompt in enumerate(prompts):
+        try:
+            # 计算token数量（预留max_tokens空间用于生成）
+            token_count = len(tokenizer.encode(prompt))
+            max_allowed = max_model_length - (max_tokens or config.DEFAULT_MAX_TOKENS)
+            
+            if token_count <= max_allowed:
+                valid_prompts.append(prompt)
+                valid_indices.append(idx)
+            else:
+                skipped_count += 1
+                logger.warning(f"跳过超长prompt [{idx+1}/{len(prompts)}]: {token_count} tokens (最大允许: {max_allowed})")
+        except Exception as e:
+            logger.warning(f"无法检测prompt长度 [{idx+1}]，保留该prompt: {e}")
+            valid_prompts.append(prompt)
+            valid_indices.append(idx)
+    
+    if skipped_count > 0:
+        logger.warning(f"共跳过 {skipped_count}/{len(prompts)} 条超长prompts")
+    
+    if not valid_prompts:
+        logger.error("所有prompts都超长，返回空列表")
+        return [""] * len(prompts)
+    
     # 检测prompt是否已经格式化（避免双重格式化）
-    # 如果prompt中已包含<|im_start|>标记，说明已经格式�
+    # 如果prompt中已包含<|im_start|>标记，说明已经格式�
     try:
         # vLLM批量生成 - 禁用内部进度条避免输出混乱
-        outputs = model.generate(prompts, sampling_params, use_tqdm=False)
+        outputs = model.generate(valid_prompts, sampling_params, use_tqdm=False)
         
         # 提取生成的文本
-        results = [output.outputs[0].text.strip() for output in outputs]
+        valid_results = [output.outputs[0].text.strip() for output in outputs]
+        
+        # 将结果映射回原始索引（被跳过的位置填充空字符串）
+        results = []
+        valid_idx = 0
+        for idx in range(len(prompts)):
+            if idx in valid_indices:
+                results.append(valid_results[valid_idx])
+                valid_idx += 1
+            else:
+                results.append("")  # 超长prompt返回空字符串
         
         return results
         

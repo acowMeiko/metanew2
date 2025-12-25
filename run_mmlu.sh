@@ -4,7 +4,7 @@
 # 使用：bash run_mmlu.sh
 # =================================================================
 
-set -e  # 遇到错误立即退出
+# 不使用 set -e，允许单个文件失败后继续
 
 # ==================== GPU 配置 ====================
 export CUDA_VISIBLE_DEVICES="6,7"  # 使用 GPU 6,7
@@ -76,9 +76,16 @@ for file in "${MMLU_FILES[@]}"; do
     # 运行数据生成（输出会追加到同一个文件）
     echo "开始生成 DPO 数据..." | tee -a "${LOG_FILE}"
     
-    if python stage_first.py 2>&1 | tee -a "${LOG_FILE}"; then
-        echo "✅ 完成: ${file}" | tee -a "${LOG_FILE}"
-        ((success_count++))
+    # 使用 || true 确保即使失败也继续
+    if python stage_first.py 2>&1 | tee -a "${LOG_FILE}" || true; then
+        # 检查是否真的成功（通过检查输出文件）
+        if grep -q "DPO数据生成完成" "${LOG_FILE}" 2>/dev/null; then
+            echo "✅ 完成: ${file}" | tee -a "${LOG_FILE}"
+            ((success_count++))
+        else
+            echo "⚠️  可能失败: ${file}" | tee -a "${LOG_FILE}"
+            ((fail_count++))
+        fi
     else
         echo "❌ 失败: ${file}" | tee -a "${LOG_FILE}"
         ((fail_count++))

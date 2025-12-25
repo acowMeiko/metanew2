@@ -442,6 +442,16 @@ def prepare_stage1(dataset):
             logger.info(f"批次 [{batch_start+1}-{batch_end}] 本地推理完成")
         
         logger.info(f"阶段1完成: 共生成 {len(all_baseline_answers)} 条本地推理结果")
+        
+        # 检查阶段1的空值（超长prompts会被跳过，返回空字符串）
+        empty_baseline = sum(1 for x in all_baseline_answers if not x)
+        empty_rejected = sum(1 for x in all_rejected if not x)
+        
+        if empty_baseline > 0:
+            logger.warning(f"⚠️  {empty_baseline}/{len(all_baseline_answers)} 条baseline答案为空（可能因prompt超长被跳过）")
+        if empty_rejected > 0:
+            logger.warning(f"⚠️  {empty_rejected}/{len(all_rejected)} 条rejected原则为空（可能因prompt超长被跳过）")
+        
     except Exception as e:
         logger.error(f"生成DPO数据时发生错误: {e}", exc_info=True)
         raise
