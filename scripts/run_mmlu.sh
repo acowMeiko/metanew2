@@ -38,18 +38,9 @@ echo "输出目录: ${OUTPUT_DIR}" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 
-# MMLU 任务列表（10个学科）
+# MMLU 任务列表（只运行test.json）
 MMLU_TASKS=(
-    "college_computer_science"
-    "college_mathematics"
-    "college_physics"
-    "conceptual_physics"
-    "formal_logic"
-    "high_school_mathematics"
-    "high_school_physics"
-    "high_school_statistics"
-    "moral_scenarios"
-    "philosophy"
+    "test"
 )
 
 echo "MMLU 共有 ${#MMLU_TASKS[@]} 个任务 (每个任务独立保存)" | tee -a "${LOG_FILE}"
