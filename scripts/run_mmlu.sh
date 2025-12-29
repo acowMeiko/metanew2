@@ -1,10 +1,10 @@
 #!/bin/bash
 # ==================== MMLU 数据集 DPO 数据生成 ====================
-# 功能：处理 MMLU 所有数据文件（4个），生成统一的 DPO 数据
+# 功能：处理 MMLU 所有任务（10个学科），每个任务单独保存
 # 使用：bash run_mmlu.sh
 # =================================================================
 
-# 不使用 set -e，允许单个文件失败后继续
+# 不使用 set -e，允许单个任务失败后继续
 
 # ==================== GPU 配置 ====================
 export CUDA_VISIBLE_DEVICES="6,7"  # 使用 GPU 6,7 (MMLU专用，与BBH的0,1不冲突)
@@ -29,7 +29,7 @@ TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 LOG_FILE="${LOG_DIR}/mmlu_${TIMESTAMP}.log"
 
 echo "==========================================" | tee -a "${LOG_FILE}"
-echo "MMLU 数据集 DPO 数据生成 (每个文件独立保存)" | tee -a "${LOG_FILE}"
+echo "MMLU 数据集 DPO 数据生成 (每个任务独立保存)" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "GPU: ${CUDA_VISIBLE_DEVICES}" | tee -a "${LOG_FILE}"
 echo "批次大小: ${BATCH_SIZE}" | tee -a "${LOG_FILE}"
@@ -38,43 +38,47 @@ echo "输出目录: ${OUTPUT_DIR}" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 
-# MMLU 数据文件列表
-MMLU_FILES=(
-    "auxiliary_train"
-    "dev"
-    "test"
-    "validation"
+# MMLU 任务列表（10个学科）
+MMLU_TASKS=(
+    "college_computer_science"
+    "college_mathematics"
+    "college_physics"
+    "conceptual_physics"
+    "formal_logic"
+    "high_school_mathematics"
+    "high_school_physics"
+    "high_school_statistics"
+    "moral_scenarios"
+    "philosophy"
 )
 
-echo "MMLU 共有 ${#MMLU_FILES[@]} 个数据文件" | tee -a "${LOG_FILE}"
-echo "" | tee -a "${LOG_FILE}"
-echo "MMLU 共有 ${#MMLU_FILES[@]} 个文件 (每个文件独立保存)" | tee -a "${LOG_FILE}"
+echo "MMLU 共有 ${#MMLU_TASKS[@]} 个任务 (每个任务独立保存)" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 
-# 处理每个 MMLU 文件
+# 处理每个 MMLU 任务
 success_count=0
 fail_count=0
 total_lines=0
 
-for file in "${MMLU_FILES[@]}"; do
+for task in "${MMLU_TASKS[@]}"; do
     echo "----------------------------------------" | tee -a "${LOG_FILE}"
-    echo "处理文件 [$((success_count + fail_count + 1))/${#MMLU_FILES[@]}]: ${file}" | tee -a "${LOG_FILE}"
+    echo "处理任务 [$((success_count + fail_count + 1))/${#MMLU_TASKS[@]}]: ${task}" | tee -a "${LOG_FILE}"
     echo "----------------------------------------" | tee -a "${LOG_FILE}"
     
-    # 为每个文件设置独立的输出文件
-    export DPO_OUTPUT_FILE="${OUTPUT_DIR}/dpo_${file}.jsonl"
+    # 为每个任务设置独立的输出文件
+    export DPO_OUTPUT_FILE="${OUTPUT_DIR}/dpo_${task}.jsonl"
     
     # 设置数据集路径
-    export DATASET_PATH="${DATASET_DIR}/${file}.json"
+    export DATASET_PATH="${DATASET_DIR}/${task}.json"
     
     # 检查文件是否存在
     if [ ! -f "${DATASET_PATH}" ]; then
-        echo "⚠️  警告: 文件不存在 - ${DATASET_PATH}，跳过" | tee -a "${LOG_FILE}"
+        echo "⚠️  警告: 任务文件不存在 - ${DATASET_PATH}，跳过" | tee -a "${LOG_FILE}"
         ((fail_count++))
         continue
     fi
     
-    # 运行数据生成（每个文件独立输出）
+    # 运行数据生成（每个任务独立输出）
     echo "开始生成 DPO 数据..." | tee -a "${LOG_FILE}"
     echo "输出文件: ${DPO_OUTPUT_FILE}" | tee -a "${LOG_FILE}"
     
@@ -84,15 +88,15 @@ for file in "${MMLU_FILES[@]}"; do
         if [ -f "${DPO_OUTPUT_FILE}" ] && [ -s "${DPO_OUTPUT_FILE}" ]; then
             file_lines=$(wc -l < "${DPO_OUTPUT_FILE}")
             file_size=$(du -h "${DPO_OUTPUT_FILE}" | cut -f1)
-            echo "✅ 完成: ${file} (${file_lines} 条, ${file_size})" | tee -a "${LOG_FILE}"
+            echo "✅ 完成: ${task} (${file_lines} 条, ${file_size})" | tee -a "${LOG_FILE}"
             ((success_count++))
             total_lines=$((total_lines + file_lines))
         else
-            echo "⚠️  可能失败: ${file} (输出文件为空或不存在)" | tee -a "${LOG_FILE}"
+            echo "⚠️  可能失败: ${task} (输出文件为空或不存在)" | tee -a "${LOG_FILE}"
             ((fail_count++))
         fi
     else
-        echo "❌ 失败: ${file}" | tee -a "${LOG_FILE}"
+        echo "❌ 失败: ${task}" | tee -a "${LOG_FILE}"
         ((fail_count++))
     fi
     
@@ -104,8 +108,8 @@ echo "" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
 echo "MMLU 数据集处理完成" | tee -a "${LOG_FILE}"
 echo "==========================================" | tee -a "${LOG_FILE}"
-echo "成功: ${success_count}/${#MMLU_FILES[@]}" | tee -a "${LOG_FILE}"
-echo "失败: ${fail_count}/${#MMLU_FILES[@]}" | tee -a "${LOG_FILE}"
+echo "成功: ${success_count}/${#MMLU_TASKS[@]}" | tee -a "${LOG_FILE}"
+echo "失败: ${fail_count}/${#MMLU_TASKS[@]}" | tee -a "${LOG_FILE}"
 echo "总数据量: ${total_lines} 条" | tee -a "${LOG_FILE}"
 echo "" | tee -a "${LOG_FILE}"
 echo "生成的文件列表:" | tee -a "${LOG_FILE}"
