@@ -183,15 +183,25 @@ def prepare_step2_update_memory_from_dpo():
             regenerated = regenerated_list[idx]
             
             # 从生成的文本中提取JSON（模型可能生成解释性文本和重复内容）
+            # 预处理：去除 markdown 代码块标记
+            task_desc_clean = task_desc_new.strip()
+            if task_desc_clean.startswith('```json'):
+                task_desc_clean = task_desc_clean[7:]  # 去掉 ```json
+            elif task_desc_clean.startswith('```'):
+                task_desc_clean = task_desc_clean[3:]  # 去掉 ```
+            if task_desc_clean.endswith('```'):
+                task_desc_clean = task_desc_clean[:-3]  # 去掉结尾的 ```
+            task_desc_clean = task_desc_clean.strip()
+            
             try:
-                # 尝试直接解析
-                task_obj = json.loads(task_desc_new)
+                # 尝试直接解析清理后的内容
+                task_obj = json.loads(task_desc_clean)
                 desc = task_obj.get("taskDescription", {}).get("description")
             except (json.JSONDecodeError, KeyError, AttributeError):
                 # 如果直接解析失败，尝试提取第一个完整JSON块
                 try:
-                    # 策略1: 提取 ```json ... ``` 中的第一个JSON
-                    json_match = re.search(r'```json\s*(\{[^`]+?\})\s*```', task_desc_new, re.DOTALL)
+                    # 策略1: 查找第一个包含 taskDescription 的完整JSON对象
+                    json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_clean, re.DOTALL)
                     if not json_match:
                         # 策略2: 查找第一个包含 taskDescription 的完整JSON对象
                         json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_new, re.DOTALL)
@@ -223,17 +233,27 @@ def prepare_step2_update_memory_from_dpo():
             canonical_key = existing_key if existing_principles else desc
 
             # 从生成的文本中提取原则JSON（处理重复输出）
+            # 预处理：去除 markdown 代码块标记
+            regenerated_clean = regenerated.strip()
+            if regenerated_clean.startswith('```json'):
+                regenerated_clean = regenerated_clean[7:]  # 去掉 ```json
+            elif regenerated_clean.startswith('```'):
+                regenerated_clean = regenerated_clean[3:]  # 去掉 ```
+            if regenerated_clean.endswith('```'):
+                regenerated_clean = regenerated_clean[:-3]  # 去掉结尾的 ```
+            regenerated_clean = regenerated_clean.strip()
+            
             try:
-                # 尝试直接解析
-                principles_obj = json.loads(regenerated)
+                # 尝试直接解析清理后的内容
+                principles_obj = json.loads(regenerated_clean)
                 output_list = principles_obj.get("output", [])
                 regenerated_parsed = [x.get("Principle") for x in output_list
                                       if isinstance(x, dict) and "Principle" in x]
             except (json.JSONDecodeError, KeyError, AttributeError):
                 # 如果直接解析失败，尝试提取第一个完整JSON块
                 try:
-                    # 策略1: 提取 ```json ... ``` 中的第一个JSON
-                    json_match = re.search(r'```json\s*(\{[^`]+?\})\s*```', regenerated, re.DOTALL)
+                    # 策略1: 查找第一个包含 output 数组的完整JSON对象
+                    json_match = re.search(r'\{\s*"output"\s*:\s*\[[^\]]*?\{[^}]*?"Principle"[^}]*?\}[^\]]*?\]\s*\}', regenerated_clean, re.DOTALL)
                     if not json_match:
                         # 策略2: 查找第一个包含 output 数组的完整JSON对象
                         json_match = re.search(r'\{\s*"output"\s*:\s*\[[^\]]*?\{[^}]*?"Principle"[^}]*?\}[^\]]*?\]\s*\}', regenerated, re.DOTALL)
