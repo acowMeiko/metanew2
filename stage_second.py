@@ -90,17 +90,18 @@ def prepare_step2_update_memory_from_dpo():
             diff = None
             
             # 1. 尝试从 input 字段提取 (LlamaFactory 格式)
-            if 'input' in item and 'Error Analysis:' in item['input']:
+            # 支持 'Error Analysis:' 和 'Error Points:' 两种格式
+            if 'input' in item:
                 input_text = item['input']
                 # 提取 Question
-                # 匹配 "Question: " 开头，直到 "Error Analysis:" 前
-                q_match = re.search(r'Question:\s*(.*?)\s*Error Analysis:', input_text, re.DOTALL)
+                # 匹配 "Question: " 开头，直到 "Error Analysis:" 或 "Error Points:" 前
+                q_match = re.search(r'Question:\s*(.*?)\s*(?:Error Analysis:|Error Points:)', input_text, re.DOTALL)
                 if q_match:
                     question = q_match.group(1).strip()
                 
                 # 提取 Diff
-                # 匹配 "Error Analysis:" 后面的所有内容
-                d_match = re.search(r'Error Analysis:\s*(.*?)$', input_text, re.DOTALL)
+                # 匹配 "Error Analysis:" 或 "Error Points:" 后面的所有内容
+                d_match = re.search(r'(?:Error Analysis:|Error Points:)\s*(.*?)$', input_text, re.DOTALL)
                 if d_match:
                     diff = d_match.group(1).strip()
             
@@ -143,9 +144,16 @@ def prepare_step2_update_memory_from_dpo():
         logger.info("批量生成任务描述...")
         task_descs = batch_generate_task_descriptions(questions)
         
-        # 批量生成新原则（使用弱模型）
-        logger.info("批量生成新原则...")
-        regenerated_list = batch_generate_principles(questions, diffs, model="weak")
+        # 从 chosen 字段直接提取原则（llamafactory 格式已包含高质量原则）
+        logger.info("提取 chosen 原则...")
+        regenerated_list = []
+        for i in range(start_index, len(dpo_data)):
+            item = dpo_data[i]
+            # 跳过被过滤的项
+            if not any(bd['index'] == i for bd in batch_data):
+                continue
+            chosen_text = item.get('chosen', '')
+            regenerated_list.append(chosen_text)
 
         # === 新增：保存中间生成结果 ===
         intermediate_output_file = Path(config.output_dir) / "stage2_generated.json"
