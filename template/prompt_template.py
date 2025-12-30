@@ -148,7 +148,7 @@ Difference: $diff_list
   ]
 }}
 ''')
-PRINCIPLE_MATCH_PROMPT = '''
+PRINCIPLE_MATCH_PROMPT = Template('''
 Your goal is to compare the new_principle against each of the existing_principles, and decide one of the following for each:
 1. Redundant: if the new and old principle express essentially the same idea.Prefer the newer one.
 2. Conflicting: if the two principles provide contradictory guidance. Keep the one that is more general or correct.
@@ -166,7 +166,7 @@ Please return your evaluation in the following JSON format exactly:
 
 
 <input>
-New_principle: {new}
-Existing_principle:{old}
+New_principle: $new
+Existing_principle:$old
 </input>
-'''
+''')
