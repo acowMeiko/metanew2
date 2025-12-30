@@ -126,8 +126,10 @@ def answer_with_principles(question: str, principles: list, use_local: bool = Tr
 # ==================== 批量推理函数（新增） ====================
 
 def batch_generate_task_descriptions(questions: List[str]) -> List[str]:
+    import config
     prompts = [TASK_DESC_PROMPT.substitute(question=q) for q in questions]
-    return batch_inference(prompts)
+    # 使用专用的任务描述长度限制
+    return batch_inference(prompts, max_tokens=config.TASK_DESC_MAX_TOKENS)
 
 
 def batch_answer_questions_directly(questions: List[str]) -> List[str]:

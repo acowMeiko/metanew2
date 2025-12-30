@@ -36,7 +36,8 @@ def prepare_step2_update_memory_from_dpo():
     memory = MemoryManager()
     logger.info("MemoryManager 初始化完成")
     
-    dpo_file = Path(config.data_levels_file)
+    # dpo_file = Path(config.data_levels_file)
+    dpo_file = Path(config.test_file)  # 测试路径
     checkpoint_file = Path(config.memory_checkpoint_file)
     
     if not dpo_file.exists():
@@ -44,17 +45,17 @@ def prepare_step2_update_memory_from_dpo():
         return
     
     try:
-        # 支持 JSONL 和 JSON 格式
-        dpo_data = []
-        if dpo_file.suffix == '.jsonl':
-            with open(dpo_file, 'r', encoding='utf-8') as f:
-                for line in f:
-                    if line.strip():
-                        dpo_data.append(json.loads(line))
-        else:
-            # 读取 LlamaFactory 格式的 JSON 文件（数组格式）
-            with open(dpo_file, 'r', encoding='utf-8') as f:
-                dpo_data = json.load(f)
+        # # 支持 JSONL 和 JSON 格式
+        # dpo_data = []
+        # if dpo_file.suffix == '.jsonl':
+        #     with open(dpo_file, 'r', encoding='utf-8') as f:
+        #         for line in f:
+        #             if line.strip():
+        #                 dpo_data.append(json.loads(line))
+        # else:
+        #     # 读取 LlamaFactory 格式的 JSON 文件（数组格式）
+        with open(dpo_file, 'r', encoding='utf-8') as f:
+            dpo_data = json.load(f)
         
         if not isinstance(dpo_data, list):
             logger.error(f"数据格式错误: 期望列表格式，实际为 {type(dpo_data)}")
