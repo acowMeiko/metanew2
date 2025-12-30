@@ -238,6 +238,7 @@ def prepare_step2_update_memory_from_dpo():
 
             # 定期保存断点
             if (idx + 1) % config.SAVE_FREQUENCY == 0:
+                checkpoint_file.parent.mkdir(parents=True, exist_ok=True)
                 with open(checkpoint_file, 'w') as cf:
                     json.dump({"last_index": i + 1}, cf)
 
