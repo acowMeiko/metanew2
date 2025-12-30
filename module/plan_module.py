@@ -96,8 +96,13 @@ def batch_generate_principles(questions: List[str], diff_lists: List[str], model
     ]
     
     if model == "weak":
-        # 弱模型使用本地批量推理
-        return batch_inference(prompts)
+        # 弱模型使用本地批量推理，添加停止序列防止重复生成
+        stop_sequences = ["```json", "}\n```", "**Final Answer:**", "Final Answer", "Final Output"]
+        return batch_inference(
+            prompts, 
+            max_tokens=config.PRINCIPLE_MAX_TOKENS,
+            stop=stop_sequences
+        )
     else:
         # 强模型使用API（在main_pipeline.py中并发调用）
         # 这里不应该被调用，如果需要应该使用concurrent_generate_chosen

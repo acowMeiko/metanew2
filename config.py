@@ -18,8 +18,14 @@ STRONG_MODEL_KEY = os.getenv('STRONG_MODEL_KEY', 'sk-0tKGY03c9OJPODlWGzAGPw')
 
 DEFAULT_TEMPERATURE = float(os.getenv('DEFAULT_TEMPERATURE', '0.1'))
 DEFAULT_TOP_P = float(os.getenv('DEFAULT_TOP_P', '0.95  '))  # top_p 必须在 (0, 1] 区间
-# 提升默认生成长度，避免接口截断；如需更短可通过环境变量覆盖
-DEFAULT_MAX_TOKENS = int(os.getenv('DEFAULT_MAX_TOKENS', '8192'))
+
+# ==================== 生成长度限制配置 ====================
+DEFAULT_MAX_TOKENS = int(os.getenv('DEFAULT_MAX_TOKENS', '2048'))  # 从8192降到2048，避免重复生成
+# 专用生成长度限制（用于特定任务）
+TASK_DESC_MAX_TOKENS = 512      # 任务描述生成
+DIFF_ANALYSIS_MAX_TOKENS = 1024  # 差异分析生成  
+PRINCIPLE_MAX_TOKENS = 1024       # 原则生成（降低到300,原则通常很短）
+ANSWER_MAX_TOKENS = 2048         # 答案生成
 
 # ==================== Memory配置 ====================
  
@@ -45,7 +51,7 @@ memory_checkpoint_file = os.path.join(check_root, 'memory_progress.json')  #Memo
 # 支持通过环境变量自定义输出文件名
 dpo_final_file = os.getenv('DPO_OUTPUT_FILE', os.path.join(output_dir, 'dpo_final.jsonl'))  #最终DPO数据文件路径
 data_levels_file = os.path.join(data_dir, 'dpo_llamafactory', 'dpo_level_level2_llamafactory.json')  #数据级别文件路径
-
+test_file = os.path.join(data_dir,"test", "test_memory.json")  #测试数据文件路径
 # 超参数
 batch_size = 64  #本地推理批次大小
 output_dir = os.path.join(Project_ROOT, 'output')  #输出目录

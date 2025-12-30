@@ -81,6 +81,7 @@ def batch_inference(
     temperature: Optional[float] = None,
     top_p: Optional[float] = None,
     max_tokens: Optional[int] = None,
+    stop: Optional[List[str]] = None,
     use_tqdm: bool = True
 ) -> List[str]:
     """
@@ -91,6 +92,7 @@ def batch_inference(
         temperature: 温度参数（可选）
         top_p: top_p参数（可选）
         max_tokens: 最大token数（可选）
+        stop: 停止序列列表（可选）
         use_tqdm: 是否显示进度条
         
     Returns:
@@ -107,6 +109,7 @@ def batch_inference(
         temperature=temperature or config.DEFAULT_TEMPERATURE,
         top_p=top_p or config.DEFAULT_TOP_P,
         max_tokens=max_tokens or config.DEFAULT_MAX_TOKENS,
+        stop=stop
     )
     
     logger.debug(f"批量推理: {len(prompts)} 条数据")

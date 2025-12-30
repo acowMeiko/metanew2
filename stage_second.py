@@ -1,4 +1,3 @@
-from asyncio.log import logger
 import json
 import config
 from pathlib import Path
@@ -23,6 +22,8 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+
+logger = logging.getLogger(__name__)
 
 def prepare_step2_update_memory_from_dpo():
     """
