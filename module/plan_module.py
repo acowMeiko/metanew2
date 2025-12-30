@@ -96,8 +96,9 @@ def batch_generate_principles(questions: List[str], diff_lists: List[str], model
     ]
     
     if model == "weak":
-        # 弱模型使用本地批量推理，添加停止序列防止重复生成
-        stop_sequences = ["```json", "}\n```", "**Final Answer:**", "Final Answer", "Final Output"]
+        # 弱模型使用本地批量推理，使用较小的max_tokens防止重复生成
+        # 注意：不使用```json作为stop序列，因为prompt中可能包含它
+        stop_sequences = ["**Final Answer:**", "Final Answer", "Final Output", "\n\n\n"]
         return batch_inference(
             prompts, 
             max_tokens=config.PRINCIPLE_MAX_TOKENS,
