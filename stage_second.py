@@ -174,13 +174,28 @@ def prepare_step2_update_memory_from_dpo():
             task_desc_new = task_descs[idx]
             regenerated = regenerated_list[idx]
             
-            # 直接解析任务描述 JSON
+            # 从生成的文本中提取JSON（模型可能生成解释性文本）
             try:
+                # 尝试直接解析
                 task_obj = json.loads(task_desc_new)
                 desc = task_obj.get("taskDescription", {}).get("description")
-            except (json.JSONDecodeError, KeyError, AttributeError) as e:
-                logger.warning(f"第 {i} 项解析任务描述失败: {e}，跳过")
-                continue
+            except (json.JSONDecodeError, KeyError, AttributeError):
+                # 如果直接解析失败，尝试提取JSON块
+                try:
+                    # 查找 ```json ... ``` 或 { ... } 格式的JSON
+                    json_match = re.search(r'```json\s*(\{.*?\})\s*```', task_desc_new, re.DOTALL)
+                    if not json_match:
+                        json_match = re.search(r'(\{[^}]*"taskDescription"[^}]*\})', task_desc_new, re.DOTALL)
+                    
+                    if json_match:
+                        task_obj = json.loads(json_match.group(1))
+                        desc = task_obj.get("taskDescription", {}).get("description")
+                    else:
+                        logger.warning(f"第 {i} 项无法提取任务描述JSON，跳过")
+                        continue
+                except Exception as e:
+                    logger.warning(f"第 {i} 项解析任务描述失败: {e}，跳过")
+                    continue
 
             if not desc:
                 logger.warning(f"第 {i} 项任务描述为空，跳过")
@@ -190,15 +205,31 @@ def prepare_step2_update_memory_from_dpo():
             existing_key, existing_principles = memory.retrieve(desc)
             canonical_key = existing_key if existing_principles else desc
 
-            # 直接解析新原则 JSON
+            # 从生成的文本中提取原则JSON
             try:
+                # 尝试直接解析
                 principles_obj = json.loads(regenerated)
                 output_list = principles_obj.get("output", [])
                 regenerated_parsed = [x.get("Principle") for x in output_list
                                       if isinstance(x, dict) and "Principle" in x]
-            except (json.JSONDecodeError, KeyError, AttributeError) as e:
-                logger.warning(f"第 {i} 项解析原则失败: {e}")
-                regenerated_parsed = None
+            except (json.JSONDecodeError, KeyError, AttributeError):
+                # 如果直接解析失败，尝试提取JSON块
+                try:
+                    json_match = re.search(r'```json\s*(\{.*?\})\s*```', regenerated, re.DOTALL)
+                    if not json_match:
+                        json_match = re.search(r'(\{[^}]*"output"[^}]*\})', regenerated, re.DOTALL)
+                    
+                    if json_match:
+                        principles_obj = json.loads(json_match.group(1))
+                        output_list = principles_obj.get("output", [])
+                        regenerated_parsed = [x.get("Principle") for x in output_list
+                                              if isinstance(x, dict) and "Principle" in x]
+                    else:
+                        logger.warning(f"第 {i} 项无法提取原则JSON")
+                        regenerated_parsed = None
+                except Exception as e:
+                    logger.warning(f"第 {i} 项解析原则失败: {e}")
+                    regenerated_parsed = None
 
             # 合并并保存
             if regenerated_parsed:
