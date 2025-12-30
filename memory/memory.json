@@ -2197,7 +2197,8 @@
     "To construct the smallest possible number with specific digit constraints, place the required digits in the rightmost positions while keeping the leftmost digits as small as possible."
   ],
   "Determine the length of side BC in an acute triangle ABC given specific geometric properties and relationships involving the circumcenter and centroid.": [
-    "Avoid unnecessary geometric constructs like the Euler line when solving problems, focusing instead on directly relevant geometric properties and relationships."
+    "Avoid unnecessary geometric constructs like the Euler line when solving problems, focusing instead on directly relevant geometric properties and relationships.",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts Maintain strict factual precision through quantitative specifications and qualified statements Address multidimensional impacts by considering both technical specifications and human factors Enhance practical utility through actionable implementation guidance Establish contextual relevance through explicit connections to application scenarios"
   ],
   "Calculate the area of triangle AEF formed by the intersection of angle bisectors and perpendicular bisectors in triangle ABC, given the side lengths AB=4, BC=5, and CA=6.": [
     "In geometric problems, utilize known properties and symmetries to simplify calculations and provide detailed step-by-step reasoning to ensure the correctness and clarity of the final answer."
@@ -2208,5 +2209,12 @@
   ],
   "Compute the inverse cosine of a sine value.": [
     "When solving trigonometric equations, consider the periodicity of the trigonometric functions to identify all possible solutions within the defined range."
+  ],
+  "Determine the number of ways to partition a set of 12 elements into three nonempty subsets such that no subset contains two consecutive integers.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
   ]
 }
