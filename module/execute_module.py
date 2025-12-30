@@ -69,13 +69,21 @@ def batch_generate_task_descriptions(questions: List[str]) -> List[str]:
     Returns:
         任务描述列表
     """
+    import config
     from template.prompt_template import format
     # 先应用任务描述模板，再应用对话格式
     prompts = [
         format.substitute(query=TASK_DESC_PROMPT.substitute(question=q))
         for q in questions
     ]
-    return batch_inference(prompts)
+    # 使用专用的 max_tokens 限制，并添加 stop 序列防止重复
+    stop_sequences = ["```\n\n", "}\n```", "Final Answer", "\n\n\n\n", "\\boxed"]
+    return batch_inference(
+        prompts,
+        max_tokens=config.TASK_DESC_MAX_TOKENS,
+        temperature=0.1,
+        stop=stop_sequences
+    )
 def generate_task_description(question: str, use_local: bool = True) -> str:
     """
     生成任务描述
