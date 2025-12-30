@@ -137,10 +137,9 @@ def batch_generate_task_descriptions(questions: List[str]) -> List[str]:
     import config
     prompts = [TASK_DESC_PROMPT.substitute(question=q) for q in questions]
     
-    # 使用更多stop序列防止重复生成
+    # 移除会导致JSON提前截断的stop序列
     stop_sequences = [
-        "```\n\n",
-        "}\n```",
+        "\n\n```json",  # 防止生成多个JSON块
         "Final Answer",
         "\n\n\n\n",
     ]
