@@ -174,21 +174,30 @@ def prepare_step2_update_memory_from_dpo():
             task_desc_new = task_descs[idx]
             regenerated = regenerated_list[idx]
             
-            # 从生成的文本中提取JSON（模型可能生成解释性文本）
+            # 从生成的文本中提取JSON（模型可能生成解释性文本和重复内容）
             try:
                 # 尝试直接解析
                 task_obj = json.loads(task_desc_new)
                 desc = task_obj.get("taskDescription", {}).get("description")
             except (json.JSONDecodeError, KeyError, AttributeError):
-                # 如果直接解析失败，尝试提取JSON块
+                # 如果直接解析失败，尝试提取第一个完整JSON块
                 try:
-                    # 查找 ```json ... ``` 或 { ... } 格式的JSON
-                    json_match = re.search(r'```json\s*(\{.*?\})\s*```', task_desc_new, re.DOTALL)
+                    # 策略1: 提取 ```json ... ``` 中的第一个JSON
+                    json_match = re.search(r'```json\s*(\{[^`]+?\})\s*```', task_desc_new, re.DOTALL)
                     if not json_match:
-                        json_match = re.search(r'(\{[^}]*"taskDescription"[^}]*\})', task_desc_new, re.DOTALL)
+                        # 策略2: 查找第一个包含 taskDescription 的完整JSON对象
+                        json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_new, re.DOTALL)
+                    if not json_match:
+                        # 策略3: 查找任意第一个 { ... } 结构
+                        json_match = re.search(r'(\{(?:[^{}]|\{[^{}]*\})*\})', task_desc_new, re.DOTALL)
                     
                     if json_match:
-                        task_obj = json.loads(json_match.group(1))
+                        json_str = json_match.group(1) if json_match.groups() else json_match.group(0)
+                        # 只保留第一个JSON，截断重复内容
+                        if json_str.count('{') > json_str.count('}'):
+                            # 如果括号不匹配，尝试修复
+                            json_str = json_str[:json_str.rfind('}')+1]
+                        task_obj = json.loads(json_str)
                         desc = task_obj.get("taskDescription", {}).get("description")
                     else:
                         logger.warning(f"第 {i} 项无法提取任务描述JSON，跳过")
@@ -205,7 +214,7 @@ def prepare_step2_update_memory_from_dpo():
             existing_key, existing_principles = memory.retrieve(desc)
             canonical_key = existing_key if existing_principles else desc
 
-            # 从生成的文本中提取原则JSON
+            # 从生成的文本中提取原则JSON（处理重复输出）
             try:
                 # 尝试直接解析
                 principles_obj = json.loads(regenerated)
@@ -213,14 +222,24 @@ def prepare_step2_update_memory_from_dpo():
                 regenerated_parsed = [x.get("Principle") for x in output_list
                                       if isinstance(x, dict) and "Principle" in x]
             except (json.JSONDecodeError, KeyError, AttributeError):
-                # 如果直接解析失败，尝试提取JSON块
+                # 如果直接解析失败，尝试提取第一个完整JSON块
                 try:
-                    json_match = re.search(r'```json\s*(\{.*?\})\s*```', regenerated, re.DOTALL)
+                    # 策略1: 提取 ```json ... ``` 中的第一个JSON
+                    json_match = re.search(r'```json\s*(\{[^`]+?\})\s*```', regenerated, re.DOTALL)
                     if not json_match:
-                        json_match = re.search(r'(\{[^}]*"output"[^}]*\})', regenerated, re.DOTALL)
+                        # 策略2: 查找第一个包含 output 数组的完整JSON对象
+                        json_match = re.search(r'\{\s*"output"\s*:\s*\[[^\]]*?\{[^}]*?"Principle"[^}]*?\}[^\]]*?\]\s*\}', regenerated, re.DOTALL)
+                    if not json_match:
+                        # 策略3: 查找任意第一个包含"output"的JSON
+                        json_match = re.search(r'(\{(?:[^{}]|\{[^{}]*\})*"output"(?:[^{}]|\{[^{}]*\})*\})', regenerated, re.DOTALL)
                     
                     if json_match:
-                        principles_obj = json.loads(json_match.group(1))
+                        json_str = json_match.group(1) if json_match.groups() else json_match.group(0)
+                        # 截断重复的JSON内容（如果存在多个相同的JSON块）
+                        first_closing = json_str.find('}\n}')
+                        if first_closing > 0:
+                            json_str = json_str[:first_closing+2]
+                        principles_obj = json.loads(json_str)
                         output_list = principles_obj.get("output", [])
                         regenerated_parsed = [x.get("Principle") for x in output_list
                                               if isinstance(x, dict) and "Principle" in x]

@@ -1,112 +1,0 @@
-nohup: ignoring input
-2025-12-30 12:51:30,854 - __main__ - INFO - ============================================================
-2025-12-30 12:51:30,854 - __main__ - INFO - Step 2: 开始更新Memory
-2025-12-30 12:51:30,854 - __main__ - INFO - ============================================================
-2025-12-30 12:51:30,855 - __main__ - INFO - MemoryManager 初始化完成
-2025-12-30 12:51:30,869 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
-2025-12-30 12:51:30,888 - __main__ - INFO - 准备批处理 396 条数据
-2025-12-30 12:51:30,889 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
-2025-12-30 12:51:30,889 - __main__ - INFO - 批量生成任务描述...
-INFO 12-30 12:51:34 [__init__.py:239] Automatically detected platform cuda.
-2025-12-30 12:51:35,227 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1
-2025-12-30 12:51:35,227 - inference.local_inference - INFO - ============================================================
-2025-12-30 12:51:35,227 - inference.local_inference - INFO - 初始化vLLM本地模型...
-2025-12-30 12:51:35,227 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
-2025-12-30 12:51:35,227 - inference.local_inference - INFO - ============================================================
-`torch_dtype` is deprecated! Use `dtype` instead!
-INFO 12-30 12:51:41 [config.py:585] This model supports multiple tasks: {'generate', 'reward', 'score', 'embed', 'classify'}. Defaulting to 'generate'.
-INFO 12-30 12:51:41 [config.py:1519] Defaulting to use mp for distributed inference
-INFO 12-30 12:51:41 [config.py:1697] Chunked prefill is enabled with max_num_batched_tokens=8192.
-INFO 12-30 12:51:42 [core.py:54] Initializing a V1 LLM engine (v0.8.2) with config: model='/home/models/qwen_dpo2_lora', speculative_config=None, tokenizer='/home/models/qwen_dpo2_lora', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=2, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=/home/models/qwen_dpo2_lora, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
-WARNING 12-30 12:51:42 [multiproc_worker_utils.py:306] Reducing Torch parallelism from 64 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
-INFO 12-30 12:51:42 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1], buffer_handle=(2, 10485760, 10, 'psm_c728d45c'), local_subscribe_addr='ipc:///tmp/30006302-efb4-4446-8928-1c8b9a51ce7f', remote_subscribe_addr=None, remote_addr_ipv6=False)
-WARNING 12-30 12:51:43 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f672221e750>
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:43 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_9e79aff5'), local_subscribe_addr='ipc:///tmp/cf0bcc4a-868a-4357-97c2-250bab72371f', remote_subscribe_addr=None, remote_addr_ipv6=False)
-WARNING 12-30 12:51:43 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f69636cb110>
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:43 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_0764ffa4'), local_subscribe_addr='ipc:///tmp/2d4db7d9-2973-4d31-9719-ff13dbc4004a', remote_subscribe_addr=None, remote_addr_ipv6=False)
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [utils.py:931] Found nccl from library libnccl.so.2
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [pynccl.py:69] vLLM is using nccl==2.21.5
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:44 [utils.py:931] Found nccl from library libnccl.so.2
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:44 [pynccl.py:69] vLLM is using nccl==2.21.5
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:44 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1.json
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[1], buffer_handle=(1, 4194304, 6, 'psm_49691e9e'), local_subscribe_addr='ipc:///tmp/36f22f69-6a76-484f-96cd-0c13b399eced', remote_subscribe_addr=None, remote_addr_ipv6=False)
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:44 [parallel_state.py:954] rank 1 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 1
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [parallel_state.py:954] rank 0 in world size 2 is assigned as DP rank 0, PP rank 0, TP rank 0
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:44 [cuda.py:220] Using Flash Attention backend on V1 engine.
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [cuda.py:220] Using Flash Attention backend on V1 engine.
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:44 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:44 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo2_lora...
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m WARNING 12-30 12:51:45 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m WARNING 12-30 12:51:45 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/6 [00:00<?, ?it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards:  17% Completed | 1/6 [00:00<00:04,  1.07it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards:  33% Completed | 2/6 [00:01<00:03,  1.08it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards:  50% Completed | 3/6 [00:02<00:02,  1.12it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards:  67% Completed | 4/6 [00:03<00:01,  1.23it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards:  83% Completed | 5/6 [00:04<00:00,  1.25it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:04<00:00,  1.35it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:04<00:00,  1.25it/s]
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m 
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:50 [loader.py:447] Loading weights took 4.86 seconds
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:50 [loader.py:447] Loading weights took 4.89 seconds
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:51:50 [gpu_model_runner.py:1186] Model loading took 13.9281 GB and 5.159746 seconds
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:51:50 [gpu_model_runner.py:1186] Model loading took 13.9281 GB and 5.194764 seconds
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:52:00 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/25a18384dd/rank_1_0 for vLLM's torch.compile
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:52:00 [backends.py:425] Dynamo bytecode transform time: 10.34 s
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:52:00 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/25a18384dd/rank_0_0 for vLLM's torch.compile
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:52:00 [backends.py:425] Dynamo bytecode transform time: 10.40 s
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:52:01 [backends.py:115] Directly load the compiled graph for shape None from the cache
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:52:01 [backends.py:115] Directly load the compiled graph for shape None from the cache
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:52:10 [monitor.py:33] torch.compile takes 10.34 s in total
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:52:10 [monitor.py:33] torch.compile takes 10.40 s in total
-INFO 12-30 12:52:12 [kv_cache_utils.py:566] GPU KV cache size: 521,072 tokens
-INFO 12-30 12:52:12 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 15.90x
-INFO 12-30 12:52:12 [kv_cache_utils.py:566] GPU KV cache size: 521,072 tokens
-INFO 12-30 12:52:12 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 15.90x
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:52:35 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:52:35 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
-[1;36m(VllmWorker rank=1 pid=65185)[0;0m INFO 12-30 12:52:35 [gpu_model_runner.py:1534] Graph capturing finished in 23 secs, took 0.72 GiB
-[1;36m(VllmWorker rank=0 pid=65173)[0;0m INFO 12-30 12:52:35 [gpu_model_runner.py:1534] Graph capturing finished in 23 secs, took 0.72 GiB
-INFO 12-30 12:52:35 [core.py:151] init engine (profile, create kv cache, warmup model) took 45.39 seconds
-2025-12-30 12:52:35,749 - inference.local_inference - INFO - vLLM模型初始化完成
-2025-12-30 12:53:15,490 - __main__ - INFO - 批量生成新原则...
-2025-12-30 12:53:59,304 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
-2025-12-30 12:53:59,331 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
-更新Memory:   0%|          | 0/396 [00:00<?, ?it/s]更新Memory:   0%|          | 1/396 [00:23<2:31:35, 23.03s/it]更新Memory:   1%|          | 2/396 [00:47<2:38:32, 24.14s/it]更新Memory:   1%|          | 3/396 [01:18<2:56:09, 26.89s/it]更新Memory:   1%|          | 4/396 [01:58<3:31:37, 32.39s/it]2025-12-30 12:55:58,273 - __main__ - WARNING - 第 4 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:   2%|▏         | 6/396 [02:19<2:14:02, 20.62s/it]更新Memory:   2%|▏         | 7/396 [02:38<2:10:31, 20.13s/it]更新Memory:   2%|▏         | 8/396 [02:59<2:11:43, 20.37s/it]更新Memory:   2%|▏         | 9/396 [03:19<2:12:14, 20.50s/it]更新Memory:   3%|▎         | 10/396 [03:40<2:11:58, 20.51s/it]更新Memory:   3%|▎         | 11/396 [04:05<2:20:29, 21.89s/it]更新Memory:   3%|▎         | 12/396 [04:27<2:19:44, 21.83s/it]更新Memory:   3%|▎         | 13/396 [04:43<2:08:59, 20.21s/it]更新Memory:   4%|▎         | 14/396 [05:04<2:09:52, 20.40s/it]更新Memory:   4%|▍         | 15/396 [05:21<2:03:46, 19.49s/it]更新Memory:   4%|▍         | 16/396 [05:46<2:12:01, 20.85s/it]更新Memory:   4%|▍         | 17/396 [06:10<2:19:25, 22.07s/it]更新Memory:   5%|▍         | 18/396 [06:32<2:17:41, 21.86s/it]更新Memory:   5%|▍         | 19/396 [06:57<2:23:19, 22.81s/it]更新Memory:   5%|▌         | 20/396 [07:19<2:21:10, 22.53s/it]更新Memory:   5%|▌         | 21/396 [07:41<2:20:20, 22.45s/it]更新Memory:   6%|▌         | 22/396 [08:03<2:19:40, 22.41s/it]更新Memory:   6%|▌         | 23/396 [08:35<2:37:30, 25.34s/it]更新Memory:   6%|▌         | 24/396 [09:16<3:04:59, 29.84s/it]2025-12-30 13:03:15,637 - __main__ - WARNING - 第 24 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 13:03:20,543 - __main__ - WARNING - 第 25 项无法提取原则JSON
-更新Memory:   7%|▋         | 26/396 [09:21<1:46:04, 17.20s/it]更新Memory:   7%|▋         | 27/396 [09:43<1:54:05, 18.55s/it]更新Memory:   7%|▋         | 28/396 [10:18<2:19:14, 22.70s/it]更新Memory:   7%|▋         | 29/396 [10:36<2:12:12, 21.61s/it]更新Memory:   8%|▊         | 30/396 [11:12<2:35:53, 25.56s/it]更新Memory:   8%|▊         | 31/396 [11:34<2:28:25, 24.40s/it]更新Memory:   8%|▊         | 32/396 [12:06<2:41:35, 26.64s/it]更新Memory:   8%|▊         | 33/396 [12:16<2:11:57, 21.81s/it]更新Memory:   9%|▊         | 34/396 [12:42<2:18:48, 23.01s/it]2025-12-30 13:06:41,663 - __main__ - WARNING - 第 34 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:   9%|▉         | 36/396 [13:02<1:42:04, 17.01s/it]更新Memory:   9%|▉         | 37/396 [13:21<1:44:35, 17.48s/it]2025-12-30 13:07:20,370 - __main__ - WARNING - 第 37 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  10%|▉         | 39/396 [13:41<1:26:00, 14.45s/it]更新Memory:  10%|█         | 40/396 [14:02<1:34:59, 16.01s/it]更新Memory:  10%|█         | 41/396 [14:25<1:44:54, 17.73s/it]2025-12-30 13:08:24,985 - __main__ - WARNING - 第 41 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  11%|█         | 43/396 [15:14<2:00:26, 20.47s/it]2025-12-30 13:09:13,743 - __main__ - WARNING - 第 43 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  11%|█▏        | 45/396 [15:38<1:41:48, 17.40s/it]更新Memory:  12%|█▏        | 46/396 [16:03<1:50:27, 18.93s/it]更新Memory:  12%|█▏        | 47/396 [16:24<1:52:53, 19.41s/it]2025-12-30 13:10:23,835 - __main__ - WARNING - 第 47 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  12%|█▏        | 49/396 [16:50<1:37:14, 16.81s/it]2025-12-30 13:10:49,579 - __main__ - WARNING - 第 49 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  13%|█▎        | 51/396 [17:23<1:36:11, 16.73s/it]更新Memory:  13%|█▎        | 52/396 [18:01<2:00:34, 21.03s/it]2025-12-30 13:12:00,419 - __main__ - WARNING - 第 52 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  14%|█▎        | 54/396 [18:19<1:34:37, 16.60s/it]更新Memory:  14%|█▍        | 55/396 [18:43<1:43:10, 18.15s/it]更新Memory:  14%|█▍        | 56/396 [18:55<1:35:02, 16.77s/it]更新Memory:  14%|█▍        | 57/396 [19:24<1:51:59, 19.82s/it]更新Memory:  15%|█▍        | 58/396 [19:43<1:50:41, 19.65s/it]更新Memory:  15%|█▍        | 59/396 [20:03<1:50:31, 19.68s/it]更新Memory:  15%|█▌        | 60/396 [20:25<1:53:44, 20.31s/it]2025-12-30 13:14:24,659 - __main__ - WARNING - 第 60 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  16%|█▌        | 62/396 [21:10<1:58:17, 21.25s/it]更新Memory:  16%|█▌        | 63/396 [21:44<2:15:08, 24.35s/it]更新Memory:  16%|█▌        | 64/396 [22:02<2:05:28, 22.68s/it]更新Memory:  16%|█▋        | 65/396 [22:42<2:31:11, 27.41s/it]更新Memory:  17%|█▋        | 66/396 [23:02<2:19:32, 25.37s/it]更新Memory:  17%|█▋        | 67/396 [23:24<2:13:09, 24.28s/it]更新Memory:  17%|█▋        | 68/396 [23:45<2:08:13, 23.46s/it]更新Memory:  17%|█▋        | 69/396 [24:12<2:13:23, 24.47s/it]更新Memory:  18%|█▊        | 70/396 [24:41<2:19:46, 25.72s/it]更新Memory:  18%|█▊        | 71/396 [25:24<2:47:39, 30.95s/it]更新Memory:  18%|█▊        | 72/396 [25:48<2:35:39, 28.83s/it]更新Memory:  18%|█▊        | 73/396 [26:06<2:17:53, 25.61s/it]更新Memory:  19%|█▊        | 74/396 [26:51<2:48:06, 31.32s/it]更新Memory:  19%|█▉        | 75/396 [27:19<2:43:38, 30.59s/it]更新Memory:  19%|█▉        | 76/396 [27:44<2:33:45, 28.83s/it]更新Memory:  19%|█▉        | 77/396 [28:05<2:20:37, 26.45s/it]更新Memory:  20%|█▉        | 78/396 [28:30<2:17:17, 25.91s/it]更新Memory:  20%|█▉        | 79/396 [28:52<2:10:57, 24.79s/it]更新Memory:  20%|██        | 80/396 [29:13<2:04:44, 23.69s/it]更新Memory:  20%|██        | 81/396 [29:51<2:26:35, 27.92s/it]更新Memory:  21%|██        | 82/396 [30:21<2:29:28, 28.56s/it]更新Memory:  21%|██        | 83/396 [30:37<2:09:39, 24.85s/it]更新Memory:  21%|██        | 84/396 [30:59<2:05:27, 24.13s/it]更新Memory:  21%|██▏       | 85/396 [31:21<2:00:48, 23.31s/it]更新Memory:  22%|██▏       | 86/396 [32:10<2:40:13, 31.01s/it]更新Memory:  22%|██▏       | 87/396 [32:44<2:44:53, 32.02s/it]更新Memory:  22%|██▏       | 88/396 [33:03<2:23:42, 28.00s/it]更新Memory:  22%|██▏       | 89/396 [33:31<2:24:02, 28.15s/it]2025-12-30 13:27:37,037 - __main__ - WARNING - 第 89 项解析原则失败: Expecting ',' delimiter: line 5 column 6 (char 186)
-更新Memory:  23%|██▎       | 90/396 [33:37<1:49:27, 21.46s/it]更新Memory:  23%|██▎       | 91/396 [34:12<2:09:43, 25.52s/it]更新Memory:  23%|██▎       | 92/396 [34:36<2:06:52, 25.04s/it]更新Memory:  23%|██▎       | 93/396 [35:08<2:16:57, 27.12s/it]更新Memory:  24%|██▎       | 94/396 [35:58<2:50:24, 33.86s/it]更新Memory:  24%|██▍       | 95/396 [36:21<2:34:04, 30.71s/it]更新Memory:  24%|██▍       | 96/396 [37:06<2:54:59, 35.00s/it]更新Memory:  24%|██▍       | 97/396 [37:35<2:45:37, 33.24s/it]2025-12-30 13:31:34,991 - __main__ - WARNING - 第 97 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory:  25%|██▌       | 99/396 [38:04<2:01:52, 24.62s/it]更新Memory:  25%|██▌       | 99/396 [38:25<1:55:17, 23.29s/it]
-2025-12-30 13:32:25,123 - __main__ - ERROR - 更新Memory时发生错误: [Errno 2] No such file or directory: '/home/metanew2/checkpoints/memory_progress.json'
-Traceback (most recent call last):
-  File "/home/metanew2/stage_second.py", line 241, in prepare_step2_update_memory_from_dpo
-    with open(checkpoint_file, 'w') as cf:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/home/metanew2/checkpoints/memory_progress.json'
-2025-12-30 13:32:25,124 - __main__ - ERROR - 程序执行失败: [Errno 2] No such file or directory: '/home/metanew2/checkpoints/memory_progress.json'
-Traceback (most recent call last):
-  File "/home/metanew2/stage_second.py", line 260, in <module>
-    prepare_step2_update_memory_from_dpo()
-  File "/home/metanew2/stage_second.py", line 241, in prepare_step2_update_memory_from_dpo
-    with open(checkpoint_file, 'w') as cf:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/home/metanew2/checkpoints/memory_progress.json'
-Traceback (most recent call last):
-  File "/home/metanew2/stage_second.py", line 260, in <module>
-    prepare_step2_update_memory_from_dpo()
-  File "/home/metanew2/stage_second.py", line 241, in prepare_step2_update_memory_from_dpo
-    with open(checkpoint_file, 'w') as cf:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [Errno 2] No such file or directory: '/home/metanew2/checkpoints/memory_progress.json'
-2025-12-30 13:32:26,394 - inference.local_inference - INFO - 清理vLLM模型...
-2025-12-30 13:32:26,421 - inference.local_inference - INFO - CUDA缓存已清理
