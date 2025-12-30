@@ -2188,5 +2188,14 @@
   ],
   "Find the value of the sum of the first 8 terms of a sequence minus 2, given a specific recurrence relation involving powers of 2.": [
     "Ensure all arithmetic operations, including subtraction, are performed accurately and the final result is expressed in its simplest form to maintain the precision and correctness of the answer."
+  ],
+  "Calculate the average score for a group of students, adjusting for a bonus applied to a specific score bracket.": [
+    "When applying bonuses or adjustments to specific score brackets, ensure to recalculate the total score for those brackets based on the adjusted values before computing the final average."
+  ],
+  "Find the smallest eight-digit number containing exactly four 4's.": [
+    "To construct the smallest possible number with specific digit constraints, place the required digits in the rightmost positions while keeping the leftmost digits as small as possible."
+  ],
+  "Determine the length of side BC in an acute triangle ABC given specific geometric properties and relationships involving the circumcenter and centroid.": [
+    "Avoid unnecessary complexity by focusing on directly relevant geometric properties and relationships rather than introducing unrelated concepts like the Euler line."
   ]
 }
