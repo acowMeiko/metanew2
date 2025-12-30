@@ -37,8 +37,8 @@ def prepare_step2_update_memory_from_dpo():
     memory = MemoryManager()
     logger.info("MemoryManager 初始化完成")
     
-    # dpo_file = Path(config.data_levels_file)
-    dpo_file = Path(config.test_file)  # 测试路径
+    dpo_file = Path(config.data_levels_file)
+    # dpo_file = Path(config.test_file)  # 测试路径
     checkpoint_file = Path(config.memory_checkpoint_file)
     
     if not dpo_file.exists():
