@@ -166,7 +166,7 @@ def inference_with_memory(dataset):
         return
 
     results = []
-    output_file = Path(config.output_dir) / "local_inference.json"
+    output_file = Path(config.output_dir) / "local_inference_round2.json"
     
     # 批处理大小
     batch_size = config.BATCH_SIZE
@@ -455,25 +455,25 @@ def main():
     # Load dataset - 支持 JSON 和 JSONL 格式
     # 可以通过命令行参数指定，默认使用 test_filter.json
     import sys
-    input_file = Path(os.getenv('TEST_FILE', 'data/test/test_filter.json'))
+    input_file = Path(os.getenv('TEST_FILE', 'data/test/filtered_test.json'))
     try:
         logger.info(f"加载数据集: {input_file}")
         
-        # 根据文件扩展名判断格式
-        if input_file.suffix == '.jsonl':
-            # JSONL格式：每行一个JSON对象
-            dataset = []
-            with open(input_file, 'r', encoding='utf-8') as f:
-                for line in f:
-                    line = line.strip()
-                    if line:
-                        dataset.append(json.loads(line))
-            logger.info(f"数据集加载成功（JSONL格式），共 {len(dataset)} 条数据")
-        else:
-            # JSON格式：整个文件是一个JSON数组
-            with open(input_file, 'r', encoding='utf-8') as f:
-                dataset = json.load(f)
-            logger.info(f"数据集加载成功（JSON格式），共 {len(dataset)} 条数据")
+        # # 根据文件扩展名判断格式
+        # if input_file.suffix == '.jsonl':
+        #     # JSONL格式：每行一个JSON对象
+        #     dataset = []
+        #     with open(input_file, 'r', encoding='utf-8') as f:
+        #         for line in f:
+        #             line = line.strip()
+        #             if line:
+        #                 dataset.append(json.loads(line))
+        #     logger.info(f"数据集加载成功（JSONL格式），共 {len(dataset)} 条数据")
+        # else:
+        #     # JSON格式：整个文件是一个JSON数组
+        with open(input_file, 'r', encoding='utf-8') as f:
+            dataset = json.load(f)
+        logger.info(f"数据集加载成功（JSON格式），共 {len(dataset)} 条数据")
         
         # 显示数据格式信息
         if dataset:

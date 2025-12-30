@@ -37,9 +37,9 @@ def get_vllm_model():
             import os
             from vllm import LLM, SamplingParams
             
-            # 如果环境变量未设置，则默认使用 0,1
+            # 如果环境变量未设置，则默认使用 0,1,2,3（4卡）
             if 'CUDA_VISIBLE_DEVICES' not in os.environ:
-                os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+                os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
                 logger.info(f"环境变量 CUDA_VISIBLE_DEVICES 未设置，默认使用: {os.environ['CUDA_VISIBLE_DEVICES']}")
             else:
                 logger.info(f"使用环境变量 CUDA_VISIBLE_DEVICES: {os.environ['CUDA_VISIBLE_DEVICES']}")
@@ -51,7 +51,7 @@ def get_vllm_model():
             
             _vllm_model = LLM(
                 model=config.lora_model_path,
-                tensor_parallel_size=2,  # 2张GPU并行
+                tensor_parallel_size=4,  # 4张GPU并行
                 gpu_memory_utilization=0.9,  # 80GB显存，可以使用更高利用率
                 trust_remote_code=True,  # 信任远程代码（某些模型需要）
                 dtype="auto",  # 自动选择数据类型

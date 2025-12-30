@@ -6,7 +6,7 @@ Project_ROOT = Path(__file__).parent.absolute()#项目根路径，运行代码�
 check_root = os.path.join(Project_ROOT, 'checkpoints')  #模型检查点目录
 output_dir = os.path.join(Project_ROOT, 'output')  #输出目录
 data_dir = os.path.join(Project_ROOT, 'data')  #数据集目录
-# BASE_MODEL_NAME = os.getenv('BASE_MODEL_NAME', "/home/share/hcz/qwen2.5-14b-awq")
+BASE_MODEL_NAME = os.getenv('BASE_MODEL_NAME', "/home/share/hcz/qwen2.5-14b-awq")
 lora_model_path = os.getenv('LORA_MODEL_PATH', "/home/models/qwen_dpo3_lora")  #LoRA模型路径
 MAX_MODEL_LEN = 32768  # 提升到 32K，充分利用 80G A800 显存
 MEMORY_FILE =os.path.join(Project_ROOT, 'memory', 'memory.json')  #Memory文件路径
@@ -38,13 +38,13 @@ LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 
 # ==================== 批处理和并发配置 ====================
 # vLLM批处理大小（针对大数据集优化）
-BATCH_SIZE = int(os.getenv('BATCH_SIZE', '64'))  # 平衡GPU利用率和内存占用
+# 4×80GB A800 + 14B模型 + LoRA，tensor_parallel_size=4
+# 实际生成长度512-2048，显存充足，可支持更大batch
+BATCH_SIZE = int(os.getenv('BATCH_SIZE', '256'))  # 4卡配置（保守），可尝试256甚至更大
 
 # API并发线程数
 MAX_WORKERS = int(os.getenv('MAX_WORKERS', '20'))  # 增加并发数
-# Sentence Transformer模型路径
-SENTENCE_TRANSFORMER_MODEL = os.path.join(Project_ROOT, 'em_model', 'all-MiniLM-L6-v2')  #本地Sentence Transformer模型路径
-SIMILARITY_THRESHOLD = float(os.getenv('SIMILARITY_THRESHOLD', '0.6'))
+
 original_data_file = os.path.join(data_dir, 'original_data', 'merged_all_levels.json')  #原始数据集文件路径
 dpo_progress_file = os.path.join(check_root, 'dpo_progress.json')  #进度文件路径
 memory_checkpoint_file = os.path.join(check_root, 'memory_progress.json')  #Memory断点文件路径

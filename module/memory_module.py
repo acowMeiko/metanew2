@@ -12,15 +12,14 @@ import re
 import os
 
 class MemoryManager:
-    def __init__(self, path=None, similarity_threshold: float = None):
-        # 如果环境变量未设置，则默认使用 0,1
+    def __init__(self, path=None):
+        # 如果环境变量未设置，则默认使用 0,1,2,3（4卡）
         if 'CUDA_VISIBLE_DEVICES' not in os.environ:
-            os.environ['CUDA_VISIBLE_DEVICES'] = '0,1'
+            os.environ['CUDA_VISIBLE_DEVICES'] = '0,1,2,3'
         
         self.path = path or str(config.MEMORY_FILE)
         self.memory = self.load()
-        # 不再使用 SentenceTransformer，改用 vLLM 模型进行语义匹配
-        self.similarity_threshold = similarity_threshold or config.SIMILARITY_THRESHOLD
+        # 使用 vLLM 模型进行语义匹配
 
     def load(self):
         """加载内存数据，确保返回字典类型"""

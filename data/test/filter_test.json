@@ -1,0 +1,37 @@
+[
+  {
+    "problem": "Mr. Fast eats a pizza slice in 5 minutes, Mr. Slow eats a pizza slice in 10 minutes, and Mr. Steady eats a pizza slice in 8 minutes. How long does it take for them to eat 24 pizza slices together? Express your answer in minutes.",
+    "answer": "56",
+    "solution": "",
+    "grading_log": {
+      "L2_result": "Correct",
+      "L2_output": " Step 1: Calculate the rate at which each person eats a pizza slice.\n- Mr. Fast eats a slice in 5 minutes, so his rate is 1/5 slices per minute.\n- Mr. Slow eats a slice in 10 minutes, so his rate is 1"
+    },
+    "difficulty": "Level 2",
+    "tags": [
+      "Standard"
+    ]
+  },
+  {
+    "problem": "Find the number of ordered pairs of positive integers $(x, y)$ with $x, y \\leq 2020$ such that $3 x^{2}+10 x y+3 y^{2}$ is the power of some prime.",
+    "answer": "29",
+    "solution": "We can factor as $(3 x+y)(x+3 y)$. If $x \\geq y$, we need $\\frac{3 x+y}{x+3 y} \\in\\{1,2\\}$ to be an integer. So we get the case where $x=y$, in which we need both to be a power of 2, or the case $x=5 y$, in which case we need $y$ to be a power of 2. This gives us $11+9+9=29$ solutions, where we account for $y=5 x$ as well.",
+    "grading_log": {
+      "L3_result": "ERROR after 5 retries: 'NoneType' object is not subscriptable"
+    },
+    "difficulty": "Level 4"
+  },
+  {
+    "problem": "The line $10x + 8y = 80$ forms a triangle with the coordinate axes. What is the sum of the lengths of the altitudes of this triangle?\nA) $\\frac{18\\sqrt{41} + 40}{\\sqrt{41}}$\nB) $\\frac{360}{17}$\nC) $\\frac{107}{5}$\nD) $\\frac{43}{2}$\nE) $\\frac{281}{13}$",
+    "answer": "\\frac{18\\sqrt{41} + 40}{\\sqrt{41}}",
+    "solution": "",
+    "grading_log": {
+      "L1_result": "Correct",
+      "L1_output": "\n\nTo solve the problem, we need to determine the lengths of the altitudes of the triangle formed by the line \\(10x + 8y = 80\\) with the coordinate axes. Let's go through the steps in detail.\n\n1. **Fin"
+    },
+    "difficulty": "Level 1",
+    "tags": [
+      "Basic"
+    ]
+  }
+]
