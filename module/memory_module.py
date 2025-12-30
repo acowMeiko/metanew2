@@ -114,6 +114,8 @@ class MemoryManager:
             try:
                 # 提取出来的字符串
                 comparisons_json_str = match.group(1)
+                # 修复常见的JSON格式错误：双花括号 {{ }} -> { }
+                comparisons_json_str = comparisons_json_str.replace('{{', '{').replace('}}', '}')
                 # 加载为 Python 对象
                 relations_dict = json.loads(comparisons_json_str)
                 relations = relations_dict.get("comparisons", [])

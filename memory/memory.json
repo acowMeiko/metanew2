@@ -346,7 +346,8 @@
   ],
   "Determine the value of a function at a specific integer point given a functional equation and initial conditions.": [
     "Ensure answers include a clear and structured explanation of the reasoning process, even if the numerical result is correct, to enhance clarity and understanding.",
-    "Ensure that the values of f(n) for prime factors satisfy all given constraints, particularly when calculating composite numbers.\nAlways verify that the final calculated value of f(n) adheres to all provided constraints, especially upper bounds."
+    "Ensure that the values of f(n) for prime factors satisfy all given constraints, particularly when calculating composite numbers.",
+    "Always verify that the final calculated value of f(n) adheres to all provided constraints, especially upper bounds."
   ],
   "Determine the number of integer solutions to a given quadratic inequality.": [
     "Ensure answers are clear and concise, avoiding unnecessary repetition of information.",

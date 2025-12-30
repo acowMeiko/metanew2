@@ -6,8 +6,8 @@ Project_ROOT = Path(__file__).parent.absolute()#项目根路径，运行代码�
 check_root = os.path.join(Project_ROOT, 'checkpoints')  #模型检查点目录
 output_dir = os.path.join(Project_ROOT, 'output')  #输出目录
 data_dir = os.path.join(Project_ROOT, 'data')  #数据集目录
-BASE_MODEL_NAME = os.getenv('BASE_MODEL_NAME', "/home/share/hcz/qwen2.5-14b-awq")
-lora_model_path = os.getenv('LORA_MODEL_PATH', "/home/models/qwen_dpo2_lora")  #LoRA模型路径
+# BASE_MODEL_NAME = os.getenv('BASE_MODEL_NAME', "/home/share/hcz/qwen2.5-14b-awq")
+lora_model_path = os.getenv('LORA_MODEL_PATH', "/home/models/qwen_dpo3_lora")  #LoRA模型路径
 MAX_MODEL_LEN = 32768  # 提升到 32K，充分利用 80G A800 显存
 MEMORY_FILE =os.path.join(Project_ROOT, 'memory', 'memory.json')  #Memory文件路径
 
@@ -16,7 +16,7 @@ STRONG_MODEL_NAME = os.getenv('STRONG_MODEL_NAME', 'DeepSeek-R1')
 STRONG_MODEL_API_URL = os.getenv('STRONG_MODEL_API_URL', 'https://llmapi.paratera.com/v1/')
 STRONG_MODEL_KEY = os.getenv('STRONG_MODEL_KEY', 'sk-0tKGY03c9OJPODlWGzAGPw')
 
-DEFAULT_TEMPERATURE = float(os.getenv('DEFAULT_TEMPERATURE', '0.1'))
+DEFAULT_TEMPERATURE = float(os.getenv('DEFAULT_TEMPERATURE', '0'))
 DEFAULT_TOP_P = float(os.getenv('DEFAULT_TOP_P', '0.95  '))  # top_p 必须在 (0, 1] 区间
 
 # ==================== 生成长度限制配置 ====================
@@ -50,7 +50,7 @@ dpo_progress_file = os.path.join(check_root, 'dpo_progress.json')  #进度文件
 memory_checkpoint_file = os.path.join(check_root, 'memory_progress.json')  #Memory断点文件路径
 # 支持通过环境变量自定义输出文件名
 dpo_final_file = os.getenv('DPO_OUTPUT_FILE', os.path.join(output_dir, 'dpo_final.jsonl'))  #最终DPO数据文件路径
-data_levels_file = os.path.join(data_dir, 'dpo_llamafactory', 'dpo_level_level2_llamafactory.json')  #数据级别文件路径
+data_levels_file = os.path.join(data_dir, 'dpo_llamafactory', 'dpo_level_level3_llamafactory.json')  #数据级别文件路径
 test_file = os.path.join(data_dir,"test", "test_memory.json")  #测试数据文件路径
 # 超参数
 batch_size = 64  #本地推理批次大小
