@@ -3,7 +3,8 @@
     "Ensure answers provide a thorough analysis and reasoning for each proposition, not just a list of correct answers, to meet task requirements and enhance comprehensibility."
   ],
   "Determine the validity of given propositions about function properties and identify the correct ones.": [
-    "Provide detailed analysis and reasoning for each proposition to ensure completeness and clarity in the answer."
+    "Ensure that the sequence of line segments adheres to the triangle inequality theorem, where no three segments can form a triangle, by correctly calculating each segment length based on the previous ones.",
+    "Ensure that answers provide detailed explanations and logical reasoning for each proposition, not just the final correct answer, to meet the task requirements and enhance comprehensiveness. Maintain thorough analysis of each proposition to ensure completeness and provide a comprehensive understanding of the task. Structure answers clearly and logically, breaking down the analysis of each proposition into distinct, understandable parts to improve clarity."
   ],
   "Simplify a given trigonometric expression.": [
     "In contexts where space is limited or efficiency is prioritized, provide the final simplified form without detailed intermediate steps.",
@@ -11,17 +12,19 @@
     "Present the final simplified form in a clear, boxed format to enhance readability and adherence to mathematical conventions."
   ],
   "Calculate the sum of the equal angles in two isosceles triangles given specific angle conditions.": [
-    "Double-check the final calculations to ensure they are based on the correct intermediate values derived from the problem constraints.",
-    "Consider all possible configurations of given angles in geometric problems before concluding any constraints are unmet.",
-    "Ensure calculations are based on a valid and fully explored set of configurations to avoid incorrect assumptions.",
-    "Provide a comprehensive reasoning process for each step in solving geometric problems to ensure correctness and completeness."
+    "Provide a comprehensive reasoning process for each step in solving geometric problems to ensure correctness and completeness.",
+    "Verify that the solution meets all specified conditions (e.g., even or odd constraints) before finalizing the answer.",
+    "Ensure all possible configurations of given conditions are explored before concluding the problem constraints cannot be met.",
+    "Correctly calculate and sum the values of variables (S and T) based on the valid configurations and constraints identified.",
+    "Double-check the final calculations to ensure they are based on the correct intermediate values derived from the problem constraints."
   ],
   "Determine the tangent of angle PAB for a point P inside triangle ABC such that angles PAB, PBC, and PCA are congruent, given the side lengths of the triangle.": [
     "Always simplify fractions to their lowest terms to ensure accuracy in subsequent calculations.",
     "Clearly show all steps and reasoning in the final computation to enhance clarity and verifiability."
   ],
   "Determine if it is possible to transform any initial configuration of 1s and -1s in the finite regions created by a set of non-parallel and non-concurrent lines into a configuration where all finite regions contain 1, using operations that multiply the values in a triangle formed by three lines by -1.": [
-    "Explicitly discuss the invariance of key properties (such as parity) that are crucial to the problem's solution to ensure the argument's completeness and rigor."
+    "Provide a detailed, step-by-step explanation to enhance clarity and completeness of the solution. Explicitly reference and apply relevant mathematical properties and theorems to provide a solid theoretical foundation for the solution.",
+    "When explaining a query strategy, provide a detailed breakdown of how each step contributes to the overall solution, including why a specific number of queries is necessary."
   ],
   "Determine the side lengths a and b of a triangle given the perimeter of sides a and b, the length of side c, and the cosine of angle C, then calculate the area of the triangle.": [
     "Ensure accurate algebraic simplification and equation solving to maintain correctness in subsequent calculations."
@@ -72,40 +75,41 @@
     "Maintain concise clarity by omitting unnecessary text and focusing solely on essential calculations and the final answer."
   ],
   "Determine the length of side BC in a triangle ABC given trigonometric conditions and the length of another side.": [
-    "Ensure correct application of geometric properties and relationships in calculations to avoid miscalculations."
+    "Ensure the final probability calculation is accurate by correctly identifying and counting all valid obtuse triangles, excluding invalid combinations that do not satisfy the triangle inequality."
   ],
   "Calculate the distance between the centers of the inscribed and circumscribed circles of a given triangle.": [
     "Ensure the use of correct and relevant formulas when calculating geometric properties."
   ],
   "Identify the number that is a multiple of every integer.": [
-    "Prioritize clarity and brevity by directly stating the answer and avoiding unnecessary elaboration.",
-    "Prioritize clarity and brevity by directly stating the answer and avoiding unnecessary elaboration. Focus on providing only the information that is essential to answering the question, avoiding redundant details.",
-    "Focus on providing only the relevant information necessary to answer the question, omitting extraneous details."
+    "Provide a clear and concise problem explanation to set the context, but focus on the solution process and final answer format for clarity and verification. Include a detailed calculation process to ensure the solution's correctness and to aid in understanding the reasoning behind the answer. Use a standard boxed format to clearly indicate the final answer, enhancing readability and comprehension."
   ],
   "Evaluate the sine of the sum of π and an angle whose terminal side passes through a given point.": [
+    "Include reasoning for each step to demonstrate the correctness and logical soundness of the solution.",
+    "Accurately calculate the duration between valid times by correctly identifying the start and end points within a 24-hour period to avoid overestimation or underestimation of the sleep duration.",
+    "Ensure all listed times are valid and accurately reflect the problem's constraints to maintain solution correctness and completeness.",
     "Provide detailed explanations and intermediate steps to enhance clarity and completeness, ensuring that readers can follow and verify the solution.",
-    "Ensure answers are well-structured, with each step logically leading to the next, to aid comprehension and verification.",
-    "Include reasoning for each step to demonstrate the correctness and logical soundness of the solution."
+    "Ensure all valid cases, including edge cases like (0,0), are accounted for in the final count.",
+    "Ensure answers are well-structured, with each step logically leading to the next, to aid comprehension and verification."
   ],
   "Determine the minimum number of additional visitors required to change the current number to another number with all distinct digits.": [
-    "Ensure the final answer is derived from a correct and consistent logical process, double-checking each step to avoid calculation or reasoning errors.",
+    "Ensure all significant digits, including those from the highest number in the range, are included in the final calculation to maintain accuracy.",
     "Provide a clear and logically consistent explanation for the final answer to ensure the reader can follow the reasoning and understand the solution."
   ],
   "Determine the smallest prime number that divides the expression n^2 + n + 11 for some integer n.": [
     "Directly state the answer when the process to reach it is clear from context, avoiding unnecessary detailed steps."
   ],
   "Find a number between 50 and 60 that has a greatest common divisor of 7 with 21.": [
-    "Directly provide the answer to enhance relevance and conciseness, ensuring the response is efficient and directly addresses the question asked."
+    "Provide a detailed step-by-step reasoning process to ensure clarity and completeness of the answer."
   ],
   "Determine the maximum number of cards that can remain in their original positions when the cards are rearranged such that each subsequent card differs from the previous one by exactly one digit incremented or decremented by 1.": [
-    "Provide a detailed, step-by-step breakdown of the problem-solving process to enhance clarity and logical flow.",
-    "Clearly explain the underlying patterns or mechanisms that justify the solution to ensure the reader understands the reasoning behind the answer.",
-    "Ensure the final answer is clearly stated and presented in a standard format (e.g., boxed answer) for completeness and clarity."
+    "Ensure the final answer is clearly stated and presented in a standard format (e.g., boxed answer) for completeness and clarity.",
+    "Maintain correctness by verifying each step of the solution and ensuring the final answer is accurate.",
+    "Provide a detailed step-by-step reasoning process to ensure clarity and completeness of the answer."
   ],
   "Calculate the final result after consecutively increasing a starting number by two given percentages.": [
-    "Ensure the final result is clearly and prominently stated to meet the needs of readers seeking quick answers.",
-    "Include intermediate steps to verify correctness, even if the answer is concise, to allow for easy verification and understanding of the calculation process.",
-    "Maintain clarity and simplicity in the answer structure to enhance readability and comprehension, especially for those focused on the final result."
+    "Maintain clarity and simplicity in the answer structure to enhance readability and comprehension, especially for those focused on the final result.",
+    "Provide a clear and comprehensive explanation of the reasoning process to ensure the correctness and completeness of the answer.",
+    "Ensure the final answer is correct by thoroughly verifying the impact of all components in the problem, especially those involving prime factorization and divisibility rules."
   ],
   "Calculate the number of distinct permutations of a given multiset.": [
     "Ensure complete solution presentation by including all steps and the final numerical result to maintain solution completeness and correctness.",
@@ -123,12 +127,13 @@
     "Ensure the final solution is clearly boxed or highlighted for easy identification."
   ],
   "Calculate the number of ways to turn off two non-adjacent streetlights from a set of 10, excluding the lights at both ends.": [
-    "Avoid unnecessary complexity in explanations by focusing on clear, relevant steps that directly contribute to the solution. Maintain brevity and relevance to enhance clarity and impact of the answer. Ensure logical flow by omitting steps that do not contribute to the solution and may confuse the reader."
+    "Avoid unnecessary steps in the solution that do not contribute directly to the final answer, such as detailed prime factorization when not required by the task. Identify and list only the relevant factor pairs that meet the task criteria, avoiding unnecessary or repeated pairs to maintain clarity and conciseness. Conclude the answer succinctly and directly, ensuring the final result is clear and easily identifiable without excessive elaboration."
   ],
   "Determine the initial number of sweets Beth had, given the exchange rules and final equal distribution among three girls.": [
     "Ensure the setup and solution of equations are clearly detailed and logically structured to derive the correct answer."
   ],
   "Calculate the time interval in minutes for the 21st coincidence of the hour and minute hands of a clock.": [
+    "Avoid unnecessary details and focus on the core logic and arithmetic needed to solve the problem, ensuring clarity and conciseness.",
     "Ensure that the total number of occurrences includes the initial condition and correctly accounts for the sequence of events, avoiding the mistake of treating the first occurrence separately from the subsequent ones."
   ],
   "Determine the number of $1 bills (x) given relationships between the number of $1, $2, and $3 bills and a total amount of money.": [
@@ -162,8 +167,9 @@
     "Avoid unnecessary calculations and discussions about rounding in favor of clear, direct answers."
   ],
   "Determine the largest integer n for which the factorial of (2004!) is divisible by the factorial of (n!).": [
-    "Ensure the final answer is presented in a clear and concise manner, making it easy for the reader to understand and follow the reasoning.",
-    "Focus on providing a clear and concise logical flow that directly addresses the problem without unnecessary steps to enhance clarity and efficiency."
+    "Ensure each step in the solution is clearly explained and logically structured to enhance clarity and understanding for the reader.",
+    "Verify the calculations of intermediate values (like k) to ensure the final answer is accurate.",
+    "Ensure the correct identification and solving of roots to maintain the accuracy of the final solution."
   ],
   "Determine the number of digits in the product of two given large numbers.": [
     "Ensure the final answer aligns with the provided options and task constraints to maintain correctness and relevance."
@@ -172,12 +178,14 @@
     "Ensure a clear and explicit concluding statement that summarizes the final answer, especially when the task is to identify a specific count or value. While detailed verification of solutions is important, it should be complemented by a clear and concise summary of the final result."
   ],
   "Determine the maximum number of given inequalities that can be simultaneously true for any real number x.": [
-    "Focus on relevant interval analysis rather than unnecessary algebraic manipulations to improve clarity and conciseness."
+    "Avoid overcomplicating explanations with unnecessary details that do not contribute to the correctness or clarity of the answer. Focus on providing a clear and concise reasoning process that leads to the correct conclusion.",
+    "When calculating the minimum number of variables required to meet a probability condition, always round up to the nearest whole number to ensure the condition is satisfied."
   ],
   "Calculate the probability that exactly one of two randomly selected distinct divisors of a given number is a perfect square, and express this probability in simplest form to find the sum of the numerator and denominator.": [
     "Ensure each step in the probability calculation is clearly shown and justified, even if the final result is correct, to provide a thorough explanation."
   ],
   "Calculate the value of a custom operation between two positive integers.": [
+    "Ensure that the multiplicative property and the increasing nature of the function are correctly applied to deduce the value of the function at composite numbers, considering the function's behavior at prime numbers.",
     "Provide step-by-step explanations to enhance clarity and completeness, even if the final result is straightforward."
   ],
   "Determine the number of positive integers a ≤ 50 for which the quadratic equation x^2 + (2a+1)x + a^2 = 0 has two integer solutions.": [
@@ -207,9 +215,9 @@
     "For straightforward questions, prioritize concise and direct answers over verbose explanations that do not add value to the solution."
   ],
   "Determine the sum of the digits of the sum of two integers given their digit sums and the number of carries during addition.": [
-    "Begin the solution with a clear and direct statement of the problem and its conditions to establish a logical framework.",
-    "Conclude with a clear and concise presentation of the final answer to enhance understanding and readability.",
     "Provide explicit reasoning for each step, especially for critical concepts like the effect of carries on digit sums, to ensure clarity and transparency.",
+    "Conclude with a clear and concise presentation of the final answer to enhance understanding and readability.",
+    "Begin the solution with a clear and direct statement of the problem and its conditions to establish a logical framework.",
     "Begin the answer with a clear and direct statement of the problem and its conditions to set up a logical framework. Explicitly explain the reasoning behind key logical steps, such as the carry effect in digit sum calculations, to ensure clarity and transparency. Emphasize clarity in presenting the final answer to make the conclusion easily understandable."
   ],
   "Determine the number of integers missing from a list of 1 to 2017 after applying a series of erasing and reinstating rules based on multiples of 3, 6, and 27.": [
@@ -220,12 +228,13 @@
     "Ensure that the final answer meets all specified requirements, such as positivity, by explicitly stating and applying the necessary conditions."
   ],
   "Calculate the binomial coefficient of n choose n-1.": [
-    "Avoid unnecessary verbosity; provide a clear and concise explanation that directly addresses the question."
+    "Ensure the proposed polynomial solution satisfies the given conditions for all nonnegative integers n and m, not just specific values.",
+    "Verify the correctness of the polynomial solution by demonstrating that it meets the problem's requirements for all cases, not just a few examples.",
+    "Always provide a detailed explanation of the logical steps and calculations used to derive the answer, as this enhances clarity, verification, and understanding."
   ],
   "Find a positive integer such that nine times its square minus the integer equals 2010.": [
-    "Avoid including verification steps unless explicitly requested or required for understanding the solution process.",
-    "Focus the answer on the specific requirements of the question to avoid providing unnecessary information.",
-    "Ensure the final answer is clearly stated and easily identifiable, without excessive detail, to maintain clarity and directness."
+    "Maintain conciseness in the solution by avoiding unnecessary repetition and extraneous details, focusing on directly addressing the task. Ensure that each step in the solution contributes to the clarity and correctness of the answer, omitting any steps that do not add value. While correctness is essential, avoid over-explaining or including steps that do not contribute to the solution's clarity or efficiency.",
+    "Ensure the derived value of n is sufficiently large to guarantee at least one prime number among any set of n mutually coprime integers up to a given limit, and provide a rigorous proof or logical reasoning to support the conclusion."
   ],
   "Determine the number of positive integer values of n for which 2016 can be evenly divided among Moor and his n friends.": [
     "Clearly articulate the initial setup and conditions of the problem to ensure the reader comprehends the task requirements.",
@@ -233,7 +242,10 @@
     "Provide detailed explanations and step-by-step reasoning, especially for complex calculations like prime factorization and divisor counting, to enhance clarity and understanding."
   ],
   "Identify and verify the correctness of given propositions related to symmetry, periodicity, and monotonicity of functions.": [
-    "Provide detailed analysis and reasoning for each proposition to ensure completeness and clarity, rather than just listing correct answers."
+    "Integrate key properties and concepts seamlessly into the solution rather than presenting them as separate, potentially redundant steps.",
+    "Ensure a detailed and clear explanation of the problem setup and constraints to enhance reader understanding and guide the solution process.",
+    "Ensure all algebraic manipulations are correctly simplified to their simplest form to avoid incorrect final values.\nDouble-check each step of the algebraic manipulation to maintain accuracy and prevent errors from propagating to the final result.",
+    "Assume the reader's familiarity with fundamental formulas and concepts to streamline the answer, but ensure clarity for those who may need explicit explanations."
   ],
   "Find the tangent of the angle formed by a point inside a triangle and two of its vertices, given the triangle's side lengths and the condition that the angles formed by the point and each pair of vertices are equal.": [
     "Always simplify fractions to their lowest terms to ensure the correctness of subsequent calculations.",
@@ -263,7 +275,8 @@
     "Ensure that the final answer aligns with the logical and contextual constraints of the problem, such as maintaining positivity for differences between positive integers."
   ],
   "Determine the number of integers missing from a sequence after selectively erasing and reinstating based on divisibility rules.": [
-    "Ensure precise counting of all relevant subsets, especially when adjusting for previously reinstated elements, to maintain accuracy in final calculations."
+    "Ensure the final answer is double-checked against the problem's constraints to avoid incorrect conclusions.",
+    "Ensure the explanation of mathematical concepts, such as the summation of a geometric series, is clear and structured to facilitate understanding and avoid confusion."
   ],
   "Determine the count of positive integers less than 100 that are both perfect squares and perfect cubes.": [
     "Maintain clarity by providing a concise and direct explanation without unnecessary elaboration.",
@@ -273,7 +286,7 @@
     "Explicitly define and use variables in terms of each other to avoid ambiguity and ensure clarity in sequence definitions."
   ],
   "Determine the value of a trigonometric expression involving double angle and phase shift.": [
-    "Ensure accurate application of trigonometric identities and calculations to derive the correct final value."
+    "Ensure precise arithmetic and avoid rounding errors to maintain the accuracy of final calculations."
   ],
   "Determine the number of positive integers b for which the logarithm of 729 to the base b is a positive integer.": [
     "Include a detailed reasoning process to enhance understanding and educational value, even if it makes the answer more verbose.",
@@ -299,6 +312,7 @@
   "Determine the sum of all possible integer values of n within a specified range.": [
     "In concise answer formats or time-constrained settings, directly state the final result without detailed intermediate steps to maintain clarity and brevity.",
     "Provide detailed step-by-step solutions to enhance clarity and understanding, especially in educational contexts where the process of arriving at the solution is as important as the answer itself.",
+    "When calculating combinations involving groups with different sizes, ensure to account for the unique constraints of each group to avoid overcounting or undercounting scenarios.",
     "Use standard presentation formats for final answers, such as boxing the result, to clearly delineate the solution and improve readability."
   ],
   "Determine the value of angle β given trigonometric values of α and α - β.": [
@@ -313,9 +327,10 @@
     "Focus the answer directly on the required information and avoid including unnecessary details that do not contribute to the solution."
   ],
   "Determine the maximum possible median of a list of eleven positive integers, given seven specific integers and a constraint on the maximum value of additional integers.": [
-    "Ensure the final answer aligns with the optimal strategy by considering all possible values that maximize the desired outcome.",
-    "When selecting additional numbers to achieve a desired outcome, prioritize values that can maximize the median or other targeted metrics.",
-    "Provide a clear and detailed explanation that not only arrives at the correct answer but also highlights the optimal strategy used."
+    "Ensure that when counting multiples of two or more numbers, account for overlaps and exclusions correctly to avoid overcounting.",
+    "Explicitly address the handling of common multiples to prevent double-counting in the final tally.",
+    "Ensure the final value of y is the smallest possible by minimizing the prime factors while maintaining the required number of factors and divisibility conditions.",
+    "Correctly adjust counts by subtracting overlaps before combining results to achieve accurate final counts."
   ],
   "Determine the number of positive integers n for which the sum of the first n natural numbers divides 6n evenly.": [
     "Avoid including non-relevant steps or solutions that do not satisfy the problem's constraints, such as considering non-positive integers in a problem asking for positive integers.",
@@ -323,22 +338,22 @@
     "Ensure completeness by implicitly including all necessary steps in the reasoning process and explicitly excluding any irrelevant or non-compliant solutions."
   ],
   "Determine the sum of three numbers given their mean relationships to the least and greatest numbers and the value of the median.": [
-    "Avoid introducing unnecessary steps and logical errors in equation solving to maintain clarity and correctness."
+    "Ensure that permutations do not include invalid cases, such as leading zeros in a five-digit number, before finalizing the count.",
+    "Ensure the correct application of mathematical formulas or known results to maintain factual accuracy in the solution."
   ],
   "Calculate the sum of all positive integer factors of a given number.": [
     "Ensure the final result is clearly stated, even if detailed steps are provided."
   ],
   "Determine the value of a function at a specific integer point given a functional equation and initial conditions.": [
-    "Ensure all steps in the calculation are clearly shown and logically follow from the given conditions, even if the final numerical result is correct."
+    "Ensure answers include a clear and structured explanation of the reasoning process, even if the numerical result is correct, to enhance clarity and understanding.",
+    "Ensure that the values of f(n) for prime factors satisfy all given constraints, particularly when calculating composite numbers.\nAlways verify that the final calculated value of f(n) adheres to all provided constraints, especially upper bounds."
   ],
   "Determine the number of integer solutions to a given quadratic inequality.": [
     "Ensure answers are clear and concise, avoiding unnecessary repetition of information.",
     "Double-check the logical structure and correctness of the solution to ensure the final answer is accurate."
   ],
   "Express a sum of cosines as a product of cosines and find the sum of the coefficients.": [
-    "Ensure each step in the solution is clearly explained and structured to enhance clarity and logical progression.",
-    "Provide detailed explanations for each transformation or step to aid understanding and verification.",
-    "Restate the final form and conclusion clearly to reinforce the solution's correctness and completeness."
+    "Ensure the final iteration is correctly identified as the point where the set is reduced to a single tile, and avoid counting any redundant iterations beyond this point."
   ],
   "Calculate the probability that the average of three randomly selected distinct numbers from a given set equals a specified value.": [
     "Ensure solutions are comprehensive by explicitly listing all valid combinations or steps, and not just restating the problem."
@@ -354,9 +369,12 @@
   ],
   "Find the minimum value of a given function for real numbers greater than 1.": [
     "Always provide the final answer in a clearly boxed or highlighted format to ensure clarity and completeness.",
-    "Ensure the correctness of the final value by double-checking all algebraic and geometric calculations. Avoid providing a geometric interpretation if it complicates the solution or leads to incorrect conclusions. While detailed steps can be helpful, ensure that the final conclusion is correct, even if steps are not shown."
+    "Verify the calculated minimum value by re-evaluating the function's behavior within the given domain to ensure accuracy.",
+    "Ensure the correctness of the final value by double-checking all algebraic and geometric calculations. Avoid providing a geometric interpretation if it complicates the solution or leads to incorrect conclusions. While detailed steps can be helpful, ensure that the final conclusion is correct, even if steps are not shown.",
+    "Ensure critical points are correctly identified within the specified domain to accurately determine the function's behavior."
   ],
   "Minimize the sum of squares of three positive real numbers subject to a linear constraint.": [
+    "Ensure that permutations do not violate the constraints of the problem, such as leading zeros in a five-digit number, and adjust calculations accordingly.",
     "Avoid redundant verification steps that do not add value to the solution, as they can confuse the reader and disrupt the logical flow of the answer."
   ],
   "Find the minimum value of the Euclidean distance squared between points (a, b) and (c, d) given the constraints b = a - 2e^a and c + d = 4.": [
@@ -366,13 +384,13 @@
     "Ensure correct application of the inclusion-exclusion principle to avoid overcounting when dealing with overlapping sets."
   ],
   "Determine the value of y given the relationships between x, y, and z under specified arithmetic transformations.": [
-    "Ensure all intermediate calculations are accurately and explicitly shown to maintain the logical flow and correctness of the solution."
+    "Ensure the problem's necessary conditions are explicitly stated to avoid confusion and enhance clarity. Include a detailed solution process to make the answer more educational and thorough. Provide intermediate steps and results to verify the correctness of the solution and enhance understanding. Reinforce the final answer with additional verification steps or listed valid pairs to ensure the solution is fully convincing."
   ],
   "Determine the number of distinct prime factors of a given number N based on a logarithmic equation.": [
     "Avoid unnecessary steps and directly state the key conclusion to enhance clarity and conciseness in the answer."
   ],
   "Determine the minimum number of natural numbers whose total sum is 80, with the constraint that the sum of any five of these numbers does not exceed 19.": [
-    "Provide a detailed and structured reasoning process, even if the final conclusion is incorrect, to demonstrate logical steps and facilitate verification or correction."
+    "Ensure logical consistency in calculations and reasoning to avoid miscalculations and incorrect conclusions."
   ],
   "Determine the maximum possible value of the minimum product among three positive real numbers whose sum and pairwise product sum are given.": [
     "Ensure that the values of variables satisfy all given constraints and equations before concluding the solution.",
@@ -395,12 +413,12 @@
     "Provide detailed probability calculations and explanations for each step to ensure clarity, correctness, and comprehensiveness of the answer."
   ],
   "Determine the maximum value of the expression A*M*C + A*M + M*C + C*A given that A, M, and C are nonnegative integers summing to 12.": [
-    "Ensure a thorough and systematic exploration of all potential cases to validate the optimality of the solution.",
-    "Provide a clear rationale for the selection of values or cases to enhance the credibility and comprehensibility of the solution.",
-    "Conclude with a clear statement of the final answer and summarize the key steps taken to reach the solution for clarity and coherence."
+    "Consider all possible ranges and lengths of numbers when identifying the largest 'very prime' number to ensure a comprehensive and accurate solution.",
+    "Conclude with a clear statement of the final answer and summarize the key steps taken to reach the solution for clarity and coherence.",
+    "Provide a clear rationale for the selection of values or cases to enhance the credibility and comprehensibility of the solution."
   ],
   "Determine a quadratic polynomial with real coefficients, given one complex root and the coefficient of x.": [
-    "Ensure the polynomial coefficients match the given conditions precisely, particularly when specific values are provided."
+    "Ensure each step in the solution is clearly explained and justified to enhance understanding and clarity. Explicitly state the specific values that satisfy the given conditions to ensure a complete and thorough solution. Ensure the conclusion is concise and directly states the final result without extraneous information."
   ],
   "Simplify a given exponential expression.": [
     "Avoid unnecessary introductory phrases and structured steps in straightforward mathematical problems to maintain clarity and brevity.",
@@ -428,10 +446,11 @@
     "Include an explanation of the conversion process when dealing with abstract numerical representations to enhance understanding."
   ],
   "Determine the product of the last two digits of an integer given that it is divisible by 4 and the sum of its last two digits is 13.": [
-    "Include detailed step-by-step reasoning to enhance clarity and ensure correctness of the solution.",
+    "Ensure the units digit of the product is correctly calculated and clearly stated.",
+    "Ensure the final arithmetic operations are double-checked for accuracy, especially when dealing with modular arithmetic, to avoid simple calculation errors that can lead to incorrect conclusions.",
     "Provide a thorough explanation of each step to aid the reader's understanding and verification of the solution.",
-    "Ensure the completeness of the solution by verifying each step and confirming the correctness of the final answer.",
-    "While stating the final answer is important, it is equally crucial to provide the reasoning process to validate the solution."
+    "While stating the final answer is important, it is equally crucial to provide the reasoning process to validate the solution.",
+    "Include detailed step-by-step reasoning to enhance clarity and ensure correctness of the solution."
   ],
   "Determine the minimum distance between two points given the distances between intermediate points.": [
     "Avoid unnecessary steps and focus on providing a clear, concise solution to the problem.",
@@ -490,7 +509,8 @@
     "Avoid redundant explanations and focus on concise, clear presentation of the final result to enhance answer clarity and conciseness."
   ],
   "Determine the number of times 24 divides into 100!": [
-    "Explicitly justify the choice of the limiting factor in calculations involving multiple constraints to ensure clarity and completeness of reasoning."
+    "Ensure that geometric properties, such as the angle formed by a tangent and a radius at the point of contact being 90 degrees, are correctly applied in calculations.",
+    "Avoid deriving unnecessary components like the circle's equation if they are not required for the final solution. Focus on the essential steps and formulas needed to solve the problem directly. Ensure accuracy in intermediate calculations, such as determining the center and radius of the circle, as errors in these steps can lead to incorrect final answers."
   ],
   "Determine the ratio of the maximum to minimum possible values of the sum of cubes of a sequence of integers given constraints on their sum and sum of squares.": [
     "Ensure solutions include detailed, step-by-step explanations to enhance clarity and facilitate verification.",
@@ -512,11 +532,12 @@
     "Ensure detailed reasoning and supporting calculations are provided when explaining the intervals of monotonicity, including the use of the quadratic formula and domain considerations."
   ],
   "Determine the minimum perimeter of a polygon with sides parallel to the coordinate axes that encloses the interior of a given circle.": [
+    "Ensure all boundary conditions and edge cases are explicitly considered and counted in the final tally.",
     "Provide a detailed justification for why a specific shape or configuration is optimal to ensure clarity and correctness in the reasoning.",
     "Focus on relevant calculations and avoid introducing unnecessary complexity to maintain clarity and precision."
   ],
   "Determine the number of unique $3 \times 3$ arrays containing digits 1 through 9 in strictly increasing order in each row and column.": [
-    "Ensure detailed explanations of the logical steps and calculations used in solving the problem, especially when applying specific formulas or methods, to enhance clarity and comprehension."
+    "Ensure the reasoning process is clear and concise, focusing on the essential steps necessary to derive the answer without unnecessary repetition or extraneous information. Avoid redundant explanations and focus on providing a direct and clear answer to the question asked. Maintain directness in the conclusion by clearly stating the answer without preceding it with excessive or irrelevant details."
   ],
   "Calculate the product of the solutions to the given absolute value equation.": [
     "Provide a detailed step-by-step solution process to enhance understanding and verification of the final answer.",
@@ -581,8 +602,7 @@
     "Focus on concise presentation of the final answer to enhance clarity and task-appropriateness, avoiding unnecessary steps that may distract from the solution."
   ],
   "Solve for x in the equation involving exponential expressions when y is given.": [
-    "Ensure answers are clearly structured and labeled to enhance readability and logical progression, even when the solution is concise.",
-    "Avoid unnecessary verbosity and focus on essential steps to maintain clarity and correctness in the solution."
+    "Ensure answers have a clear logical structure and flow, introducing the problem, explaining the steps, and concluding with the final result. Explicitly state the final answer to improve clarity and completeness. While correctness is essential, clarity and completeness in explanation and presentation are crucial for understanding and usability."
   ],
   "Determine a quadratic polynomial given specific function values at different points.": [
     "Always verify the solution by explicitly showing that it satisfies all given conditions to ensure completeness and correctness."
@@ -634,10 +654,10 @@
     "Avoid unnecessary steps in the answer to maintain clarity and conciseness, directly addressing the question at hand."
   ],
   "Calculate the required score for the sixth quiz to achieve a desired mean score.": [
-    "Provide concise and direct answers without unnecessary elaboration or redundant formatting, focusing solely on the required output."
+    "Ensure answers are concise and directly state the final result, complemented by a clear boxed format for the solution to enhance readability and quick comprehension. Maintain a clear and logical structure in answers, guiding the reader through the solution process with a well-organized format that highlights the final answer prominently. Avoid unnecessary verbosity in answers; focus on providing essential information and calculations to reach the solution efficiently."
   ],
   "Evaluate a polynomial function at a given point.": [
-    "Always explicitly substitute values and show intermediate simplification steps to ensure clarity and transparency in the reasoning process."
+    "Ensure each intermediate step in Horner's method is accurately calculated to prevent propagation of errors in subsequent steps."
   ],
   "Find the largest integer less than or equal to the cube root of a given polynomial expression.": [
     "Avoid unnecessary complexity in explanations. Provide a clear, concise, and direct answer to enhance clarity and precision."
@@ -705,7 +725,7 @@
     "Ensure accurate application of summation formulas to avoid miscalculations that can significantly affect the final result."
   ],
   "Determine the number of permutations of the set {1, 2, ..., 10} that satisfy specific pairwise ordering conditions and avoid certain subsequences.": [
-    "Ensure all constraints, including stack-sortable permutation requirements, are accounted for in the calculation to avoid overestimating the number of valid sequences."
+    "Ensure each step in the solution is clearly explained and verified to maintain clarity and completeness. Include a verification step to confirm that all given conditions (such as LCM and GCD) are satisfied in the solution. Provide a detailed explanation of the factors involved in the problem to enhance understanding and avoid confusion."
   ],
   "Determine the value of $c_{7}$ in a given sequence of tuples.": [
     "For straightforward calculation tasks, directly provide the final answer without unnecessary introductory or intermediate steps.",
@@ -728,7 +748,10 @@
     "Ensure the final result is the closest value in the sequence to the target number, not necessarily the exact match."
   ],
   "Determine the number of sequences of integers from -7 to 7 where the absolute values of the numbers are nondecreasing.": [
-    "Ensure that explanations accompanying numerical answers are clear, structured, and provide a step-by-step breakdown to enhance understanding and completeness."
+    "Avoid introducing incorrect or confusing steps in the reasoning process; directly apply relevant geometric principles to ensure clarity and accuracy.",
+    "Clearly state the simplification of the final fraction and explicitly calculate the sum of the numerator and denominator for completeness.",
+    "Adhere to standard mathematical notation and presentation formats, such as boxing the final answer, to improve readability and maintain professional standards in mathematical communication.",
+    "Eliminate redundant repetition of the entire calculation process to maintain efficiency and clarity in the answer."
   ],
   "Find the arithmetic mean of two terms in a geometric sequence given the common ratio and a relationship between terms.": [
     "Ensure solutions include clear, step-by-step explanations and proper mathematical formatting to enhance readability and correctness.",
@@ -773,7 +796,7 @@
     "Focus on providing a concise and direct answer to improve clarity and precision, avoiding unnecessary steps that do not add value to the solution."
   ],
   "Calculate the result of a nested operation defined by a custom binary operation.": [
-    "Ensure the clarity and correctness of the computation process, as both minor formatting differences and detailed step-by-step explanations contribute to the overall quality of the answer."
+    "Explicitly detail each step of the calculation process to enhance clarity and understanding for the reader."
   ],
   "Multiply a whole number by a mixed number.": [
     "Ensure the final answer is clearly boxed and formatted as requested, without additional unnecessary text, to meet task requirements.",
@@ -783,7 +806,7 @@
     "Ensure the logical steps in the solution process are necessary and directly lead to the correct answer, avoiding unnecessary complications."
   ],
   "Compute the value of a given expression involving powers and reciprocals of rational numbers.": [
-    "Ensure all calculation steps, including inverses and powers, are correctly executed and clearly shown to maintain accuracy and clarity in the solution."
+    "Ensure that geometric properties and specific conditions of the problem are accurately applied when calculating side lengths and other measurements. Verify that the side lengths and other measurements used in area calculations are consistent with the problem's specific conditions and accurately derived."
   ],
   "Calculate the ratio of the sum of two variables to the sum of another pair of variables given their proportional relationships.": [
     "Include detailed, step-by-step explanations for each calculation to ensure clarity and correctness."
@@ -801,7 +824,7 @@
     "Clearly present the final answer in a distinct format (e.g., boxed) to highlight the solution and provide a clear conclusion."
   ],
   "Solve for x in a given algebraic equation.": [
-    "Avoid unnecessary steps in the simplification process to maintain clarity and efficiency in the answer."
+    "Ensure all logical steps are explicitly shown, especially when selecting critical values that impact the solution, to maintain clarity and completeness in reasoning."
   ],
   "Calculate the probability that the sine of a randomly chosen number from the interval [0, 2π] falls between 0 and √3/2.": [
     "Ensure the final probability calculation is accurate and clearly stated, reflecting the proportion of the interval where the condition is satisfied."
@@ -857,7 +880,10 @@
     "Conclude with a clear statement that directly connects the final steps of the reasoning process to the solution, enhancing clarity and accessibility."
   ],
   "Determine the number of unique lists of three numbers that can be generated by randomly selecting a number from 1 to 12, with replacement, three times.": [
-    "Ensure the final answer is clearly stated and emphasized to improve clarity and ease of understanding."
+    "Avoid double-counting symmetrical arrangements by recognizing that rotations and reflections of the same pattern should be considered identical unless explicitly stated otherwise.",
+    "Ensure the final answer is clearly stated and emphasized to improve clarity and ease of understanding.",
+    "Ensure the initial count of natural numbers includes only positive integers, excluding zero, to maintain accuracy in subsequent calculations.",
+    "Ensure detailed combinatorial analysis is performed to accurately calculate the probability of complex events, such as the product of dice rolls being divisible by a specific number, and correctly apply the complement rule to find the desired probability."
   ],
   "Determine the number of integers within a given range for which the fraction with a fixed denominator results in a repeating decimal.": [
     "Ensure the solution approach clearly connects each step to the underlying mathematical principles, such as explaining how the GCD relates to the condition for a fraction to have a repeating decimal."
@@ -909,9 +935,13 @@
     "Ensure the final answer is clearly marked and presented concisely, omitting unnecessary steps to enhance clarity and adherence to standard mathematical presentation practices."
   ],
   "Determine the polynomial g(x) given the sum of two polynomials and one of the polynomials.": [
-    "Include detailed algebraic steps to ensure clarity and completeness in the reasoning process, even if the target audience is presumed to have some understanding of the underlying concepts."
+    "Maintain mathematical correctness by accurately applying formulas and solving equations, ensuring all calculations are precise and relevant to the problem.",
+    "Structure answers clearly and logically, with each step following from the previous one, and present the final answer in a boxed format for clarity.",
+    "Ensure answers are comprehensive and correct by providing a detailed step-by-step solution, including all necessary equations and calculations, and presenting the final answer clearly.",
+    "Demonstrate clear and logical reasoning by including detailed derivations and steps to solve the problem, ensuring the solution is easy to follow and understand."
   ],
   "Calculate the total number of logs in a triangular stack where the number of logs decreases by one in each successive row.": [
+    "Ensure the final answer is consistent with the detailed reasoning provided, and double-check calculations to avoid significant arithmetic errors. Provide a detailed and clear explanation of the reasoning process to enhance clarity and completeness of the answer. Maintain a clear logical structure and coherence in the answer to facilitate understanding and verification of the solution.",
     "In questions requiring a straightforward numerical answer, providing a concise response can be appropriate. However, for educational or detailed problem-solving contexts, including a step-by-step explanation enhances clarity and understanding."
   ],
   "Determine the value of k for which a given line is tangent to a specified parabola.": [
@@ -929,7 +959,7 @@
     "Include a step-by-step reasoning process to enhance understanding, even if the final answer is correct."
   ],
   "Apply Horner's method to evaluate a polynomial at a given value.": [
-    "Focus on the specific task requirements and avoid providing unnecessary details that do not contribute directly to answering the question."
+    "Provide a detailed explanation and reasoning alongside the final answer to enhance the completeness and clarity of the solution."
   ],
   "Determine the value of x for which the inverse function f^{-1}(x) is undefined.": [
     "Provide detailed step-by-step solutions and explanations to ensure clarity and completeness, enhancing understanding and verification of the process."
@@ -968,10 +998,10 @@
     "Always provide a detailed reasoning process to ensure correctness and clarity of the solution."
   ],
   "Determine the minimum sum of two integers whose product is a given constant.": [
-    "Ensure all answers include a clear, step-by-step explanation and explicitly state the final answer."
+    "Ensure all possible factor pairs, including negative ones, are considered to find the true minimum or maximum value. Explicitly calculate and compare the sums of all factor pairs to avoid overlooking the optimal solution. Conclude with the correct minimum or maximum value after thoroughly evaluating all possibilities."
   ],
   "Evaluate the expression involving a logarithm and an exponent with the same base.": [
-    "For straightforward mathematical problems requiring a direct numerical answer, provide a concise and clear solution without unnecessary elaboration."
+    "Avoid unnecessary complexity and ensure clarity by directly stating the final answer. Ensure correctness by avoiding incorrect or unnecessary steps in the solution process. Provide a simplified and clear final expression to make the solution easily verifiable."
   ],
   "Calculate the total number of outfit combinations given different categories of clothing items.": [
     "Provide a clear numerical solution and the reasoning process to ensure the answer is both accurate and understandable.",
@@ -1038,6 +1068,7 @@
     "Ensure the final answer explicitly summarizes the key findings and directly addresses the question asked, enhancing clarity and completeness."
   ],
   "Calculate the value of a given arithmetic expression.": [
+    "Ensure that all algebraic manipulations are correctly simplified to their final form to avoid incorrect conclusions.",
     "For straightforward arithmetic problems, provide a concise final answer rather than a detailed step-by-step explanation to maintain clarity and avoid unnecessary complexity."
   ],
   "Multiply two polynomial expressions.": [
@@ -1080,7 +1111,9 @@
     "Maintain a balance between detailed explanation and directness to cater to the specific requirements of the problem."
   ],
   "Calculate the number of ways to distribute distinguishable balls into indistinguishable boxes.": [
-    "For factual recall tasks, provide a concise answer rather than an extensive step-by-step explanation."
+    "Clearly define all states and their transition probabilities to ensure accurate and complete problem-solving.",
+    "For factual recall tasks, provide a concise answer rather than an extensive step-by-step explanation.",
+    "Ensure that the logic for each step in combinatorial problems is correct, even if the final numerical answer appears to be correct. Incorrect logic can lead to flawed understanding and potential errors in similar problems. When providing detailed step-by-step explanations, verify each logical step for accuracy to avoid misleading reasoning, even if the final answer is correct. A concise answer can imply a correct understanding, but detailed explanations should be free of logical flaws."
   ],
   "Count all three-digit numbers that do not contain the digits 7 or 9.": [
     "Ensure the final answer is clearly and directly stated, without relying solely on boxed notations or embedded within lengthy explanations."
@@ -1089,7 +1122,8 @@
     "Ensure the final answer is clearly stated and avoid including extraneous or incorrect information that may confuse the reader."
   ],
   "Calculate the value of the function f for a given number based on specific rules.": [
-    "Avoid introducing unnecessary assumptions about undefined function values; directly apply the given properties to derive the solution."
+    "Ensure the correct application of function properties, such as periodicity and odd function characteristics, to derive accurate values for specific points.",
+    "Ensure all algebraic manipulations are correctly simplified to their final form to maintain the accuracy of the solution."
   ],
   "Determine the number of seating arrangements for five people in a booth with seating constraints.": [
     "Ensure all possible configurations are accounted for in the final calculation to avoid underestimating the total number of arrangements.",
@@ -1227,7 +1261,9 @@
     "Double-check the simplification and verification of the final area calculation to match it with the closest provided option accurately."
   ],
   "Determine the distance between the intersection points of the graphs of a quadratic function and a linear function given the distances for similar intersections with shifted quadratic and linear functions.": [
-    "Ensure all intermediate calculations are accurately followed through to the final answer, double-checking each step for consistency with given constraints and formulas."
+    "Perform systematic checks and calculations to ensure the correct answer is found, avoiding repetitive and incorrect calculations.",
+    "Formulate the problem with a clear and precise equation or setup to ensure a structured and systematic approach to solving.",
+    "Ensure the conclusion is supported by logical steps and correct calculations, providing clarity and validation of the answer."
   ],
   "Calculate the product of four real numbers defined by specific nested radical equations.": [
     "Leverage symmetry and underlying mathematical properties to simplify problem-solving, rather than introducing unnecessary complexity."
@@ -1236,7 +1272,9 @@
     "Avoid redundant restatements of the final answer to maintain clarity and conciseness."
   ],
   "Determine the maximum value of a given expression under specified constraints.": [
-    "Ensure the final answer is explicitly and correctly stated, reflecting the largest value derived from the calculations."
+    "Ensure clarity in explaining intermediate steps that lead to maximum distances or values, providing a detailed reasoning process. Explicitly state the reasoning behind the final conclusion to enhance understanding and completeness of the answer.",
+    "Ensure that the solution maximizes the success ratio by carefully considering all possible values within the given constraints, rather than making assumptions that may lead to suboptimal results.",
+    "Ensure the correct identification and application of geometric properties and definitions when setting up the problem, such as the focus and directrix of a parabola, to accurately derive the required function or expression."
   ],
   "Determine the exponent to which 7 must be raised to equal the given expression.": [
     "Ensure all critical steps in the calculation are clearly shown to enhance transparency and understanding."
@@ -1278,6 +1316,7 @@
     "Provide explicit steps for calculating each component of the final result to ensure transparency and ease of verification."
   ],
   "Determine the fraction of the first 22 U.S. states' quarters that joined the union during the decade 1780-1789.": [
+    "Ensure accurate comparison and evaluation of all calculated options to determine the smallest or largest value, as required by the task. Double-check and present the correct final answer to ensure the task requirements are fully met.",
     "Ensure answers include a clear interpretation of given data or graphs to support logical reasoning."
   ],
   "Solve for the expression 2xy + xz + √3yz given three simultaneous equations involving x, y, and z.": [
@@ -1373,6 +1412,7 @@
     "Accurately evaluate the maximum or minimum values at the critical points to ensure the final result is precise."
   ],
   "Determine the value of a trigonometric expression given an equation involving cosine and sine.": [
+    "Ensure the final conclusion aligns with the problem's context and constraints, particularly the signs of trigonometric functions based on the angle's quadrant.",
     "Focus on providing concise, relevant information and avoid unnecessary details that do not contribute to the final solution."
   ],
   "Determine the angle between two vectors given their magnitudes and a perpendicularity condition.": [
@@ -1387,9 +1427,765 @@
     "Maintain exact values and precise calculations throughout the problem-solving process to ensure the accuracy of the final answer.",
     "Avoid rounding or approximating intermediate values to preserve the precision of the final result.",
     "Perform arithmetic operations, especially divisions, exactly to ensure the correctness of the solution.",
-    "Ensure clarity and precision in handling complex expressions by maintaining exact values at each step."
+    "Ensure clarity and precision in handling complex expressions by maintaining exact values at each step.",
+    "Maintain a clear and logical structure throughout the answer, segmenting the solution into distinct parts and ensuring a smooth progression from problem statement to solution verification.",
+    "Provide detailed steps for solving systems of equations to ensure the reasoning process is rigorous and comprehensible.",
+    "Ensure all intermediate steps are clearly shown to maintain transparency and facilitate verification, especially when simplifying expressions or solving equations.",
+    "Formulate the problem with a clear and precise equation or setup to ensure a structured and systematic approach to solving. Perform systematic checks and calculations to ensure the correct answer is found, avoiding repetitive and incorrect calculations. Ensure the conclusion is supported by logical steps and correct calculations, providing clarity and validation of the answer.",
+    "Begin with a clear and concise restatement of the problem to ensure the reader understands the context and requirements before diving into the solution.",
+    "Double-check the final calculations to ensure the correct and simplified form of the answer is provided, avoiding any arithmetic or logical errors."
   ],
   "Calculate the product of trigonometric expressions involving sine functions at specific angles.": [
-    "Leverage trigonometric identities and symmetry properties to simplify calculations, avoiding unnecessary and complex intermediate steps."
+    "Ensure the range of summation matches the problem's constraints to avoid overestimation or underestimation of results.",
+    "Break down complex calculations into clear, distinct steps to ensure clarity and correctness."
+  ],
+  "Calculate the area of a rectangle given the division of its diagonal into segments by parallel lines through its vertices.": [
+    "Ensure accurate interpretation of geometric relationships and proportional segments when calculating dimensions of geometric shapes.",
+    "Verify calculated dimensions and area against provided options to ensure consistency with the problem's constraints."
+  ],
+  "Determine the value of a parameter in a quadratic equation.": [
+    "Clearly identify and explain any constraints or conditions that affect the solution, such as $a \neq -1$, to promote a deeper understanding of the problem.",
+    "Ensure the setup of equations is accurate and complete, avoiding premature conclusions about specific values without proper derivation.",
+    "Avoid providing specific values without a detailed and logical derivation to prevent misleading the reader."
+  ],
+  "Find the minimum value of the sum of distances from a given point to the intersection points of a line and a curve.": [
+    "Ensure the correct application of trigonometric identities and algebraic manipulations to accurately determine the minimum value of expressions involving trigonometric functions."
+  ],
+  "Find the Cartesian equations of a line and a curve, and calculate the sum of the reciprocals of the distances from a point on the y-axis to the intersection points of the line and the curve.": [
+    "Ensure the solution is complete by including all necessary steps, such as calculating intermediate values and providing the final result."
+  ],
+  "Calculate the height of a point on a rotating Ferris wheel at a given time.": [
+    "For questions requiring a direct numerical answer, provide the result succinctly without unnecessary elaboration, ensuring clarity and directness."
+  ],
+  "Determine the intersection point of a line dividing a quadrilateral into two regions with a specific area ratio.": [
+    "Ensure detailed explanations of each step in the solution process to enhance clarity and understanding, especially when applying mathematical theorems or conditions."
+  ],
+  "Find the minimum value of the sum of distances from a point on a parabola to a fixed point and to the y-axis.": [
+    "Provide clear and detailed explanations for each step in the solution process to enhance understanding and verification of the answer.",
+    "Ensure the correct application of geometric properties and reflection methods to accurately calculate minimum distances in problems involving parabolas.",
+    "Use the reflection method across the directrix of a parabola to simplify problems involving distances from points on the parabola to external points."
+  ],
+  "Determine the shortest path on the surface of a right circular cone between two points given their distances from the vertex.": [
+    "Avoid redundant reiteration of steps in the final calculation to maintain conciseness and clarity."
+  ],
+  "Calculate the square of an algebraic expression.": [
+    "Ensure algebraic simplifications are accurate and maintain the integrity of the original expression."
+  ],
+  "Find the minimum value of the expression involving reciprocals of coefficients given a logarithmic function's fixed point and its relation to a linear equation.": [
+    "Ensure all calculations are double-checked for accuracy to avoid incorrect final values, as even a single miscalculation can lead to an incorrect solution."
+  ],
+  "Convert parametric and polar equations to rectangular coordinates, find the intersection points of a line and an ellipse, and calculate the sum of distances from a specific point on the line to these intersection points.": [
+    "Identify and calculate the coordinates of key points, such as where the line intersects the x-axis, to address all parts of the question.",
+    "Ensure the derivation of equations is accurate and included in the solution to establish a solid foundation for solving the problem.",
+    "Calculate and provide the coordinates of intersection points to ensure the completeness of the solution.",
+    "Include detailed calculations for all required values, such as |EA + EB|, to ensure the solution is comprehensive and accurate.",
+    "Always provide a detailed solution with step-by-step reasoning and calculations to meet the task requirements."
+  ],
+  "Find the intersection points of a given parametric curve and a given polar line, and calculate the absolute difference of distances from a specified point to these intersection points.": [
+    "Always box or clearly highlight the final answer in math problems to ensure clarity and completeness."
+  ],
+  "Determine the ratio of segments FH to HE given the intersection properties and segment division in a triangle.": [
+    "Ensure the final interpretation of ratios in geometric problems aligns with the initial conditions and the method used (e.g., mass points). Incorrectly interpreting the final ratio can lead to an incorrect answer despite correctly applying the method."
+  ],
+  "Determine the maximum distance between a fixed point and any point on a given ellipse.": [
+    "Ensure accurate calculation and simplification of expressions to avoid incorrect conclusions about maximum or minimum values.",
+    "Provide a detailed and clear explanation of the steps taken to reach the solution, including the correct evaluation of critical points and function values.",
+    "Verify the correctness of the solution by solving the problem using appropriate mathematical techniques, such as calculus, to find the exact maximum or minimum values."
+  ],
+  "Determine the slope of the line containing the reflected ray after it reflects off a given line.": [
+    "Ensure the final answer is accurate and supported by detailed calculations. Avoid stating incorrect conclusions without proper justification.",
+    "Provide clear and accurate reasoning and explanations to support the final answer. Avoid misleading explanations that lead to incorrect conclusions."
+  ],
+  "Solve for y in a given proportion equation.": [
+    "Ensure all mathematical operations are correctly applied and completed to reach the final solution, including taking roots of powers to maintain accuracy.",
+    "Maintain clarity and logical flow in the explanation by avoiding unnecessary steps and ensuring each step logically leads to the next."
+  ],
+  "Find the area of triangle FPQ where P and Q are equidistant from a point F and two perpendicular lines L1 and L2.": [
+    "Always include detailed calculation steps for each part of the solution to ensure clarity, completeness, and verifiability."
+  ],
+  "Determine the eccentricity of an ellipse given geometric conditions involving its foci, vertices, and points on the ellipse.": [
+    "Ensure arithmetic operations are accurately performed when simplifying equations to avoid incorrect solutions.",
+    "Provide a clear and detailed explanation of how intermediate steps lead to the final solution to enhance the completeness and understandability of the answer."
+  ],
+  "Determine the value of a polynomial at a specific point, given constraints on its coefficients and a known value at another point.": [
+    "Ensure the coefficients of the polynomial are accurately determined by matching the rational and irrational parts of the given polynomial evaluation, and verify each coefficient against the problem constraints.",
+    "Double-check the inclusion and calculation of each term in the polynomial when substituting a value, ensuring no extraneous or omitted terms affect the final result."
+  ],
+  "Determine the maximum value of the ratio of the distance from a point on a parabola to the origin to the distance from that point to the focus.": [
+    "When solving for initial conditions in recursive sequences, explicitly set variables to minimize or maximize the target value based on the sequence's properties.",
+    "Ensure the exclusion of zero when counting natural numbers, as zero is not considered a natural number.\nCorrectly adjust the count of numbers without a specific digit by excluding zero from the initial count of single-digit numbers.\nMaintain accuracy in initial counts and calculations to ensure the final result is correct."
+  ],
+  "Calculate the probability of drawing a set of coins with a total value of at least 100 cents from a mixed collection of coins.": [
+    "Support the final answer choice with a detailed and logical analysis to ensure credibility and accuracy.",
+    "Adopt a clear and structured approach in presenting the solution to facilitate understanding and verification.",
+    "Ensure thorough exploration of all possible scenarios to capture all valid combinations, enhancing the completeness and correctness of the solution."
+  ],
+  "Find the minimum value of the expression involving the reciprocals of two positive real numbers, given their linear relationship.": [
+    "Avoid unnecessary complexity and ensure clarity by directly stating the final answer and avoiding incorrect or overly detailed intermediate steps.",
+    "Ensure the final expression is simplified and clearly stated to enhance the reader's understanding and verification of the solution.",
+    "Maintain correctness throughout the solution process to avoid misleading the reader with incorrect steps or conclusions."
+  ],
+  "Find the value of a given expression under specified algebraic conditions.": [
+    "Ensure accurate application of formulas and arithmetic operations to avoid final step errors in calculations.",
+    "Clearly box and present the final answer to ensure clarity and correctness in the response."
+  ],
+  "Determine the value of A-3B under given conditions and identify x for which A-3B is independent of y.": [
+    "Ensure the final answer is clearly boxed and labeled for easy identification."
+  ],
+  "Calculate the probability that each player ends up with the same amount of money after a series of random monetary exchanges.": [
+    "Ensure the final probability calculation accounts for the symmetry and combinatorial nature of the problem to avoid underestimating the probability due to misinterpretation."
+  ],
+  "Determine the values of a and b given the conditions on sets A and B, and compute a^2023 + b^2023.": [
+    "When solving problems involving set equality, always verify all possible values of variables to ensure the sets match completely."
+  ],
+  "Determine the eccentricity of a hyperbola given the area of a triangle formed by the intersection of a line perpendicular to one of its asymptotes and the asymptotes themselves.": [
+    "Ensure accurate calculation and identification of intersection points between geometric figures and lines, as errors in this step can lead to incorrect solutions."
+  ],
+  "Determine the value of x1 given the constraints and equation involving x1, x2, and x3.": [
+    "Ensure rigorous and logical handling of equations to avoid incorrect conclusions, such as misinterpreting the discriminant or making unfounded assumptions.",
+    "Maintain clarity and logical structure in the solution process to enhance the credibility and correctness of the answer."
+  ],
+  "Find the sum of the real y values that satisfy a given system of nonlinear equations.": [
+    "Ensure the final answer is accurate and matches the solution derived from the equations, as even minor discrepancies can affect the correctness of the solution."
+  ],
+  "Determine the maximum value of a given piecewise function on a specified interval.": [
+    "Ensure the final answer is clearly and concisely stated to enhance clarity and effectiveness of the response."
+  ],
+  "Find the minimum value of a given expression involving indices of terms in a geometric sequence.": [
+    "Ensure detailed steps are included when solving equations, especially when finding critical points, to maintain transparency and robustness in the solution.",
+    "Explicitly show all substitutions and intermediate steps to enhance the clarity and structure of the solution, making it easier for readers to follow the logical progression.",
+    "Provide detailed arithmetic steps when calculating final values to increase transparency and allow for easier verification of the solution."
+  ],
+  "Determine which fraction is closest to a given ratio.": [
+    "Maintain clarity and focus by directly stating the final answer without unnecessary details.",
+    "Optimize logical flow by minimizing unnecessary steps and directly addressing the question's simplicity.",
+    "Ensure correctness by identifying the closest fraction accurately and efficiently."
+  ],
+  "Calculate the number of ways to select a team of 4 athletes from a group of 5 males and 4 females, ensuring the team includes at least one male and one female, and either athlete A or athlete B.": [
+    "Ensure each step in the solution is clearly explained and directly contributes to solving the problem, avoiding unnecessary text that may distract from the logical flow. Maintain a concise and focused approach, including only necessary details and explanations to enhance clarity and ease of understanding. Structure the solution logically, ensuring each part builds upon the previous one without introducing irrelevant information."
+  ],
+  "Calculate the number of valid arrangements for a ceremony program under given constraints.": [
+    "When a specific ordering constraint exists between items, clearly explain the rationale behind dividing the total permutations by the number of possible orderings that satisfy the constraint.",
+    "Maintain clear and detailed explanations for each part of the problem to enhance understanding and ensure the logical flow of the solution is transparent.",
+    "Ensure that the calculation of permutations with constraints accounts for all items in the arrangement, not just subsets, to avoid undercounting or overcounting the total number of valid arrangements.",
+    "Provide detailed reasoning for each step in the calculation, especially when using subtraction or division to adjust for constraints, to ensure clarity and correctness of the solution."
+  ],
+  "Determine the optimal salary in Taxland where tax rate equals the thousands of Tuzrics earned.": [
+    "Ensure clarity and completeness by providing context and explaining each step of the solution process.",
+    "Provide a detailed explanation of the reasoning process to ensure the reader understands how the solution was derived. Include the mathematical derivation steps to validate the solution and enhance the answer's comprehensiveness. Add verification steps, such as the second derivative test, to confirm the correctness of the solution. Ensure clarity and completeness by providing context and explaining each step of the solution process.",
+    "Provide a detailed explanation of the reasoning process to ensure the reader understands how the solution was derived.",
+    "Include verification steps, such as the second derivative test, to confirm the correctness of the solution.",
+    "Include the mathematical derivation steps to validate the solution and enhance the answer's comprehensiveness."
+  ],
+  "Determine the total number of characters in a document given the typing speeds of two individuals and changes in their work conditions.": [
+    "Ensure accurate and consistent calculations by correctly solving for intermediate variables and verifying the final result."
+  ],
+  "Determine the maximum number of girls given the distribution of boys collecting different types of stamps.": [
+    "Provide the final calculation and answer with supporting intermediate steps to enhance clarity and verifiability.",
+    "Explicitly demonstrate the application of relevant mathematical principles, such as the inclusion-exclusion principle, to ensure transparency and correctness.",
+    "Ensure each step in the reasoning process is clearly explained and explicitly stated to maintain clarity and completeness."
+  ],
+  "Determine the minimum initial number of gold coins Huanhuan had, given the relationships between their gold coins after each round of the game.": [
+    "Ensure logical consistency and correctness by verifying the final solution against all given conditions.",
+    "Ensure the final answer is clearly and prominently stated, especially in mathematical or numerical problems, to maintain clarity and conciseness. Focus on providing a concise and direct answer to the question, avoiding unnecessary elaboration that may overshadow the key result."
+  ],
+  "Calculate the number of chairs in a room given the total number of legs and the number of unoccupied chairs.": [
+    "Always verify the solution by checking its consistency with the given conditions to ensure correctness."
+  ],
+  "Calculate the total volume of a rectangular fort using one-foot cubical blocks, considering uniform thickness of walls and floor.": [
+    "To accurately calculate the number of blocks used in the walls and floor of a structure, subtract the volume of the inner space from the total volume of the structure.",
+    "Ensure logical consistency by clearly distinguishing between the total volume of a structure and the volume of its walls and floor when calculating the number of blocks used."
+  ],
+  "Determine the distribution of audio segments across a minimum number of storage units, given total audio length and storage capacity per unit.": [
+    "Ensure the explanation of the calculation steps is clear and present, even if the final answer is concise. This helps in understanding the reasoning behind the numerical result.",
+    "Maintain clarity and precision in the answer while providing necessary context to enhance understanding, but avoid introducing extraneous information that does not directly address the core question.",
+    "Focus on the primary task and avoid unnecessary details that deviate from the core question. For instance, if asked to calculate an average, provide the average and the steps to reach it without detailing specific distribution plans unless explicitly asked."
+  ],
+  "Determine the number of subsets of a given set that satisfy specific ordering constraints.": [
+    "Maintain conciseness and clarity in problem-solving explanations to enhance understanding and verification.",
+    "Conclude with a clear final statement to provide a streamlined logical flow and avoid confusion.",
+    "Ensure the final answer is explicitly stated for clarity and completeness."
+  ],
+  "Determine the number of valid scheduling sequences for six projects with specific precedence constraints.": [
+    "Provide a detailed step-by-step calculation to demonstrate how the final answer is derived, including any adjustments for constraints.",
+    "Ensure the calculation accounts for all constraints, such as fixed pairs or sequences, and adjust the permutation accordingly.",
+    "Clearly explain the reasoning behind each step of the calculation to ensure the answer is transparent and easy to follow."
+  ],
+  "Calculate the number of ways to assign 4 out of 5 students to 4 different competitions, excluding one student from being assigned to a specific competition.": [
+    "Ensure all calculations are accurate and correctly reflect the constraints of the problem."
+  ],
+  "Calculate the total number of pages read over a specified period.": [
+    "Ensure all calculations are accurate and double-check each step to maintain correctness."
+  ],
+  "Calculate the number of ways to climb a staircase of given steps using specified step sizes, considering individual and combined climbs.": [
+    "Use dynamic programming to systematically calculate the number of ways to achieve a goal, ensuring correctness and completeness by setting up recurrence relations and initializing base cases correctly.",
+    "Correctly account for all possible combinations of actions when calculating the total number of ways, avoiding overcounting by properly handling cases where actions can overlap or be combined."
+  ],
+  "Determine the smallest positive real number x satisfying a given equation involving the floor function.": [
+    "Conclude with the correct and verified solution, even if the process is detailed, to ensure completeness and correctness.",
+    "Double-check the correctness of the final solution to ensure it accurately satisfies the problem's conditions.",
+    "Maintain clarity and conciseness in the final answer to ensure it is easily understandable and directly addresses the question.",
+    "Ensure that all candidate solutions are verified to satisfy the given equation before concluding the answer."
+  ],
+  "Determine the base of a logarithm given a system of logarithmic equations with a unique real solution.": [
+    "Ensure the final answer is correct and explicitly verified by substituting back into the original equations.",
+    "Communicate the final solution clearly and concisely, avoiding unnecessary steps that do not contribute to the clarity of the answer.",
+    "Maintain logical consistency and completeness by including verification steps to confirm the solution."
+  ],
+  "Calculate the weight of a right triangular piece of wood given its dimensions and the weight of a similar piece with known dimensions.": [
+    "Ensure final answers are clearly emphasized and presented in a boxed or highlighted format to improve readability and adhere to common academic or professional standards.",
+    "Use precise language in final answers to accurately reflect the calculation's precision based on the given data, avoiding unnecessary qualifiers like 'approximate' if the calculation is exact.",
+    "Enhance the logical flow and structure of answers by explicitly highlighting or boxing the final result to make it easily locatable for the reader."
+  ],
+  "Determine the maximum volume of a pyramid with a square base, given the perimeter of the diagonal cross-section that includes the pyramid's height.": [
+    "Ensure answers are comprehensive and correct by providing detailed step-by-step solutions, including all necessary equations and calculations, and clearly stating the final answer.",
+    "Demonstrate clear and logical reasoning by including detailed derivations and steps to solve the problem, ensuring the thought process is transparent and understandable.",
+    "Maintain mathematical correctness by accurately applying formulas and solving equations, ensuring all calculations are precise and relevant to the problem.",
+    "Structure answers clearly and logically, with each step following from the previous one, and present the final answer in a clear and boxed format for emphasis."
+  ],
+  "Determine the height of a right circular cylinder inscribed in a hemisphere, given the radius of the cylinder and the radius of the hemisphere.": [
+    "Ensure the final answer is correctly calculated and fully explained, including all necessary steps, to maintain accuracy and completeness."
+  ],
+  "Count the number of unique five-digit numbers greater than 20000 using the digits 1, 2, 3, 4, and 5 without repetition, ensuring the hundreds place is not the digit 3.": [
+    "Always conclude with a clear and direct statement of the final result to ensure the reader immediately understands the solution."
+  ],
+  "Find the sum of all three-digit numbers that satisfy given modular arithmetic conditions.": [
+    "Ensure each step in the solution process is clearly explained to maintain clarity and completeness, enhancing the reader's understanding."
+  ],
+  "Calculate the number of license plates that meet specific criteria involving consonant letters and an odd digit.": [
+    "Ensure that exclusions based on specific criteria (like odd digits) inherently exclude invalid combinations (like 000), avoiding unnecessary adjustments in calculations."
+  ],
+  "Determine the value of a specific letter in a cryptarithm problem where each letter represents a unique digit.": [
+    "Start with a clear and structured plan or rationale before diving into calculations to ensure logical clarity and ease of understanding.",
+    "Consider all possible scenarios, including carry-over, when analyzing each column in a multi-digit addition problem to avoid incorrect conclusions.",
+    "Explicitly mention carry-over from previous columns to maintain clarity and correctness in subsequent column analyses.",
+    "Thoroughly re-evaluate the solution with all possible values to ensure consistency and correctness before concluding.",
+    "Carefully analyze each column, considering both scenarios (with and without carry-over) to avoid contradictions and ensure the correctness of the solution."
+  ],
+  "Determine the value of x that satisfies the equation x^(x^(x^...)) = 2.": [
+    "Ensure the final solution is mathematically correct by accurately solving the equation and not making incorrect assumptions about the convergence of infinite series.",
+    "When verifying a solution, substitute the derived value back into the original equation correctly to ensure it satisfies the equation, and avoid assuming convergence without proper justification."
+  ],
+  "Determine the intersection point of a line dividing a quadrilateral into two areas with a 2:1 ratio, and calculate the sum of the numerators and denominators of the coordinates of this point in simplest form.": [
+    "Ensure detailed explanations of each step in the solution process to enhance clarity and understanding, especially when applying mathematical theorems or conditions."
+  ],
+  "Simplify the square of a given algebraic expression.": [
+    "Ensure that algebraic simplifications maintain the correct structure and do not lose or incorrectly combine terms.",
+    "Verify each step of the simplification process to ensure accuracy and completeness."
+  ],
+  "Determine the shortest path to visit two points on given lines and return to the starting point.": [
+    "Avoid unnecessary simplifications that do not add clarity or precision to the final answer. Clearly state the exact value or expression that represents the solution."
+  ],
+  "Calculate the probability that the product of numbers rolled on 8 six-sided dice is divisible by 8.": [
+    "Ensure detailed combinatorial analysis is performed to accurately calculate the probability of complex events, such as the product of dice rolls being divisible by a specific number, to avoid incorrect conclusions."
+  ],
+  "Determine the coefficient of a specific term in a polynomial expansion.": [
+    "Ensure clarity by explicitly stating the final answer, especially in concise formats.",
+    "While detailed steps can aid understanding, prioritize brevity and directness for those seeking only the final result.",
+    "Provide detailed step-by-step reasoning and calculations to ensure clarity and understanding of the solution process. Include all possible valid combinations and their respective calculations to offer a comprehensive explanation of the problem. Explicitly state the final answer with clear boxed notation and provide a detailed explanation of why it is the correct answer."
+  ],
+  "Determine the second term of an infinite geometric series given its sum and common ratio.": [
+    "Maintain a clear and concise structure by directly providing the necessary information without unnecessary elaboration or repetition."
+  ],
+  "Find the projection matrix P that projects any vector v onto a specified vector.": [
+    "Ensure each step in constructing a projection matrix is clearly explained, including the rationale behind normalizing the vector and the importance of using the outer product of the unit vector with itself to form the projection matrix."
+  ],
+  "Calculate the total number of one-foot cubical blocks used to construct a uniformly thick rectangular fort.": [
+    "Ensure the calculation accurately reflects the volume of the structure's walls and floor by subtracting the inner space volume from the total fort volume.",
+    "Maintain logical consistency by clearly distinguishing between the total volume of the fort and the volume of the walls and floor when calculating the number of blocks used."
+  ],
+  "Determine a 4-digit integer A such that modifying its digits according to a specific rule results in n times A.": [
+    "Begin with a clear statement of the problem and provide a structured, step-by-step approach to solving it, including a verification step at the end.",
+    "Ensure each step in the solution is clearly explained to facilitate understanding and verification.",
+    "Maintain a clear structure with logical progression and a final verification step to enhance clarity and comprehensibility."
+  ],
+  "Determine the rank of a specific five-digit number in an ordered list of unique-digit numbers formed from a given set of digits.": [
+    "Ensure each step in the calculation is clearly explained, including the reasoning behind the choices made, to enhance clarity and understanding for the reader.",
+    "Explicitly state the number of choices available for each digit position, especially when considering permutations and restrictions (like avoiding leading zeros), to maintain logical coherence and accuracy.",
+    "Summarize the cumulative counts from each step to derive the final answer, ensuring the reader can follow the logical progression and understand how the final result is reached."
+  ],
+  "Find a three-digit number where the sum of the factorials of its digits equals the number itself, given that one of the digits is 3.": [
+    "Ensure the solution provided is correct and clearly verified, avoiding incorrect attempts and assertions.",
+    "Communicate the solution process clearly and efficiently, avoiding unnecessary or incorrect steps that may confuse the reader.",
+    "Focus on providing a concise and direct solution, rather than including lengthy and repetitive processes that do not contribute to the clarity or correctness of the answer."
+  ],
+  "Determine the least common multiple of all numbers within a given range that have the maximum number of divisors.": [
+    "Ensure answers are structured with clear, step-by-step breakdowns to enhance clarity and facilitate verification.",
+    "Include detailed calculations and explicit steps for each part of the solution to improve completeness and understanding."
+  ],
+  "Determine the 2014th term in a sequence where each term is either a power of 3 or a sum of distinct powers of 3.": [
+    "After completing a full cycle of bracket sizes, ensure any remaining terms are correctly accounted for by adding the necessary additional brackets."
+  ],
+  "Determine which prime numbers can be expressed as the sum of the product of four distinct integers and another product of three distinct integers, all chosen from the set {1, 2, 3, 4, 5, 6, 7}.": [
+    "Ensure the answer correctly identifies all possible solutions to the problem, avoiding false negatives or positives.",
+    "Provide specific examples to support the conclusion and enhance the completeness of the answer.",
+    "Clearly explain each step and reasoning to ensure the answer is understandable and well-structured."
+  ],
+  "Determine the sum of two positive integers that satisfy a given equation.": [
+    "Ensure the solution aligns with the problem's context and typical expectations, especially when multiple valid solutions exist.",
+    "Provide a rationale for the chosen solution, considering the problem's structure and symmetry."
+  ],
+  "Find the value of x that satisfies the recursive function equation f_{1001}(x) = x - 3, where f_n(x) is defined recursively, and express the solution as a fraction in simplest form.": [
+    "Ensure each step in the solution process is clearly explained and verified to maintain clarity and correctness.",
+    "Provide detailed step-by-step instructions to guide the reader through the solution process, reducing the risk of misinterpretation.",
+    "Include explicit verification steps and show all intermediate steps to ensure the solution's completeness and correctness."
+  ],
+  "Find the y-coordinate of a point P that satisfies given geometric conditions involving distances to other points.": [
+    "Ensure all mathematical expressions and equations are correctly derived and simplified to maintain logical consistency and accuracy.",
+    "Clearly state the final answer in the requested format, ensuring all components (a, b, c, d) are explicitly identified and summed.",
+    "Use consistent and clear notation throughout the solution to avoid confusion and enhance readability.",
+    "Verify the correctness of the final answer by cross-referencing with the problem statement and ensuring all conditions are met."
+  ],
+  "Determine the expected value of the final roll of a 6-sided die after up to two strategic re-rolls, and find the sum of the numerator and denominator of the simplified fraction representing this expected value.": [
+    "Ensure the final answer is clearly stated and aligned with the question's requirements, even if the reasoning process differs."
+  ],
+  "Determine the number of distinct ways to arrange two $1 \times 2$ tiles on a $2 \times 2$ grid.": [
+    "Ensure the final answer is correct by accounting for all relevant permutations and combinations, including the internal permutations of new elements being inserted."
+  ],
+  "Calculate the probability that one person gets more heads than another in a series of coin tosses.": [
+    "Leverage symmetry in binomial distributions to simplify probability calculations when applicable, avoiding unnecessary complexity and potential inaccuracies.",
+    "Provide concise answers that directly address the question without unnecessary elaboration or steps, unless specifically requested."
+  ],
+  "Calculate the perimeter of a T-shaped figure formed by combining two rectangles.": [
+    "Ensure accurate identification and measurement of overlapping edges to avoid overcounting in perimeter calculations."
+  ],
+  "Calculate the ratio of two specific elements in a given row of Pascal's triangle.": [
+    "Ensure answers include detailed explanations of the calculation steps and reasoning, not just final numerical results, to enhance understanding and verification."
+  ],
+  "Determine the distance between two docks given altered travel times due to a stop and speed reduction.": [
+    "Ensure all intermediate calculations are accurate to prevent errors from propagating into the final solution.",
+    "Double-check arithmetic and algebraic manipulations to maintain the integrity of the solution process.",
+    "Verify the correctness of the final answer by cross-referencing with the problem statement and intermediate steps."
+  ],
+  "Determine the profit and marginal profit functions for a shipbuilding company and find the optimal number of ships to build annually to maximize profit.": [
+    "Focus on essential calculations and directly provide the solution to avoid redundancy and ensure clarity.",
+    "Avoid unnecessary calculations that do not contribute to solving the main task to maintain task relevance and simplicity.",
+    "Conclude with a clear and direct statement of the final answer to ensure the task's completeness and clarity."
+  ],
+  "Determine the period and symmetry of a trigonometric function and use trigonometric identities to find a ratio in a triangle.": [
+    "Provide detailed step-by-step reasoning and explanations for each part of the solution to ensure clarity and completeness.",
+    "Ensure that each step in the solution is logically connected and clearly explained to demonstrate a thorough understanding of the problem.",
+    "Apply mathematical principles accurately and consistently throughout the solution to maintain correctness and precision."
+  ],
+  "Solve an inequality involving a quadratic function and determine if a specific value of a parameter minimizes another function within a given interval.": [
+    "Ensure all calculations, including solving for roots of quadratic functions, are accurate and double-checked to maintain the integrity of subsequent steps."
+  ],
+  "Determine the measure of angle BED in triangle ABC given that angle A is 55 degrees, angle C is 75 degrees, and DB equals BE.": [
+    "Ensure all steps in the solution, including the identification of isosceles triangles and the application of angle sum properties, are explicitly detailed and justified to maintain clarity and logical coherence."
+  ],
+  "Determine the length of side BD in a right triangle ABD given the lengths of sides BC, AC, and AD.": [
+    "Simplify mathematical expressions to their most concise form to enhance clarity without sacrificing correctness.",
+    "Ensure each step in the solution process is clear, logical, and directly contributes to the final answer to maintain clarity and correctness."
+  ],
+  "Calculate the length of the segment from the incenter to a vertex in a given triangle.": [
+    "Ensure the correct application of relevant formulas to achieve accurate results.",
+    "Simplify the final answer to enhance clarity and readability.",
+    "Avoid unnecessary complexity and repetition in the solution process."
+  ],
+  "Find the sum of two variables given the values of a polynomial function at those variables.": [
+    "Transform complex functions into simpler forms to facilitate problem-solving.",
+    "Include detailed intermediate steps to enhance clarity and understanding.",
+    "Provide clear explanations for key mathematical concepts and theorems used in the solution."
+  ],
+  "Determine the distance traveled by one skater before meeting another skater, given their speeds and initial directions.": [
+    "Ensure the solution to the system of equations is verified for consistency in time and distance calculations to avoid incorrect conclusions.",
+    "Always verify the final answer by checking the logical consistency of the solution steps to ensure correctness.",
+    "Conclude with a clear and accurate statement of the final answer to avoid misleading the reader."
+  ],
+  "Determine the cosine of angle A in a given isosceles trapezoid with specified side lengths and perimeter.": [
+    "Ensure all critical assumptions and steps are explicitly stated and justified to maintain the logical integrity and completeness of the solution."
+  ],
+  "Calculate the distance from a vertex to a plane in a tetrahedron given specific edge lengths and dihedral angle.": [
+    "Ensure all steps in the solution, from coordinate system setup to final calculation, are meticulously checked for accuracy to avoid any unnoticed errors."
+  ],
+  "Calculate the mean value of the interior angles of any triangle.": [
+    "Prioritize concise and direct answers over verbose explanations when the question seeks a specific numerical result or straightforward conclusion."
+  ],
+  "Calculate the ratio of the area of a sector to the area of a circle given specific central angles.": [
+    "Ensure the central angle of a sector is correctly calculated by considering the position of points relative to the circle's diameter or other reference points to avoid underestimating or overestimating the arc length."
+  ],
+  "Determine the integer length of side BC in a triangle ABC given specific segment lengths AD, DE, and EC are equal and integer values.": [
+    "Ensure detailed intermediate steps and logical reasoning are included to validate the solution and enhance understanding.",
+    "Provide a comprehensive and structured approach to solving the problem, including all necessary calculations and verification steps.",
+    "Maintain clarity and completeness in the solution presentation to ensure the reader can follow the problem-solving process."
+  ],
+  "Calculate the sum of the distances from the centroid of an isosceles triangle to its sides.": [
+    "Maintain precision and clarity in mathematical calculations and final answers to ensure rigorous and accurate solutions."
+  ],
+  "Calculate the ratio of segment PQ to EF in a geometric configuration involving intersecting lines within a rectangle.": [
+    "Always provide explicit coordinates for intersection points to ensure clarity and verifiability in geometric problems.",
+    "Detail the calculation steps for segment lengths to enhance clarity and facilitate verification.",
+    "Show a step-by-step approach in simplifying ratios to ensure accuracy and educational value."
+  ],
+  "Calculate the difference between the products of segments formed by altitudes in an acute triangle.": [
+    "Ensure the correct application of geometric properties and formulas to avoid sign errors in final calculations."
+  ],
+  "Determine angle A and find the maximum area of triangle ABC given the relationship between its sides and angles.": [
+    "Ensure all steps in the derivation are clearly shown, including the application of relevant identities and formulas, to maintain clarity and completeness of reasoning."
+  ],
+  "Calculate the ratio of the area of triangle DEF to the area of square ABCD.": [
+    "Ensure that the geometric configuration of points in a problem accurately reflects the given conditions to avoid flawed calculations and reasoning."
+  ],
+  "Determine the length of side BC in an isosceles triangle ABC given specific segment lengths and areas.": [
+    "Ensure trigonometric calculations for obtuse angles correctly reflect the supplementary angle's cosine value to maintain logical consistency."
+  ],
+  "Determine the length of a segment in a triangle given parallel lines and segment lengths.": [
+    "Avoid unnecessary repetition and redundancy in the solution to maintain clarity and conciseness.",
+    "Ensure the logical steps are clear and directly lead to the final answer, especially for those familiar with the problem setup.",
+    "Directly provide the final answer to enhance clarity and directness, while detailed steps can be provided in supplementary materials for learners needing a thorough explanation."
+  ],
+  "Determine the value of cos A given a trigonometric equation involving sides and angles of a triangle.": [
+    "Simplify and isolate key variables early in the problem-solving process to maintain clarity and facilitate direct calculation of the desired result."
+  ],
+  "Calculate the area of a triangle given two sides and the cosine of the difference between two angles.": [
+    "Ensure all side lengths are derived accurately using appropriate trigonometric identities and formulas before proceeding to calculate the area.",
+    "Use correct trigonometric identities to calculate angles or trigonometric functions of compound angles, ensuring the derivation is accurate and simplified correctly.",
+    "Simplify expressions and calculations thoroughly to arrive at the exact and correct final value, avoiding premature or incorrect simplifications."
+  ],
+  "Determine the measure of angle C in a triangle given a trigonometric equation, and find the maximum area of the triangle under a specific condition.": [
+    "Always verify the correctness of specific solutions by substituting them back into the original equation to ensure logical consistency and clarity.",
+    "Provide detailed step-by-step derivations for key calculations, such as maximizing the area, to ensure the solution is rigorous and comprehensible."
+  ],
+  "Calculate the sum of the squares of the sides and diagonals of a quadrilateral given the sum of the squares of the distances from the centroid to the vertices.": [
+    "Ensure accurate arithmetic operations to maintain the correctness of the final solution.",
+    "Provide detailed step-by-step reasoning and calculations to ensure clarity and correctness in solving multi-step problems."
+  ],
+  "Calculate the sum of two relatively prime integers representing the dimensions of a rectangular box given the area of a triangle formed by the center points of three meeting faces.": [
+    "Ensure each step in the calculation process is clearly explained, including the cross product calculation, to enhance understanding and transparency.",
+    "Provide a complete derivation of all variables, especially when they are crucial to the final answer, to avoid confusion and ensure clarity."
+  ],
+  "Calculate the length of side BC in a triangle given the lengths of sides AB and AC, and the angle relationship B=2C.": [
+    "Ensure all calculations are consistently followed through and verified against derived values and geometric constraints to avoid logical errors."
+  ],
+  "Find all functions f from real numbers to real numbers that satisfy the given functional equation and initial condition.": [
+    "Ensure proposed solutions satisfy all given conditions, including initial conditions, to validate their correctness.",
+    "Verify the functional form of the solution by explicitly checking it against all provided conditions to ensure completeness and correctness."
+  ],
+  "Calculate the probability of drawing an odd-numbered card first and an even-numbered card second from a set of numbered cards, adjusting the set after the first draw.": [
+    "When calculating the total probability of a sequence of dependent events, ensure to account for the initial probabilities of each event and the conditional probabilities of subsequent events, rather than simply summing the individual conditional probabilities."
+  ],
+  "Calculate the magnitude of a complex number and determine real numbers a and b from a given complex equation.": [
+    "Ensure all parts of the question are fully addressed with clear, boxed final answers to maintain completeness.",
+    "Maintain a clear and logical structure in the presentation of steps and explanations to enhance clarity.",
+    "Double-check all calculations and logical steps to ensure correctness and avoid misleading the reader."
+  ],
+  "Determine the number of permutations of a given set of integers where each pair of adjacent numbers are coprime.": [
+    "Ensure comprehensive enumeration of all valid permutations to avoid undercounting and maintain accuracy.",
+    "Maintain clarity by focusing on presenting the final result directly, avoiding potential confusion from detailed but incomplete steps."
+  ],
+  "Determine the maximum value of a given expression involving three positive real variables.": [
+    "Ensure the final answer is mathematically correct and explicitly stated."
+  ],
+  "Calculate the probability of a specific mass being on the heavier side of a balance scale given the distribution of six different masses.": [
+    "Ensure the final answer is consistent with the detailed reasoning provided, double-checking calculations to avoid logical errors."
+  ],
+  "Determine the value of g(1) + g(-1) given the functional equation and specific values of f(x).": [
+    "Ensure each step in the reasoning process is clearly explained and logically follows from the given conditions and previous steps to enhance clarity and completeness."
+  ],
+  "Calculate the probability of a specific sequence of outcomes in a binomial distribution.": [
+    "For conditional probability problems, correctly identify and use the relevant total number of outcomes that satisfy the given conditions, rather than the total number of possible outcomes without conditions.",
+    "Avoid including unnecessary steps and explanations that do not contribute to solving the specific problem given the conditions."
+  ],
+  "Calculate the probability of selecting a tile with a letter from the word 'CALM' from a set of tiles containing the letters of 'MATHEMATICS'.": [
+    "Ensure all stated information is directly relevant to the problem at hand, avoiding unnecessary details that do not contribute to the solution."
+  ],
+  "Determine which year has a higher probability of obtaining a certificate by guessing answers on a standardized exam.": [
+    "Ensure all possible outcomes contributing to the required number of correct answers are included in the probability calculation to maintain completeness and accuracy."
+  ],
+  "Calculate the number of circular arrangements of plates where two specific plates are not adjacent.": [
+    "When calculating circular permutations with indistinguishable items, correctly apply the formula (n-1)!/product_of_factorials_of_indistinguishable_items to avoid overcounting.",
+    "Ensure the initial total number of arrangements is calculated accurately before subtracting invalid arrangements to maintain the correctness of the final result."
+  ],
+  "Determine the number of integer values of a for which a quadratic equation has integer solutions.": [
+    "Avoid unnecessary verbosity and repetition in explanations to maintain clarity and focus on the essential solution steps."
+  ],
+  "Determine the value of n based on the given pseudocode loop.": [
+    "Ensure the final calculation is correctly applied to derive the final value, especially when dealing with loop termination conditions."
+  ],
+  "Calculate the sum of given numbers.": [
+    "Avoid unnecessary details and redundant information; directly state the answer to enhance clarity and focus."
+  ],
+  "Calculate the probability that the product of two numbers selected from two sets is a multiple of 4.": [
+    "Ensure the final answer is mathematically correct and clearly stated."
+  ],
+  "Determine the largest integer divisor that yields the same remainder for three given numbers.": [
+    "Ensure the final result is explicitly stated to avoid confusion and directly address the question.",
+    "Provide detailed steps and explanations to ensure the reasoning process is clear and understandable for the reader.",
+    "Use a structured format with clear headings and steps to facilitate the logical progression and understanding of the solution."
+  ],
+  "Determine the length of a segment that divides a square into two equal areas.": [
+    "Ensure correct geometric configuration and area division when solving problems involving shapes and their segments, as incorrect assumptions can lead to erroneous calculations."
+  ],
+  "Determine the ratio of distances given equal travel times for walking and scooting.": [
+    "Ensure equations are clearly set up and solved to directly lead to the final answer, avoiding unnecessary steps and repetitions.",
+    "Maintain clarity and conciseness in the solution process to enhance readability and understanding.",
+    "Present the final answer in a clear, boxed format to improve usability and professionalism."
+  ],
+  "Determine the value of a monic quartic polynomial at a given point using provided values.": [
+    "Ensure the final answer is clearly and prominently presented, ideally using a boxed format, to improve readability and quick identification.",
+    "Balance between providing necessary intermediate steps for clarity and maintaining conciseness to directly address the question.",
+    "Include a concise statement of the method or approach used to derive the final answer, even if omitting detailed steps."
+  ],
+  "Determine the required cycling speed to arrive home at a specific time.": [
+    "Always provide context and explain the conversion of units to ensure clarity and accessibility in the reasoning process.",
+    "Maintain a clear and logical structure throughout the solution to avoid redundancy and enhance readability.",
+    "Consistently use units and mathematical notation to improve the clarity and correctness of the solution.",
+    "Break down the problem into logical steps and use consistent notation to ensure each step is clear and understandable.",
+    "Provide context and direct explanation for each step to help the reader follow the logical reasoning and understand the necessity of each calculation."
+  ],
+  "Calculate the probability that three out of four randomly chosen segments from a set of ten points form a triangle.": [
+    "Ensure accurate simplification of fractions by correctly calculating the greatest common divisor (GCD) to maintain the integrity of the final result."
+  ],
+  "Calculate the mass of the fourth metal in a 20 kg alloy given the ratios of the masses of the four metals.": [
+    "Maintain calculation precision throughout the problem-solving process and round only the final answer to ensure accuracy.",
+    "Avoid showing intermediate approximations in calculations to prevent cumulative rounding errors.",
+    "Present the final answer concisely and clearly, omitting unnecessary intermediate steps to enhance clarity and ease of verification."
+  ],
+  "Convert a given amount of one currency into another using provided exchange rates.": [
+    "Avoid intermediate approximations to maintain precision and clarity in the final answer."
+  ],
+  "Calculate the area of the remaining two triangles after cutting off two specified triangles from a trapezoid.": [
+    "Ensure the total area calculation is accurate by correctly summing all component areas and subtracting any areas that are cut off, maintaining logical consistency in the process."
+  ],
+  "Calculate the difference between the mean and median scores given the distribution of scores among students.": [
+    "Clearly explain the process of determining the median score by referencing the cumulative distribution of scores.",
+    "Provide a step-by-step breakdown of the solution to ensure clarity and ease of understanding for the reader.",
+    "Explicitly state the final result and ensure the task is fully addressed by clearly presenting the conclusion."
+  ],
+  "Calculate the amount of nectar required to produce a given amount of honey, considering the water content difference.": [
+    "Ensure the mathematical formulation accurately reflects the problem's constraints and relationships, avoiding conceptual errors in variable definitions and equation setups.",
+    "Maintain logical consistency by using a clear and concise variable definition and equation setup, avoiding unnecessary complexity.",
+    "Strive for clarity and conciseness in presenting the solution, eliminating unnecessary steps and variables to enhance readability and understanding."
+  ],
+  "Calculate the volume of a region in the first octant defined by given absolute value inequalities.": [
+    "Ensure accurate calculation of geometric properties such as area and height before integrating to find the volume, to avoid incorrect final results."
+  ],
+  "Calculate the combined percentage of students in grade 6 from two schools given their individual student counts and grade distribution percentages.": [
+    "For straightforward calculation questions, provide a concise answer without unnecessary steps to maintain clarity and directness."
+  ],
+  "Determine the range of values for a quadratic expression given the inequality of another quadratic expression.": [
+    "Ensure that the solution of an inequality is directly linked to the final range or values of the desired expression, providing clear justification for each step.",
+    "Explicitly connect the interval or domain of the variable to the range of the desired expression to ensure clarity and precision in the final answer.",
+    "While concise answers can be effective, ensure that critical connections between steps are made explicit to avoid confusion for the reader."
+  ],
+  "Determine the value of 3m + 2n for integers x and y that satisfy given logarithmic equations involving gcd and lcm, where m and n are the counts of prime factors in x and y, respectively.": [
+    "Ensure accurate calculation of prime factors by correctly accounting for the number of distinct prime factors contributed by each term in the expression, especially when dealing with powers of composite numbers."
+  ],
+  "Solve a system of linear equations to find the value of a specific linear combination of variables.": [
+    "Always simplify and present the final answer in its most clear and precise form, especially when the question asks for a specific value."
+  ],
+  "Determine the number of truth-tellers among a group of warriors based on their responses to questions about their favorite weapons.": [
+    "Ensure the calculation of truth-tellers aligns with the logical constraints of the problem, verifying the consistency of responses across all questions."
+  ],
+  "Determine the greatest common divisor of a polynomial function of x and x, where x is a multiple of a given constant.": [
+    "Ensure the GCD calculation accounts for the divisibility of each term in the polynomial modulo the smallest powers of the prime factors of the multiple, rather than higher powers.",
+    "When evaluating terms modulo higher powers of primes, ensure that the evaluation correctly identifies the divisibility by smaller powers that are factors of the multiple.",
+    "Verify that the product of the evaluated terms modulo smaller powers of primes is correctly identified as divisible by these smaller powers, even if the product is not divisible by higher powers."
+  ],
+  "Determine the value of x given the relationship between the surface area and volume of a right rectangular prism with edge lengths expressed as logarithmic functions of x.": [
+    "Ensure the final answer aligns with the provided options to maintain consistency and accuracy."
+  ],
+  "Determine the number of non-congruent rectangles with a given perimeter and an area greater than a specified value.": [
+    "Provide detailed step-by-step reasoning and explanations to enhance understanding and demonstrate a thorough grasp of the problem-solving process, even if the final answer is concise."
+  ],
+  "Calculate the time required for three individuals with different eating speeds to consume a given number of pizza slices together.": [
+    "For practical applications, round numerical answers to whole numbers to enhance user-friendliness.",
+    "Prioritize conciseness in answers to improve clarity and ease of understanding for the reader.",
+    "Avoid unnecessary formality in presenting numerical answers; focus on the essential information."
+  ],
+  "Determine the actual amount recorded incorrectly due to a decimal point error in bookkeeping.": [
+    "Always provide detailed reasoning and step-by-step calculations to ensure clarity and correctness in solving mathematical problems.",
+    "Ensure answers are complete and clear, including explanations of the solution process and boxed final answers."
+  ],
+  "Determine the first day in March when the kitten consumes all three types of snacks.": [
+    "Avoid including unnecessary details that do not contribute to solving the problem. Focus on providing a clear and concise explanation that directly addresses the task."
+  ],
+  "Calculate the volume of an original cube given the volume difference after modifying its dimensions.": [
+    "Focus on providing a clear, concise answer that directly addresses the question, avoiding unnecessary derivation steps."
+  ],
+  "Calculate the value of an expression involving the roots of a quadratic equation.": [
+    "Always provide detailed step-by-step reasoning to ensure clarity and correctness in the solution process.",
+    "Maintain a clear and structured presentation to enhance readability and comprehension of the solution."
+  ],
+  "Calculate the mean age of a given set of children.": [
+    "Avoid redundancy and unnecessary details in the final answer; focus on providing clear, concise, and relevant information."
+  ],
+  "Calculate the percentage saved based on applied discounts on multiple items.": [
+    "Ensure the final answer is explicitly stated for clarity and accessibility, even if detailed steps are provided.",
+    "Balance the level of detail in the explanation to match the context and needs of the reader, avoiding unnecessary verbosity."
+  ],
+  "Calculate the total number of days in a specified range of years.": [
+    "Ensure accurate summation of days when calculating the total number of days across multiple years, including correct identification and inclusion of leap years."
+  ],
+  "Determine the value of a quadratic function's coefficients sum at a given point.": [
+    "Ensure the distinction between the value of the function at a given point and the sum of the coefficients is clear to avoid misinterpretation of the task."
+  ],
+  "Find the smallest prime number whose digits sum to a specified value.": [
+    "Ensure thorough verification of the primality of the identified number by checking divisibility by all primes up to its square root."
+  ],
+  "Determine the optimal frequency of flour purchases to minimize the average daily total cost.": [
+    "Always provide a direct and specific answer to the question, complemented by a detailed explanation or calculation process to support the conclusion.",
+    "Ensure the answer is task-relevant and complete, addressing all aspects of the question without merely restating the task requirements.",
+    "Maintain clarity in the response by structuring the answer in a logical and easy-to-follow manner, ensuring the reader can understand the solution process."
+  ],
+  "Determine the number of individual starships sold given total sales and earnings.": [
+    "Use systematic algebraic methods to solve problems involving multiple variables and constraints to ensure all conditions are correctly accounted for.",
+    "Double-check calculations and validate solutions to avoid arithmetic errors and ensure logical consistency.",
+    "Provide a clear and structured explanation of the solution process to enhance readability and understanding.",
+    "Verify that the final solution satisfies all given conditions and constraints to ensure accuracy."
+  ],
+  "Determine the seating capacity for a given arrangement of tables based on a specified pattern.": [
+    "Ensure the final answer is clearly stated and easily identifiable, regardless of stylistic choices like boxed notation."
+  ],
+  "Determine the number of edges in a new polyhedron formed by cutting a convex polyhedron with planes through specific vertices.": [
+    "Always provide a detailed explanation of the reasoning process to ensure clarity and verifiability of the answer."
+  ],
+  "Determine the maximum amount spent given constraints on change denominations and divisibility conditions.": [
+    "Ensure accurate arithmetic operations when calculating the total change and the amount spent to avoid logical inconsistencies and incorrect conclusions."
+  ],
+  "Find the absolute difference between two numbers given their product, sum, and the difference of their squares.": [
+    "Ensure all intermediate steps in calculations are logically consistent and correctly derived from given equations."
+  ],
+  "Calculate the product of the solutions of a given quadratic equation.": [
+    "Ensure the final answer aligns with mathematical principles and formulas, such as Vieta's formulas for quadratic equations, to maintain correctness."
+  ],
+  "Calculate the number of outfit combinations consisting of one shirt, one pair of pants, one hat, and one tie, ensuring the shirt and hat are not the same color and the tie matches the hat.": [
+    "Ensure the final calculation is double-checked for accuracy, but recognize that identical numerical results do not necessarily indicate the correctness or thoroughness of the reasoning process leading to that result."
+  ],
+  "Find the minimum value of the ratio of two given polynomials evaluated at a real number.": [
+    "Ensure final answers are clearly boxed and emphasized to enhance clarity and professionalism.",
+    "Provide detailed and logically structured explanations for each step in the solution to improve clarity and understanding."
+  ],
+  "Determine the monotonicity and range of a function involving dot products of vectors and find the magnitude of a vector sum under collinearity condition.": [
+    "Ensure solutions are complete and detailed, providing all necessary steps and explanations to guide the reader through the reasoning process.",
+    "Maintain clarity and structure in the presentation of solutions, using clear transitions and detailed explanations to enhance understanding and logical flow.",
+    "Adhere to mathematical rigor by including all necessary steps, calculations, and explanations to ensure the solution is logically sound and verifiable."
+  ],
+  "Determine the equation of a parabola given its focus and find the area of a triangle formed by the origin and the intersection points of a line with the parabola.": [
+    "Ensure accurate application of mathematical formulas and meticulous simplification to avoid calculation errors."
+  ],
+  "Find the minimum value of the sum of a function evaluated at the vertices of a unit square.": [
+    "Ensure meticulous arithmetic accuracy in the final steps of calculations to avoid incorrect results."
+  ],
+  "Find the sum of two positive real numbers x and y that satisfy given equations.": [
+    "Ensure the correct application of trigonometric identities and simplifications to accurately derive the final value of the expression.",
+    "Double-check the final answer against the given conditions to ensure it satisfies all parts of the problem.",
+    "Carefully verify each step in the solution process, especially when simplifying trigonometric expressions, to avoid arriving at incorrect intermediate values."
+  ],
+  "Determine the fourth intersection point of a circle and the hyperbola xy=1 given three intersection points.": [
+    "Ensure all given points satisfy the equations of both the curve and the circle to accurately determine the fourth intersection point."
+  ],
+  "Determine the value of a real number a such that the function f(x) is non-negative for all x in a specified interval.": [
+    "Ensure all domain conditions are correctly identified and combined to derive the correct constraints on variables.",
+    "Carefully solve the intersection of domain conditions to accurately determine the valid range for variables.",
+    "Conclude with the value of the variable that satisfies all derived conditions, ensuring the solution is consistent with the problem statement."
+  ],
+  "Determine the value(s) of m given that x=1 is a root of a specific quadratic equation.": [
+    "Ensure that all potential solutions are valid under the problem's constraints and avoid listing extraneous or invalid solutions.",
+    "Maintain clarity and conciseness in the explanation to avoid unnecessary confusion and enhance readability."
+  ],
+  "Calculate the dot product of vector AO and the sum of vectors AB and AC in an acute triangle where O is the circumcenter.": [
+    "Avoid unnecessary steps and extraneous information in the explanation to maintain clarity and efficiency.",
+    "Succinctly present the final result without including intermediate steps that do not contribute to the solution.",
+    "Focus on the essential elements of the problem and avoid adding elements that do not enhance the understanding or the solution."
+  ],
+  "Determine the equation of an ellipse and investigate the sum of parameters related to the intersection points of a line with the ellipse.": [
+    "Ensure detailed and transparent calculations are provided to enhance clarity and verifiability of the solution."
+  ],
+  "Determine the maximum value of tan A given a trigonometric equation in triangle ABC.": [
+    "Ensure the final conclusion accurately reflects the maximum value of the trigonometric function based on the feasible angle solutions derived from the given constraints."
+  ],
+  "Determine the area of a triangle given the lengths of two sides and the perpendicularity condition of two vectors associated with the triangle.": [
+    "Avoid unnecessary repetition and redundancy in the solution process to maintain clarity and efficiency.",
+    "Focus on essential steps and calculations, leveraging trigonometric identities and simplifications effectively to streamline the solution."
+  ],
+  "Evaluate a trigonometric expression using given trigonometric values and identities.": [
+    "Ensure detailed intermediate steps are provided for evaluating trigonometric functions and simplifying expressions to avoid incorrect conclusions.",
+    "Correctly apply trigonometric identities and simplify expressions to arrive at the accurate final answer.",
+    "Break down the simplification of complex trigonometric expressions into detailed steps to maintain accuracy."
+  ],
+  "Determine the scalar coefficient λ in a vector equation involving a point on a triangle side.": [
+    "Ensure all calculations are accurate and consistent with the problem's constraints, and correct any errors before finalizing the answer.",
+    "Maintain clarity and consistency in the explanation, clearly addressing and correcting any initial mistakes before presenting the final answer."
+  ],
+  "Calculate the overlapping area between a rectangle and a circle sharing the same center.": [
+    "Ensure the correct application of geometric properties by accurately calculating the overlapping area without introducing unnecessary or incorrect steps.",
+    "Provide a clear and step-by-step reasoning that directly addresses the geometric properties and their correct application to avoid confusion.",
+    "Maintain clarity in the explanation to ensure the reasoning is easy to follow and does not mislead readers about the correct calculation method."
+  ],
+  "Determine the number of solutions to a trigonometric equation within a specified interval.": [
+    "Ensure the final solution accurately reflects the number of valid solutions identified through analysis, verifying each step for correctness."
+  ],
+  "Determine the measure of angle B and calculate sin 2C given trigonometric equations in triangle ABC.": [
+    "Ensure accurate simplification and factorization of intermediate results to maintain correctness in subsequent calculations.",
+    "Double-check simplification steps to avoid introducing errors that affect the final solution's precision."
+  ],
+  "Evaluate a trigonometric function at a specific angle.": [
+    "Ensure correct application of trigonometric identities and algebraic simplifications, particularly when dealing with squared terms and Pythagorean identities, to maintain the integrity of the expression and avoid introducing errors."
+  ],
+  "Determine the general formula for a subsequence and the sum of the first 20 terms of a given sequence.": [
+    "Ensure all solutions include a clearly boxed final answer to enhance clarity and completeness."
+  ],
+  "Calculate the sum of coefficients in a polynomial expansion.": [
+    "Ensure logical consistency and correctness in the reasoning process, verifying each step, especially when dealing with transformations and substitutions in polynomial expressions. Clearly articulate the transformation of the polynomial from its original form to the expanded form in terms of the variable of interest, ensuring the reader understands the context and relevance of each step. Maintain clarity and conciseness in explanations, avoiding unnecessary steps that may confuse the reader while ensuring all critical transformations and calculations are properly explained."
+  ],
+  "Determine the length of a segment formed by the intersection of a plane with an edge of a parallelepiped.": [
+    "Ensure the final step of the solution is correct and clearly presents the numerical answer to avoid ambiguity.",
+    "Maintain clarity and conciseness in the solution by omitting unnecessary steps and focusing on essential calculations.",
+    "Conclude the solution with a clear and concise statement of the final answer to ensure completeness and correctness."
+  ],
+  "Determine the value of tan(2α) and find the angle β given trigonometric values and constraints.": [
+    "In mathematical problem-solving, prefer simpler and more recognizable values for final answers, especially when common angles or numbers are involved, as they are easier to interpret and verify.",
+    "While detailed derivations are important for understanding, ensure the final answer is concise and clear, balancing completeness with simplicity for practical application and ease of verification."
+  ],
+  "Find the value of a in an arithmetic sequence formed by Fibonacci numbers where a + b + c = 2000.": [
+    "Ensure all calculations are accurate and consistent with the problem constraints, especially when solving for integer values."
+  ],
+  "Find the smallest n such that the sum of the first n terms of a geometric sequence equals zero and compute the product of these terms.": [
+    "Ensure the product of terms in a geometric sequence is accurately calculated by considering the properties of the sequence, including the sign and magnitude of each term, to avoid incorrect conclusions such as stating a product as 1 when it should be -1."
+  ],
+  "Calculate the sum of the first 40 terms of the alternating sequence derived from a given recursive formula.": [
+    "Ensure correct final simplification of telescoping series by accurately accounting for the remaining terms to avoid significant errors in the final result."
+  ],
+  "Determine the general term formula for a sequence given a recursive relation and find the smallest positive integer n for which the sum of a derived sequence exceeds a specified value.": [
+    "Always include a detailed step-by-step proof or derivation to ensure clarity and correctness, especially for complex mathematical problems."
+  ],
+  "Determine the common difference of an arithmetic sequence formed by the differences of sums of consecutive terms of another arithmetic sequence.": [
+    "Ensure the derived common difference in arithmetic sequences aligns with the correct interpretation of the sum sequence differences, not just any arithmetic sequence formed from the data."
+  ],
+  "Determine the smallest positive integer n such that a given trigonometric series expression evaluates to an integer.": [
+    "Ensure the final answer is accurate by double-checking the conditions and constraints of the problem, such as divisibility requirements."
+  ],
+  "Determine the maximum number of finite roots for a given absolute value equation with distinct constants.": [
+    "When determining the maximum number of finite roots for an equation involving absolute values, correctly identify the intervals between critical points rather than counting the critical points themselves as potential roots."
+  ],
+  "Calculate the area of triangle BCD given the area of triangle ABC.": [
+    "For straightforward calculation problems, directly state the final answer without unnecessary steps to maintain clarity and relevance."
+  ],
+  "Calculate the sum of two specified angles in a circle divided into twelve equal parts.": [
+    "Ensure the sum of angles in a triangle equals 180 degrees, correctly identifying the roles of central and base angles in isosceles triangles."
+  ],
+  "Calculate the total area of four isosceles right triangles removed from a square to form a rectangle, given the side length of the rectangle.": [
+    "Avoid unnecessary calculations and redundant restatements to maintain clarity and conciseness in the solution."
+  ],
+  "Determine the area of a triangle given the areas of three smaller triangles formed by lines parallel to its sides.": [
+    "Ensure the answer is concise and directly states the correct result without unnecessary details, especially when the reasoning steps are straightforward or can be derived from known principles.",
+    "Avoid convoluted and repetitive explanations; strive for clarity and directness in presenting the solution.",
+    "While detailed reasoning steps are valuable, ensure they are correct and relevant. If the reasoning is complex or prone to errors, it may be better to state the result clearly and reference known principles or theorems."
+  ],
+  "Determine the number of distinct colorings of a circle divided into six sections, given specific color constraints, under rotational symmetry.": [
+    "Ensure the final answer is accurate and double-check calculations to avoid arithmetic errors that can lead to incorrect results."
+  ],
+  "Calculate the area of a quadrilateral formed by the longest and shortest chords passing through a given point inside a circle.": [
+    "Avoid redundant repetition of conclusions to maintain clarity and conciseness in the final answer.",
+    "Emphasize key geometric properties directly relevant to the solution without unnecessary elaboration.",
+    "Focus on presenting the final answer and avoid including detailed intermediate steps that do not contribute to the main goal."
+  ],
+  "Determine the length of a segment within a circle sector where a perpendicular line intersects the chord.": [
+    "Ensure the calculation of geometric lengths is accurate by correctly identifying and applying relevant geometric properties and relationships.",
+    "Provide a clear and logical explanation of the reasoning behind each step in the solution to enhance clarity and correctness."
+  ],
+  "Find the value of the sum of the first 8 terms of a sequence minus 2, given a specific recurrence relation involving powers of 2.": [
+    "Ensure all arithmetic operations, including subtraction, are performed accurately and the final result is expressed in its simplest form to maintain the precision and correctness of the answer."
   ]
 }

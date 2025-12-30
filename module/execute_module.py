@@ -128,8 +128,32 @@ def answer_with_principles(question: str, principles: list, use_local: bool = Tr
 def batch_generate_task_descriptions(questions: List[str]) -> List[str]:
     import config
     prompts = [TASK_DESC_PROMPT.substitute(question=q) for q in questions]
-    # 使用专用的任务描述长度限制
-    return batch_inference(prompts, max_tokens=config.TASK_DESC_MAX_TOKENS)
+    
+    # 使用更多stop序列防止重复生成
+    stop_sequences = [
+        "```\n\n",
+        "}\n```",
+        "Final Answer",
+        "\n\n\n\n",
+    ]
+    
+    results = batch_inference(
+        prompts, 
+        max_tokens=config.TASK_DESC_MAX_TOKENS,
+        stop=stop_sequences,
+        temperature=0.1
+    )
+    
+    # 后处理：截断重复的JSON块
+    cleaned_results = []
+    for result in results:
+        if result.count('```json') > 1:
+            first_end = result.find('```', result.find('```json') + 7)
+            if first_end > 0:
+                result = result[:first_end + 3]
+        cleaned_results.append(result)
+    
+    return cleaned_results
 
 
 def batch_answer_questions_directly(questions: List[str]) -> List[str]:

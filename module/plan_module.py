@@ -96,14 +96,34 @@ def batch_generate_principles(questions: List[str], diff_lists: List[str], model
     ]
     
     if model == "weak":
-        # 弱模型使用本地批量推理，使用较小的max_tokens防止重复生成
-        # 注意：不使用```json作为stop序列，因为prompt中可能包含它
-        stop_sequences = ["**Final Answer:**", "Final Answer", "Final Output", "\n\n\n"]
-        return batch_inference(
+        # 弱模型使用本地批量推理
+        # 使用更多stop序列防止重复生成
+        stop_sequences = [
+            "```\n\n",  # JSON代码块结束后的空行
+            "}\n}\n```",  # 嵌套JSON结束
+            "Final Answer",
+            "**Final",
+            "\n\n\n\n",  # 多个空行
+        ]
+        results = batch_inference(
             prompts, 
             max_tokens=config.PRINCIPLE_MAX_TOKENS,
-            stop=stop_sequences
+            stop=stop_sequences,
+            temperature=0.1  # 降低随机性
         )
+        
+        # 后处理：截断重复内容
+        cleaned_results = []
+        for result in results:
+            # 如果发现重复的JSON块，只保留第一个
+            if result.count('```json') > 1:
+                # 找到第一个完整的 ```json...``` 块
+                first_end = result.find('```', result.find('```json') + 7)
+                if first_end > 0:
+                    result = result[:first_end + 3]
+            cleaned_results.append(result)
+        
+        return cleaned_results
     else:
         # 强模型使用API（在main_pipeline.py中并发调用）
         # 这里不应该被调用，如果需要应该使用concurrent_generate_chosen
