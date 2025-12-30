@@ -455,7 +455,7 @@ def main():
     # Load dataset - 支持 JSON 和 JSONL 格式
     # 可以通过命令行参数指定，默认使用 test_filter.json
     import sys
-    input_file = Path(os.getenv('TEST_FILE', 'data/test/filtered_test.json'))
+    input_file = Path(os.getenv('TEST_FILE', 'data/test/filter_test.json'))
     try:
         logger.info(f"加载数据集: {input_file}")
         
