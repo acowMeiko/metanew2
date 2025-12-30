@@ -1,513 +1,511 @@
 nohup: ignoring input
-2025-12-30 20:02:49,404 - __main__ - INFO - ============================================================
-2025-12-30 20:02:49,404 - __main__ - INFO - Step 2: 开始更新Memory
-2025-12-30 20:02:49,404 - __main__ - INFO - ============================================================
-2025-12-30 20:02:49,406 - __main__ - INFO - MemoryManager 初始化完成
-2025-12-30 20:02:49,420 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
-2025-12-30 20:02:49,440 - __main__ - INFO - 准备批处理 398 条数据
-2025-12-30 20:02:49,440 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
-2025-12-30 20:02:49,440 - __main__ - INFO - 批量生成任务描述...
-INFO 12-30 20:02:53 [__init__.py:239] Automatically detected platform cuda.
-2025-12-30 20:02:53,769 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
-2025-12-30 20:02:53,769 - inference.local_inference - INFO - ============================================================
-2025-12-30 20:02:53,769 - inference.local_inference - INFO - 初始化vLLM本地模型...
-2025-12-30 20:02:53,769 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
-2025-12-30 20:02:53,769 - inference.local_inference - INFO - ============================================================
+2025-12-30 20:11:41,623 - __main__ - INFO - ============================================================
+2025-12-30 20:11:41,623 - __main__ - INFO - Step 2: 开始更新Memory
+2025-12-30 20:11:41,623 - __main__ - INFO - ============================================================
+2025-12-30 20:11:41,625 - __main__ - INFO - MemoryManager 初始化完成
+2025-12-30 20:11:41,637 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-30 20:11:41,656 - __main__ - INFO - 准备批处理 398 条数据
+2025-12-30 20:11:41,657 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2025-12-30 20:11:41,657 - __main__ - INFO - 批量生成任务描述...
+INFO 12-30 20:11:45 [__init__.py:239] Automatically detected platform cuda.
+2025-12-30 20:11:46,070 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2025-12-30 20:11:46,070 - inference.local_inference - INFO - ============================================================
+2025-12-30 20:11:46,070 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-30 20:11:46,070 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-30 20:11:46,070 - inference.local_inference - INFO - ============================================================
 `torch_dtype` is deprecated! Use `dtype` instead!
-INFO 12-30 20:02:59 [config.py:585] This model supports multiple tasks: {'embed', 'classify', 'generate', 'score', 'reward'}. Defaulting to 'generate'.
-INFO 12-30 20:02:59 [config.py:1519] Defaulting to use mp for distributed inference
-INFO 12-30 20:02:59 [config.py:1697] Chunked prefill is enabled with max_num_batched_tokens=8192.
-INFO 12-30 20:03:01 [core.py:54] Initializing a V1 LLM engine (v0.8.2) with config: model='/home/models/qwen_dpo3_lora', speculative_config=None, tokenizer='/home/models/qwen_dpo3_lora', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=4, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=/home/models/qwen_dpo3_lora, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
-WARNING 12-30 20:03:01 [multiproc_worker_utils.py:306] Reducing Torch parallelism from 64 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
-INFO 12-30 20:03:01 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1, 2, 3], buffer_handle=(4, 10485760, 10, 'psm_e239eb21'), local_subscribe_addr='ipc:///tmp/8b2e697a-0f64-4e49-8498-090d0346ce56', remote_subscribe_addr=None, remote_addr_ipv6=False)
-WARNING 12-30 20:03:01 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f33a9f28b10>
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:01 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_cbd8f531'), local_subscribe_addr='ipc:///tmp/a9f65edd-c533-4316-9a66-425083959faa', remote_subscribe_addr=None, remote_addr_ipv6=False)
-WARNING 12-30 20:03:02 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f33a841c890>
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:02 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_69c2cc79'), local_subscribe_addr='ipc:///tmp/6731ddea-c60c-4b97-9f6e-65cc1e6bc2b2', remote_subscribe_addr=None, remote_addr_ipv6=False)
-WARNING 12-30 20:03:02 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f33a9f4dd90>
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:02 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_cdf4e72c'), local_subscribe_addr='ipc:///tmp/c26d3c37-f383-46f7-9928-ce98399090a3', remote_subscribe_addr=None, remote_addr_ipv6=False)
-WARNING 12-30 20:03:03 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f33a841c4d0>
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:03 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_69615631'), local_subscribe_addr='ipc:///tmp/f24077ea-b1b8-4f8c-bf5c-8f6071af42ce', remote_subscribe_addr=None, remote_addr_ipv6=False)
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:03 [utils.py:931] Found nccl from library libnccl.so.2
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:03 [pynccl.py:69] vLLM is using nccl==2.21.5
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:03 [utils.py:931] Found nccl from library libnccl.so.2
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:03 [utils.py:931] Found nccl from library libnccl.so.2
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:03 [utils.py:931] Found nccl from library libnccl.so.2
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:03 [pynccl.py:69] vLLM is using nccl==2.21.5
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:03 [pynccl.py:69] vLLM is using nccl==2.21.5
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:03 [pynccl.py:69] vLLM is using nccl==2.21.5
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:04 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:04 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:04 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:04 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:04 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[1, 2, 3], buffer_handle=(3, 4194304, 6, 'psm_3a1daee3'), local_subscribe_addr='ipc:///tmp/373e1d11-5ba7-476c-af16-ca037110e406', remote_subscribe_addr=None, remote_addr_ipv6=False)
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:04 [parallel_state.py:954] rank 0 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 0
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:04 [parallel_state.py:954] rank 1 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 1
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:04 [parallel_state.py:954] rank 2 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 2
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:04 [cuda.py:220] Using Flash Attention backend on V1 engine.
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:04 [cuda.py:220] Using Flash Attention backend on V1 engine.
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:04 [cuda.py:220] Using Flash Attention backend on V1 engine.
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:04 [parallel_state.py:954] rank 3 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 3
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:04 [cuda.py:220] Using Flash Attention backend on V1 engine.
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:04 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:04 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:04 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:04 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m WARNING 12-30 20:03:04 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m WARNING 12-30 20:03:04 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m WARNING 12-30 20:03:04 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/6 [00:00<?, ?it/s]
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m WARNING 12-30 20:03:04 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards:  17% Completed | 1/6 [00:00<00:01,  2.82it/s]
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards:  33% Completed | 2/6 [00:00<00:01,  2.29it/s]
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards:  50% Completed | 3/6 [00:01<00:01,  2.12it/s]
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards:  67% Completed | 4/6 [00:01<00:00,  2.07it/s]
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards:  83% Completed | 5/6 [00:02<00:00,  2.04it/s]
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:07 [loader.py:447] Loading weights took 2.65 seconds
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:02<00:00,  2.16it/s]
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:02<00:00,  2.16it/s]
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m 
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:07 [loader.py:447] Loading weights took 2.88 seconds
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:07 [loader.py:447] Loading weights took 2.91 seconds
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:07 [loader.py:447] Loading weights took 2.94 seconds
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:07 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 2.928028 seconds
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:08 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 3.161675 seconds
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:08 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 3.162085 seconds
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:08 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 3.170892 seconds
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:18 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_2_0 for vLLM's torch.compile
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:18 [backends.py:425] Dynamo bytecode transform time: 10.12 s
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:18 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_0_0 for vLLM's torch.compile
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:18 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_1_0 for vLLM's torch.compile
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:18 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_3_0 for vLLM's torch.compile
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:18 [backends.py:425] Dynamo bytecode transform time: 10.19 s
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:18 [backends.py:425] Dynamo bytecode transform time: 10.19 s
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:18 [backends.py:425] Dynamo bytecode transform time: 10.19 s
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:18 [backends.py:115] Directly load the compiled graph for shape None from the cache
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:18 [backends.py:115] Directly load the compiled graph for shape None from the cache
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:18 [backends.py:115] Directly load the compiled graph for shape None from the cache
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:18 [backends.py:115] Directly load the compiled graph for shape None from the cache
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:27 [monitor.py:33] torch.compile takes 10.12 s in total
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:27 [monitor.py:33] torch.compile takes 10.19 s in total
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:27 [monitor.py:33] torch.compile takes 10.19 s in total
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:27 [monitor.py:33] torch.compile takes 10.19 s in total
-INFO 12-30 20:03:29 [kv_cache_utils.py:566] GPU KV cache size: 1,251,264 tokens
-INFO 12-30 20:03:29 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.19x
-INFO 12-30 20:03:29 [kv_cache_utils.py:566] GPU KV cache size: 1,247,168 tokens
-INFO 12-30 20:03:29 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.06x
-INFO 12-30 20:03:29 [kv_cache_utils.py:566] GPU KV cache size: 1,247,168 tokens
-INFO 12-30 20:03:29 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.06x
-INFO 12-30 20:03:29 [kv_cache_utils.py:566] GPU KV cache size: 1,251,264 tokens
-INFO 12-30 20:03:29 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.19x
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:50 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:50 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:50 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:50 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
-[1;36m(VllmWorker rank=3 pid=67833)[0;0m INFO 12-30 20:03:50 [gpu_model_runner.py:1534] Graph capturing finished in 22 secs, took 0.71 GiB
-[1;36m(VllmWorker rank=1 pid=67806)[0;0m INFO 12-30 20:03:51 [gpu_model_runner.py:1534] Graph capturing finished in 22 secs, took 0.71 GiB
-[1;36m(VllmWorker rank=2 pid=67820)[0;0m INFO 12-30 20:03:51 [gpu_model_runner.py:1534] Graph capturing finished in 22 secs, took 0.71 GiB
-[1;36m(VllmWorker rank=0 pid=67794)[0;0m INFO 12-30 20:03:51 [gpu_model_runner.py:1534] Graph capturing finished in 22 secs, took 0.71 GiB
-INFO 12-30 20:03:51 [core.py:151] init engine (profile, create kv cache, warmup model) took 43.04 seconds
-2025-12-30 20:03:51,210 - inference.local_inference - INFO - vLLM模型初始化完成
-2025-12-30 20:04:03,532 - __main__ - INFO - 批量生成新原则...
-2025-12-30 20:04:28,604 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
-2025-12-30 20:04:28,624 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
-更新Memory:   0%|          | 0/398 [00:00<?, ?it/s]2025-12-30 20:04:28,627 - __main__ - WARNING - 第 0 项任务描述为空，跳过
-2025-12-30 20:04:28,627 - __main__ - WARNING - 第 1 项任务描述为空，跳过
-2025-12-30 20:04:28,627 - __main__ - WARNING - 第 2 项任务描述为空，跳过
-2025-12-30 20:04:28,627 - __main__ - WARNING - 第 3 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:28,627 - __main__ - WARNING - 第 4 项任务描述为空，跳过
-更新Memory:   2%|▏         | 6/398 [00:17<18:41,  2.86s/it]2025-12-30 20:04:45,787 - __main__ - WARNING - 第 6 项任务描述为空，跳过
-2025-12-30 20:04:45,787 - __main__ - WARNING - 第 7 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 8 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 9 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 10 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 11 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 12 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 13 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 14 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 15 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 16 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 17 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 18 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 19 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 20 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 21 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 22 项任务描述为空，跳过
-2025-12-30 20:04:45,788 - __main__ - WARNING - 第 23 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 24 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 25 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 26 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 27 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 28 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 29 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 30 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 31 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 32 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 33 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 34 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 35 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 36 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 37 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 38 项任务描述为空，跳过
-2025-12-30 20:04:45,789 - __main__ - WARNING - 第 39 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 40 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 41 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 42 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 43 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 44 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 45 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 46 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 47 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 48 项解析任务描述失败: Invalid \escape: line 2 column 82 (char 83)，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 49 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 50 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 51 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 52 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 53 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 54 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 55 项任务描述为空，跳过
-2025-12-30 20:04:45,790 - __main__ - WARNING - 第 56 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 57 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 58 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 59 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 60 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 61 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 62 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 63 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 64 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 65 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 66 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 67 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 68 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 69 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 70 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 71 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 72 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 73 项任务描述为空，跳过
-2025-12-30 20:04:45,791 - __main__ - WARNING - 第 74 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 75 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 76 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 77 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 78 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 79 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 80 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 81 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 82 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 83 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 84 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 85 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 86 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 87 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 88 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 89 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 90 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 91 项任务描述为空，跳过
-2025-12-30 20:04:45,792 - __main__ - WARNING - 第 92 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 93 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 94 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 95 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 96 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 97 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 98 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 99 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 100 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 101 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 102 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 103 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 104 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 105 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 106 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 107 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 108 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 109 项任务描述为空，跳过
-2025-12-30 20:04:45,793 - __main__ - WARNING - 第 110 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 111 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 112 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 113 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 114 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 115 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 116 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 117 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 118 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 119 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 120 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 121 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 122 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 123 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 124 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 125 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 126 项任务描述为空，跳过
-2025-12-30 20:04:45,794 - __main__ - WARNING - 第 127 项任务描述为空，跳过
-2025-12-30 20:04:45,795 - __main__ - WARNING - 第 128 项任务描述为空，跳过
-2025-12-30 20:04:45,795 - __main__ - WARNING - 第 129 项任务描述为空，跳过
-2025-12-30 20:04:45,795 - __main__ - WARNING - 第 130 项任务描述为空，跳过
-更新Memory:  33%|███▎      | 132/398 [00:34<00:59,  4.48it/s]2025-12-30 20:05:02,817 - __main__ - WARNING - 第 132 项任务描述为空，跳过
-2025-12-30 20:05:02,817 - __main__ - WARNING - 第 133 项任务描述为空，跳过
-2025-12-30 20:05:02,817 - __main__ - WARNING - 第 134 项任务描述为空，跳过
-2025-12-30 20:05:02,817 - __main__ - WARNING - 第 135 项任务描述为空，跳过
-2025-12-30 20:05:02,817 - __main__ - WARNING - 第 136 项任务描述为空，跳过
-2025-12-30 20:05:02,817 - __main__ - WARNING - 第 137 项任务描述为空，跳过
-2025-12-30 20:05:02,817 - __main__ - WARNING - 第 138 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 139 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 140 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 141 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 142 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 143 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 144 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 145 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 146 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 147 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 148 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 149 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 150 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 151 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 152 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 153 项任务描述为空，跳过
-2025-12-30 20:05:02,818 - __main__ - WARNING - 第 154 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 155 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 156 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 157 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 158 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 159 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 160 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 161 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 162 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 163 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 164 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 165 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 166 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 167 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 168 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 169 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 170 项任务描述为空，跳过
-2025-12-30 20:05:02,819 - __main__ - WARNING - 第 171 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 172 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 173 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 174 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 175 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 176 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 177 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 178 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 179 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 180 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 181 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 182 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 183 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 184 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 185 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 186 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 187 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 188 项任务描述为空，跳过
-2025-12-30 20:05:02,820 - __main__ - WARNING - 第 189 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 190 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 191 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 192 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 193 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 194 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 195 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 196 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 197 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 198 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 199 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 200 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 201 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 202 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 203 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 204 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 205 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 206 项任务描述为空，跳过
-2025-12-30 20:05:02,821 - __main__ - WARNING - 第 207 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 208 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 209 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 210 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 211 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 212 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 213 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 214 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 215 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 216 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 217 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 218 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 219 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 220 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 221 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 222 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 223 项任务描述为空，跳过
-2025-12-30 20:05:02,822 - __main__ - WARNING - 第 224 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 225 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 226 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 227 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 228 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 229 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 230 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 231 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 232 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 233 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 234 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 235 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 236 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 237 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 238 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 239 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 240 项任务描述为空，跳过
-2025-12-30 20:05:02,823 - __main__ - WARNING - 第 241 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 242 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 243 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 244 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 245 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 246 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 247 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 248 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 249 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 250 项解析任务描述失败: Invalid \escape: line 2 column 87 (char 88)，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 251 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 252 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 253 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 254 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 255 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 256 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 257 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 258 项任务描述为空，跳过
-2025-12-30 20:05:02,824 - __main__ - WARNING - 第 259 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 260 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 261 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 262 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 263 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 264 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 265 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 266 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 267 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 268 项解析任务描述失败: Invalid \escape: line 2 column 52 (char 53)，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 269 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 270 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 271 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 272 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 273 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 274 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 275 项任务描述为空，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 276 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,825 - __main__ - WARNING - 第 277 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 278 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 279 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 280 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 281 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 282 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 283 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 284 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 285 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 286 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 287 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 288 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 289 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 290 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 291 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 292 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 293 项任务描述为空，跳过
-2025-12-30 20:05:02,826 - __main__ - WARNING - 第 294 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 295 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 296 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 297 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 298 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 299 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 300 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 301 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 302 项任务描述为空，跳过
-2025-12-30 20:05:02,827 - __main__ - WARNING - 第 303 项任务描述为空，跳过
-更新Memory:  77%|███████▋  | 305/398 [00:54<00:14,  6.46it/s]2025-12-30 20:05:23,407 - __main__ - WARNING - 第 305 项任务描述为空，跳过
-2025-12-30 20:05:23,408 - __main__ - WARNING - 第 306 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,408 - __main__ - WARNING - 第 307 项任务描述为空，跳过
-2025-12-30 20:05:23,408 - __main__ - WARNING - 第 308 项任务描述为空，跳过
-2025-12-30 20:05:23,408 - __main__ - WARNING - 第 309 项任务描述为空，跳过
-2025-12-30 20:05:23,409 - __main__ - WARNING - 第 310 项任务描述为空，跳过
-2025-12-30 20:05:23,409 - __main__ - WARNING - 第 311 项任务描述为空，跳过
-2025-12-30 20:05:23,409 - __main__ - WARNING - 第 312 项任务描述为空，跳过
-2025-12-30 20:05:23,409 - __main__ - WARNING - 第 313 项任务描述为空，跳过
-2025-12-30 20:05:23,409 - __main__ - WARNING - 第 314 项任务描述为空，跳过
-2025-12-30 20:05:23,410 - __main__ - WARNING - 第 315 项任务描述为空，跳过
-2025-12-30 20:05:23,410 - __main__ - WARNING - 第 316 项任务描述为空，跳过
-2025-12-30 20:05:23,410 - __main__ - WARNING - 第 317 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,410 - __main__ - WARNING - 第 318 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 319 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 320 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 321 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 322 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 323 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 324 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 325 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 326 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 327 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 328 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 329 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 330 项任务描述为空，跳过
-2025-12-30 20:05:23,411 - __main__ - WARNING - 第 331 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 332 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 333 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 334 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 335 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 336 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 337 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 338 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 339 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 340 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 341 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 342 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 343 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 344 项解析任务描述失败: Invalid \escape: line 2 column 50 (char 51)，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 345 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 346 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 347 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 348 项任务描述为空，跳过
-2025-12-30 20:05:23,412 - __main__ - WARNING - 第 349 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 350 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 351 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 352 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 353 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 354 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 355 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 356 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 357 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 358 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 359 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 360 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 361 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 362 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 363 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 364 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 365 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 366 项任务描述为空，跳过
-2025-12-30 20:05:23,413 - __main__ - WARNING - 第 367 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 368 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 369 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 370 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 371 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 372 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 373 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 374 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 375 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 376 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 377 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 378 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 379 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 380 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 381 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 382 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 383 项任务描述为空，跳过
-2025-12-30 20:05:23,414 - __main__ - WARNING - 第 384 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 385 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 386 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 387 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 388 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 389 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 390 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 391 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 392 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 393 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 394 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 395 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 396 项任务描述为空，跳过
-2025-12-30 20:05:23,415 - __main__ - WARNING - 第 397 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
-更新Memory: 100%|██████████| 398/398 [00:54<00:00,  7.26it/s]
-2025-12-30 20:05:23,415 - __main__ - INFO - Memory更新完成
-2025-12-30 20:05:23,417 - __main__ - INFO - 程序执行完成
-2025-12-30 20:05:25,075 - inference.local_inference - INFO - 清理vLLM模型...
-2025-12-30 20:05:25,101 - inference.local_inference - INFO - CUDA缓存已清理
+INFO 12-30 20:11:52 [config.py:585] This model supports multiple tasks: {'classify', 'reward', 'score', 'embed', 'generate'}. Defaulting to 'generate'.
+INFO 12-30 20:11:52 [config.py:1519] Defaulting to use mp for distributed inference
+INFO 12-30 20:11:52 [config.py:1697] Chunked prefill is enabled with max_num_batched_tokens=8192.
+INFO 12-30 20:11:53 [core.py:54] Initializing a V1 LLM engine (v0.8.2) with config: model='/home/models/qwen_dpo3_lora', speculative_config=None, tokenizer='/home/models/qwen_dpo3_lora', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, override_neuron_config=None, tokenizer_revision=None, trust_remote_code=True, dtype=torch.bfloat16, max_seq_len=32768, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=4, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto,  device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='xgrammar', reasoning_backend=None), observability_config=ObservabilityConfig(show_hidden_metrics=False, otlp_traces_endpoint=None, collect_model_forward_time=False, collect_model_execute_time=False), seed=None, served_model_name=/home/models/qwen_dpo3_lora, num_scheduler_steps=1, multi_step_stream_outputs=True, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, disable_mm_preprocessor_cache=False, mm_processor_kwargs=None, pooler_config=None, compilation_config={"level":3,"custom_ops":["none"],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output"],"use_inductor":true,"compile_sizes":[],"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[512,504,496,488,480,472,464,456,448,440,432,424,416,408,400,392,384,376,368,360,352,344,336,328,320,312,304,296,288,280,272,264,256,248,240,232,224,216,208,200,192,184,176,168,160,152,144,136,128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"max_capture_size":512}
+WARNING 12-30 20:11:53 [multiproc_worker_utils.py:306] Reducing Torch parallelism from 64 threads to 1 to avoid unnecessary CPU contention. Set OMP_NUM_THREADS in the external environment to tune this value as needed.
+INFO 12-30 20:11:53 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0, 1, 2, 3], buffer_handle=(4, 10485760, 10, 'psm_4bf5c1ad'), local_subscribe_addr='ipc:///tmp/72c9aa2b-5c67-47c1-88b5-607a05aa88a3', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-30 20:11:53 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f0cbb3b79d0>
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:54 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_ad15f0f2'), local_subscribe_addr='ipc:///tmp/fd25f580-33ab-4194-9714-0358ed2e4add', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-30 20:11:54 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f0cbb3b79d0>
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:54 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_ec3a98f9'), local_subscribe_addr='ipc:///tmp/cd51b6b7-bad6-4763-b0e8-f7f2040ac9fd', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-30 20:11:54 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f0cbb3b79d0>
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:54 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_70c21a0b'), local_subscribe_addr='ipc:///tmp/3e4613f2-4394-4883-89ac-a615bcfb2582', remote_subscribe_addr=None, remote_addr_ipv6=False)
+WARNING 12-30 20:11:55 [utils.py:2321] Methods determine_num_available_blocks,device_config,get_cache_block_size_bytes,initialize_cache not implemented in <vllm.v1.worker.gpu_worker.Worker object at 0x7f0cbb3b79d0>
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:55 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[0], buffer_handle=(1, 10485760, 10, 'psm_ba7aa7cd'), local_subscribe_addr='ipc:///tmp/d9f54b9e-19d2-405a-9cd2-65b3145f4329', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:55 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:55 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:55 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:55 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:55 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:55 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:55 [utils.py:931] Found nccl from library libnccl.so.2
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:55 [pynccl.py:69] vLLM is using nccl==2.21.5
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:56 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:56 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:56 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:56 [custom_all_reduce_utils.py:244] reading GPU P2P access cache from /root/.cache/vllm/gpu_p2p_access_cache_for_0,1,2,3.json
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:56 [shm_broadcast.py:259] vLLM message queue communication handle: Handle(local_reader_ranks=[1, 2, 3], buffer_handle=(3, 4194304, 6, 'psm_eb70b792'), local_subscribe_addr='ipc:///tmp/165af5b2-8993-45ed-98dd-af4d963e1d83', remote_subscribe_addr=None, remote_addr_ipv6=False)
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:56 [parallel_state.py:954] rank 2 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 2
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:56 [parallel_state.py:954] rank 1 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 1
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:56 [parallel_state.py:954] rank 3 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 3
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:56 [parallel_state.py:954] rank 0 in world size 4 is assigned as DP rank 0, PP rank 0, TP rank 0
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:56 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:56 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:56 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:56 [cuda.py:220] Using Flash Attention backend on V1 engine.
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:56 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:56 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:56 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:56 [gpu_model_runner.py:1174] Starting to load model /home/models/qwen_dpo3_lora...
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m WARNING 12-30 20:11:57 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m WARNING 12-30 20:11:57 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m WARNING 12-30 20:11:57 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m WARNING 12-30 20:11:57 [topk_topp_sampler.py:63] FlashInfer is not available. Falling back to the PyTorch-native implementation of top-p & top-k sampling. For the best performance, please install FlashInfer.
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards:   0% Completed | 0/6 [00:00<?, ?it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards:  17% Completed | 1/6 [00:00<00:01,  2.86it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards:  33% Completed | 2/6 [00:00<00:01,  2.37it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards:  50% Completed | 3/6 [00:01<00:01,  2.24it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards:  67% Completed | 4/6 [00:01<00:00,  2.22it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards:  83% Completed | 5/6 [00:02<00:00,  2.24it/s]
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:59 [loader.py:447] Loading weights took 2.56 seconds
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:02<00:00,  2.40it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m Loading safetensors checkpoint shards: 100% Completed | 6/6 [00:02<00:00,  2.35it/s]
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m 
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:59 [loader.py:447] Loading weights took 2.58 seconds
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:59 [loader.py:447] Loading weights took 2.61 seconds
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:11:59 [loader.py:447] Loading weights took 2.61 seconds
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:11:59 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 2.859354 seconds
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:11:59 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 2.904885 seconds
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:11:59 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 2.894115 seconds
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:00 [gpu_model_runner.py:1186] Model loading took 6.9460 GB and 2.912460 seconds
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:12:09 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_0_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:12:09 [backends.py:425] Dynamo bytecode transform time: 9.98 s
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:12:10 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_3_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:12:10 [backends.py:425] Dynamo bytecode transform time: 10.02 s
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:12:10 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_2_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:12:10 [backends.py:425] Dynamo bytecode transform time: 10.08 s
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:10 [backends.py:415] Using cache directory: /root/.cache/vllm/torch_compile_cache/42b8e6bd16/rank_1_0 for vLLM's torch.compile
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:10 [backends.py:425] Dynamo bytecode transform time: 10.20 s
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:12:10 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:12:10 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:12:10 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:10 [backends.py:115] Directly load the compiled graph for shape None from the cache
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:12:19 [monitor.py:33] torch.compile takes 9.98 s in total
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:12:19 [monitor.py:33] torch.compile takes 10.02 s in total
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:12:19 [monitor.py:33] torch.compile takes 10.08 s in total
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:19 [monitor.py:33] torch.compile takes 10.20 s in total
+INFO 12-30 20:12:21 [kv_cache_utils.py:566] GPU KV cache size: 1,251,264 tokens
+INFO 12-30 20:12:21 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.19x
+INFO 12-30 20:12:21 [kv_cache_utils.py:566] GPU KV cache size: 1,247,168 tokens
+INFO 12-30 20:12:21 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.06x
+INFO 12-30 20:12:21 [kv_cache_utils.py:566] GPU KV cache size: 1,247,168 tokens
+INFO 12-30 20:12:21 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.06x
+INFO 12-30 20:12:21 [kv_cache_utils.py:566] GPU KV cache size: 1,251,264 tokens
+INFO 12-30 20:12:21 [kv_cache_utils.py:569] Maximum concurrency for 32,768 tokens per request: 38.19x
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:45 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:12:45 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:12:45 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:12:45 [custom_all_reduce.py:229] Registering 6499 cuda graph addresses
+[1;36m(VllmWorker rank=2 pid=68496)[0;0m INFO 12-30 20:12:46 [gpu_model_runner.py:1534] Graph capturing finished in 25 secs, took 0.71 GiB
+[1;36m(VllmWorker rank=1 pid=68483)[0;0m INFO 12-30 20:12:46 [gpu_model_runner.py:1534] Graph capturing finished in 25 secs, took 0.71 GiB
+[1;36m(VllmWorker rank=3 pid=68510)[0;0m INFO 12-30 20:12:46 [gpu_model_runner.py:1534] Graph capturing finished in 25 secs, took 0.71 GiB
+[1;36m(VllmWorker rank=0 pid=68471)[0;0m INFO 12-30 20:12:46 [gpu_model_runner.py:1534] Graph capturing finished in 25 secs, took 0.71 GiB
+INFO 12-30 20:12:46 [core.py:151] init engine (profile, create kv cache, warmup model) took 46.88 seconds
+2025-12-30 20:12:46,931 - inference.local_inference - INFO - vLLM模型初始化完成
+2025-12-30 20:13:15,921 - __main__ - INFO - 批量生成新原则...
+2025-12-30 20:14:33,714 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
+2025-12-30 20:14:33,734 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
+更新Memory:   0%|          | 0/398 [00:00<?, ?it/s]2025-12-30 20:14:33,736 - __main__ - WARNING - 第 0 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 1 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 2 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 3 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 4 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 5 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 6 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 7 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 8 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 9 项任务描述为空，跳过
+2025-12-30 20:14:33,736 - __main__ - WARNING - 第 10 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 11 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 12 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 13 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 14 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 15 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 16 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 17 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 18 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 19 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 20 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 21 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 22 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 23 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 24 项任务描述为空，跳过
+2025-12-30 20:14:33,737 - __main__ - WARNING - 第 25 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 26 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 27 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 28 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 29 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 30 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 31 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 32 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 33 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 34 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 35 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 36 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 37 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 38 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 39 项任务描述为空，跳过
+2025-12-30 20:14:33,738 - __main__ - WARNING - 第 40 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 41 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 42 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 43 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 44 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 45 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 46 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 47 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 48 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 49 项解析任务描述失败: Invalid \escape: line 1 column 61 (char 60)，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 50 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 51 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 52 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 53 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 54 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 55 项任务描述为空，跳过
+2025-12-30 20:14:33,739 - __main__ - WARNING - 第 56 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 57 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 58 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 59 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 60 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 61 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 62 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 63 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 64 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 65 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 66 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 67 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 68 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 69 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 70 项任务描述为空，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 71 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,740 - __main__ - WARNING - 第 72 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 73 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 74 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 75 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 76 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 77 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 78 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 79 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 80 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 81 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 82 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 83 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 84 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 85 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 86 项任务描述为空，跳过
+2025-12-30 20:14:33,741 - __main__ - WARNING - 第 87 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 88 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 89 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 90 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 91 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 92 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 93 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 94 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 95 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 96 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 97 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 98 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 99 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 100 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 101 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 102 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 103 项任务描述为空，跳过
+2025-12-30 20:14:33,742 - __main__ - WARNING - 第 104 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 105 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 106 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 107 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 108 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 109 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 110 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 111 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 112 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 113 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 114 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 115 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 116 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 117 项任务描述为空，跳过
+2025-12-30 20:14:33,743 - __main__ - WARNING - 第 118 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 119 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 120 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 121 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 122 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 123 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 124 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 125 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 126 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 127 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 128 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 129 项任务描述为空，跳过
+2025-12-30 20:14:33,744 - __main__ - WARNING - 第 130 项任务描述为空，跳过
+更新Memory:  33%|███▎      | 132/398 [00:40<01:22,  3.23it/s]2025-12-30 20:15:14,581 - __main__ - WARNING - 第 132 项任务描述为空，跳过
+2025-12-30 20:15:14,581 - __main__ - WARNING - 第 133 项任务描述为空，跳过
+2025-12-30 20:15:14,581 - __main__ - WARNING - 第 134 项任务描述为空，跳过
+2025-12-30 20:15:14,581 - __main__ - WARNING - 第 135 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 136 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 137 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 138 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 139 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 140 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 141 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 142 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 143 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 144 项任务描述为空，跳过
+2025-12-30 20:15:14,582 - __main__ - WARNING - 第 145 项任务描述为空，跳过
+2025-12-30 20:15:14,583 - __main__ - WARNING - 第 146 项任务描述为空，跳过
+更新Memory:  37%|███▋      | 148/398 [01:00<01:51,  2.25it/s]2025-12-30 20:15:34,262 - __main__ - WARNING - 第 148 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,262 - __main__ - WARNING - 第 149 项任务描述为空，跳过
+2025-12-30 20:15:34,262 - __main__ - WARNING - 第 150 项任务描述为空，跳过
+2025-12-30 20:15:34,262 - __main__ - WARNING - 第 151 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 152 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 153 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 154 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 155 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 156 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 157 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 158 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 159 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 160 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 161 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 162 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 163 项任务描述为空，跳过
+2025-12-30 20:15:34,263 - __main__ - WARNING - 第 164 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 165 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 166 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 167 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 168 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 169 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 170 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 171 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 172 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 173 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 174 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 175 项任务描述为空，跳过
+2025-12-30 20:15:34,264 - __main__ - WARNING - 第 176 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 177 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 178 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 179 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 180 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 181 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 182 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 183 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 184 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 185 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 186 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 187 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 188 项任务描述为空，跳过
+2025-12-30 20:15:34,265 - __main__ - WARNING - 第 189 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 190 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 191 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 192 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 193 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 194 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 195 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 196 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 197 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 198 项任务描述为空，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 199 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 200 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,266 - __main__ - WARNING - 第 201 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 202 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 203 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 204 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 205 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 206 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 207 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 208 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 209 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 210 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 211 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 212 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 213 项任务描述为空，跳过
+2025-12-30 20:15:34,267 - __main__ - WARNING - 第 214 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 215 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 216 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 217 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 218 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 219 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 220 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 221 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 222 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 223 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 224 项任务描述为空，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 225 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 226 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,268 - __main__ - WARNING - 第 227 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 228 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 229 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 230 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 231 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 232 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 233 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 234 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 235 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 236 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 237 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 238 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 239 项任务描述为空，跳过
+2025-12-30 20:15:34,269 - __main__ - WARNING - 第 240 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 241 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 242 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 243 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 244 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 245 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 246 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 247 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 248 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 249 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 250 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 251 项任务描述为空，跳过
+2025-12-30 20:15:34,270 - __main__ - WARNING - 第 252 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 253 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 254 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 255 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 256 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 257 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 258 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 259 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 260 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 261 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 262 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 263 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 264 项任务描述为空，跳过
+2025-12-30 20:15:34,271 - __main__ - WARNING - 第 265 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 266 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 267 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 268 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 269 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 270 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 271 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 272 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 273 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 274 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 275 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 276 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 277 项任务描述为空，跳过
+2025-12-30 20:15:34,272 - __main__ - WARNING - 第 278 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 279 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 280 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 281 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 282 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 283 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 284 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 285 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 286 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 287 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 288 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 289 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 290 项任务描述为空，跳过
+2025-12-30 20:15:34,273 - __main__ - WARNING - 第 291 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 292 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 293 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 294 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 295 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 296 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 297 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 298 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 299 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 300 项解析任务描述失败: Invalid \escape: line 2 column 51 (char 52)，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 301 项任务描述为空，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 302 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:15:34,274 - __main__ - WARNING - 第 303 项任务描述为空，跳过
+更新Memory:  77%|███████▋  | 305/398 [01:57<00:36,  2.55it/s]2025-12-30 20:16:31,663 - __main__ - WARNING - 第 305 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 306 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 307 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 308 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 309 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 310 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 311 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 312 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 313 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 314 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 315 项任务描述为空，跳过
+2025-12-30 20:16:31,664 - __main__ - WARNING - 第 316 项任务描述为空，跳过
+2025-12-30 20:16:31,665 - __main__ - WARNING - 第 317 项任务描述为空，跳过
+2025-12-30 20:16:31,665 - __main__ - WARNING - 第 318 项任务描述为空，跳过
+2025-12-30 20:16:31,665 - __main__ - WARNING - 第 319 项任务描述为空，跳过
+更新Memory:  81%|████████  | 321/398 [02:17<00:35,  2.15it/s]2025-12-30 20:16:51,154 - __main__ - WARNING - 第 321 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 322 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 323 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 324 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 325 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 326 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 327 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 328 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 329 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 330 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 331 项任务描述为空，跳过
+2025-12-30 20:16:51,155 - __main__ - WARNING - 第 332 项任务描述为空，跳过
+更新Memory:  84%|████████▍ | 334/398 [02:40<00:37,  1.69it/s]2025-12-30 20:17:14,570 - __main__ - WARNING - 第 334 项任务描述为空，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 335 项任务描述为空，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 336 项任务描述为空，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 337 项任务描述为空，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 338 项任务描述为空，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 339 项任务描述为空，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 340 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:17:14,570 - __main__ - WARNING - 第 341 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 342 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 343 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 344 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 345 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 346 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 347 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 348 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 349 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 350 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 351 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 352 项任务描述为空，跳过
+2025-12-30 20:17:14,571 - __main__ - WARNING - 第 353 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 354 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 355 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 356 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 357 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 358 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 359 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 360 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 361 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 362 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 363 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 364 项任务描述为空，跳过
+2025-12-30 20:17:14,572 - __main__ - WARNING - 第 365 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 366 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 367 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 368 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 369 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 370 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 371 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 372 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 373 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 374 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 375 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 376 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 377 项任务描述为空，跳过
+2025-12-30 20:17:14,573 - __main__ - WARNING - 第 378 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 379 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 380 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 381 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 382 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 383 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 384 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 385 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 386 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 387 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 388 项解析任务描述失败: Invalid \escape: line 1 column 84 (char 83)，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 389 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 390 项任务描述为空，跳过
+2025-12-30 20:17:14,574 - __main__ - WARNING - 第 391 项任务描述为空，跳过
+2025-12-30 20:17:14,575 - __main__ - WARNING - 第 392 项任务描述为空，跳过
+2025-12-30 20:17:14,575 - __main__ - WARNING - 第 393 项任务描述为空，跳过
+2025-12-30 20:17:14,575 - __main__ - WARNING - 第 394 项任务描述为空，跳过
+2025-12-30 20:17:14,575 - __main__ - WARNING - 第 395 项任务描述为空，跳过
+2025-12-30 20:17:14,575 - __main__ - WARNING - 第 396 项任务描述为空，跳过
+2025-12-30 20:17:14,575 - __main__ - WARNING - 第 397 项任务描述为空，跳过
+更新Memory: 100%|██████████| 398/398 [02:40<00:00,  2.47it/s]
+2025-12-30 20:17:14,575 - __main__ - INFO - Memory更新完成
+2025-12-30 20:17:14,577 - __main__ - INFO - 程序执行完成
+2025-12-30 20:17:16,545 - inference.local_inference - INFO - 清理vLLM模型...
+2025-12-30 20:17:16,572 - inference.local_inference - INFO - CUDA缓存已清理

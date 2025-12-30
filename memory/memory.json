@@ -510,8 +510,9 @@
     "Avoid redundant explanations and focus on concise, clear presentation of the final result to enhance answer clarity and conciseness."
   ],
   "Determine the number of times 24 divides into 100!": [
+    "Avoid deriving unnecessary components like the circle's equation if they are not required for the final solution. Focus on the essential steps and formulas needed to solve the problem directly. Ensure accuracy in intermediate calculations, such as determining the center and radius of the circle, as errors in these steps can lead to incorrect final answers.",
     "Ensure that geometric properties, such as the angle formed by a tangent and a radius at the point of contact being 90 degrees, are correctly applied in calculations.",
-    "Avoid deriving unnecessary components like the circle's equation if they are not required for the final solution. Focus on the essential steps and formulas needed to solve the problem directly. Ensure accuracy in intermediate calculations, such as determining the center and radius of the circle, as errors in these steps can lead to incorrect final answers."
+    "To construct the smallest possible number with specific digit constraints, place the required digits in the rightmost positions while keeping the leftmost digits as small as possible."
   ],
   "Determine the ratio of the maximum to minimum possible values of the sum of cubes of a sequence of integers given constraints on their sum and sum of squares.": [
     "Ensure solutions include detailed, step-by-step explanations to enhance clarity and facilitate verification.",
@@ -2196,6 +2197,16 @@
     "To construct the smallest possible number with specific digit constraints, place the required digits in the rightmost positions while keeping the leftmost digits as small as possible."
   ],
   "Determine the length of side BC in an acute triangle ABC given specific geometric properties and relationships involving the circumcenter and centroid.": [
-    "Avoid unnecessary complexity by focusing on directly relevant geometric properties and relationships rather than introducing unrelated concepts like the Euler line."
+    "Avoid unnecessary geometric constructs like the Euler line when solving problems, focusing instead on directly relevant geometric properties and relationships."
+  ],
+  "Calculate the area of triangle AEF formed by the intersection of angle bisectors and perpendicular bisectors in triangle ABC, given the side lengths AB=4, BC=5, and CA=6.": [
+    "In geometric problems, utilize known properties and symmetries to simplify calculations and provide detailed step-by-step reasoning to ensure the correctness and clarity of the final answer."
+  ],
+  "Determine the minimum value of a function defined by the sum of two integrals over specified intervals.": [
+    "Ensure that algebraic simplifications are correctly performed and fully reduced to their simplest form to accurately reflect the mathematical expression's value.",
+    "Verify the final value of the function by comparing it against known mathematical identities or values to ensure correctness."
+  ],
+  "Compute the inverse cosine of a sine value.": [
+    "When solving trigonometric equations, consider the periodicity of the trigonometric functions to identify all possible solutions within the defined range."
   ]
 }
