@@ -38,8 +38,8 @@ def prepare_step2_update_memory_from_dpo():
     logger.info("MemoryManager 初始化完成")
     
     dpo_file = Path(config.data_levels_file)
-    # dpo_file = Path(config.test_file)  # 测试路径
-    # checkpoint_file = Path(config.memory_checkpoint_file)
+    dpo_file = Path(config.test_file)  # 测试路径
+    checkpoint_file = Path(config.memory_checkpoint_file)
     
     if not dpo_file.exists():
         logger.error(f"DPO文件不存在: {dpo_file}，请先运行Step 1")
@@ -68,15 +68,15 @@ def prepare_step2_update_memory_from_dpo():
 
     # # 读取断点
     start_index = 0
-    # if checkpoint_file.exists():
-    #     try:
-    #         with open(checkpoint_file, 'r') as cf:
-    #             ckpt = json.load(cf)
-    #             start_index = ckpt.get("last_index", 0)
-    #             logger.info(f"从断点恢复: {start_index}/{len(dpo_data)}")
-    #     except Exception as e:
-    #         logger.warning(f"读取断点文件失败: {e}，从头开始")
-    #         start_index = 0
+    if checkpoint_file.exists():
+        try:
+            with open(checkpoint_file, 'r') as cf:
+                ckpt = json.load(cf)
+                start_index = ckpt.get("last_index", 0)
+                logger.info(f"从断点恢复: {start_index}/{len(dpo_data)}")
+        except Exception as e:
+            logger.warning(f"读取断点文件失败: {e}，从头开始")
+            start_index = 0
 
     # 主循环：批处理模式
     try:
