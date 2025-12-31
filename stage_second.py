@@ -39,7 +39,7 @@ def prepare_step2_update_memory_from_dpo():
     
     dpo_file = Path(config.data_levels_file)
     # dpo_file = Path(config.test_file)  # 测试路径
-    checkpoint_file = Path(config.memory_checkpoint_file)
+    # checkpoint_file = Path(config.memory_checkpoint_file)
     
     if not dpo_file.exists():
         logger.error(f"DPO文件不存在: {dpo_file}，请先运行Step 1")
@@ -66,17 +66,17 @@ def prepare_step2_update_memory_from_dpo():
         logger.error(f"读取JSON文件失败: {e}")
         return
 
-    # 读取断点
+    # # 读取断点
     start_index = 0
-    if checkpoint_file.exists():
-        try:
-            with open(checkpoint_file, 'r') as cf:
-                ckpt = json.load(cf)
-                start_index = ckpt.get("last_index", 0)
-                logger.info(f"从断点恢复: {start_index}/{len(dpo_data)}")
-        except Exception as e:
-            logger.warning(f"读取断点文件失败: {e}，从头开始")
-            start_index = 0
+    # if checkpoint_file.exists():
+    #     try:
+    #         with open(checkpoint_file, 'r') as cf:
+    #             ckpt = json.load(cf)
+    #             start_index = ckpt.get("last_index", 0)
+    #             logger.info(f"从断点恢复: {start_index}/{len(dpo_data)}")
+    #     except Exception as e:
+    #         logger.warning(f"读取断点文件失败: {e}，从头开始")
+    #         start_index = 0
 
     # 主循环：批处理模式
     try:
@@ -105,16 +105,16 @@ def prepare_step2_update_memory_from_dpo():
                 if d_match:
                     diff = d_match.group(1).strip()
             
-            # 2. 尝试从 messages 中提取 (JSONL 格式 - 兼容旧格式)
-            elif 'messages' in item:
-                user_msg = next((m['content'] for m in item['messages'] if m['role'] == 'user'), None)
-                if user_msg:
-                    # 提取 Question 和 Diff
-                    q_match = re.search(r'Input: Question: (.*?)\nError Points:', user_msg, re.DOTALL)
-                    d_match = re.search(r'Error Points: (.*?)\nOutput:', user_msg, re.DOTALL)
+            # # 2. 尝试从 messages 中提取 (JSONL 格式 - 兼容旧格式)
+            # elif 'messages' in item:
+            #     user_msg = next((m['content'] for m in item['messages'] if m['role'] == 'user'), None)
+            #     if user_msg:
+            #         # 提取 Question 和 Diff
+            #         q_match = re.search(r'Input: Question: (.*?)\nError Points:', user_msg, re.DOTALL)
+            #         d_match = re.search(r'Error Points: (.*?)\nOutput:', user_msg, re.DOTALL)
                     
-                    question = q_match.group(1).strip() if q_match else None
-                    diff = d_match.group(1).strip() if d_match else None
+            #         question = q_match.group(1).strip() if q_match else None
+            #         diff = d_match.group(1).strip() if d_match else None
             
             # 3. 尝试直接获取字段 (简单 JSON 格式)
             if not question:
@@ -192,6 +192,7 @@ def prepare_step2_update_memory_from_dpo():
             if task_desc_clean.endswith('```'):
                 task_desc_clean = task_desc_clean[:-3]  # 去掉结尾的 ```
             task_desc_clean = task_desc_clean.strip()
+
             
             try:
                 # 尝试直接解析清理后的内容
