@@ -1537,3 +1537,566 @@ FileNotFoundError: [Errno 2] No such file or directory: '/home/metanew2/checkpoi
 2025-12-30 20:59:56,598 - __main__ - INFO - 程序执行完成
 2025-12-30 20:59:58,357 - inference.local_inference - INFO - 清理vLLM模型...
 2025-12-30 20:59:58,388 - inference.local_inference - INFO - CUDA缓存已清理
+2025-12-30 21:11:00,102 - __main__ - INFO - ============================================================
+2025-12-30 21:11:00,103 - __main__ - INFO - Step 2: 开始更新Memory
+2025-12-30 21:11:00,103 - __main__ - INFO - ============================================================
+2025-12-30 21:11:00,104 - __main__ - INFO - MemoryManager 初始化完成
+2025-12-30 21:11:00,116 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-30 21:11:00,136 - __main__ - INFO - 准备批处理 398 条数据
+2025-12-30 21:11:00,136 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2025-12-30 21:11:00,136 - __main__ - INFO - 批量生成任务描述...
+2025-12-30 21:11:04,297 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2025-12-30 21:11:04,298 - inference.local_inference - INFO - ============================================================
+2025-12-30 21:11:04,298 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-30 21:11:04,298 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-30 21:11:04,298 - inference.local_inference - INFO - ============================================================
+2025-12-30 21:12:01,465 - inference.local_inference - INFO - vLLM模型初始化完成
+2025-12-30 21:12:36,987 - __main__ - INFO - 提取 chosen 原则...
+2025-12-30 21:12:36,996 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
+2025-12-30 21:12:37,016 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
+2025-12-30 21:12:37,018 - __main__ - WARNING - 第 0 项任务描述为空，跳过
+2025-12-30 21:12:37,018 - __main__ - WARNING - 第 1 项任务描述为空，跳过
+2025-12-30 21:12:37,018 - __main__ - WARNING - 第 2 项任务描述为空，跳过
+2025-12-30 21:12:37,018 - __main__ - WARNING - 第 3 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:12:37,018 - __main__ - WARNING - 第 4 项任务描述为空，跳过
+2025-12-30 21:13:30,873 - __main__ - WARNING - 第 6 项任务描述为空，跳过
+2025-12-30 21:13:30,873 - __main__ - WARNING - 第 7 项任务描述为空，跳过
+2025-12-30 21:13:30,873 - __main__ - WARNING - 第 8 项任务描述为空，跳过
+2025-12-30 21:13:30,873 - __main__ - WARNING - 第 9 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 10 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 11 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 12 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 13 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 14 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 15 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 16 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 17 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 18 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 19 项任务描述为空，跳过
+2025-12-30 21:13:30,874 - __main__ - WARNING - 第 20 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 21 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 22 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 23 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 24 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 25 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 26 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 27 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 28 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 29 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 30 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 31 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 32 项任务描述为空，跳过
+2025-12-30 21:13:30,875 - __main__ - WARNING - 第 33 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 34 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 35 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 36 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 37 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 38 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 39 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 40 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 41 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 42 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 43 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 44 项任务描述为空，跳过
+2025-12-30 21:13:30,876 - __main__ - WARNING - 第 45 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 46 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 47 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 48 项解析任务描述失败: Invalid \escape: line 2 column 82 (char 83)，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 49 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 50 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 51 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 52 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 53 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 54 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 55 项任务描述为空，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 56 项解析任务描述失败: Expecting ',' delimiter: line 1 column 159 (char 158)，跳过
+2025-12-30 21:13:30,877 - __main__ - WARNING - 第 57 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 58 项任务描述为空，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 59 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 60 项任务描述为空，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 61 项任务描述为空，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 62 项任务描述为空，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 63 项任务描述为空，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 64 项任务描述为空，跳过
+2025-12-30 21:13:30,878 - __main__ - WARNING - 第 65 项任务描述为空，跳过
+2025-12-30 21:13:30,881 - __main__ - WARNING - 第 66 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 67 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 68 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 69 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 70 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 71 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 72 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 73 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 74 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 75 项任务描述为空，跳过
+2025-12-30 21:13:30,882 - __main__ - WARNING - 第 76 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 77 项解析任务描述失败: Invalid \escape: line 2 column 50 (char 51)，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 78 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 79 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 80 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 81 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 82 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 83 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 84 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 85 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 86 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 87 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 88 项任务描述为空，跳过
+2025-12-30 21:13:30,883 - __main__ - WARNING - 第 89 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 90 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 91 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 92 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 93 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 94 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 95 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 96 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 97 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 98 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 99 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 100 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 101 项任务描述为空，跳过
+2025-12-30 21:13:30,884 - __main__ - WARNING - 第 102 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 103 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 104 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 105 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 106 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 107 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 108 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 109 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 110 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 111 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 112 项任务描述为空，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 113 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,885 - __main__ - WARNING - 第 114 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 115 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 116 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 117 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 118 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 119 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 120 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 121 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 122 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 123 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 124 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 125 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 126 项任务描述为空，跳过
+2025-12-30 21:13:30,886 - __main__ - WARNING - 第 127 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 128 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 129 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 130 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 131 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 132 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 133 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 134 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 135 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 136 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 137 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 138 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 139 项任务描述为空，跳过
+2025-12-30 21:13:30,887 - __main__ - WARNING - 第 140 项任务描述为空，跳过
+2025-12-30 21:13:30,888 - __main__ - WARNING - 第 141 项任务描述为空，跳过
+2025-12-30 21:13:30,888 - __main__ - WARNING - 第 142 项任务描述为空，跳过
+2025-12-30 21:13:30,888 - __main__ - WARNING - 第 143 项任务描述为空，跳过
+2025-12-30 21:13:30,888 - __main__ - WARNING - 第 144 项任务描述为空，跳过
+2025-12-30 21:13:30,888 - __main__ - WARNING - 第 145 项任务描述为空，跳过
+2025-12-30 21:13:30,888 - __main__ - WARNING - 第 146 项任务描述为空，跳过
+2025-12-30 21:13:53,374 - __main__ - WARNING - 第 148 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,374 - __main__ - WARNING - 第 149 项任务描述为空，跳过
+2025-12-30 21:13:53,374 - __main__ - WARNING - 第 150 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 151 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 152 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 153 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 154 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 155 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 156 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 157 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 158 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 159 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 160 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 161 项任务描述为空，跳过
+2025-12-30 21:13:53,375 - __main__ - WARNING - 第 162 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 163 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 164 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 165 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 166 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 167 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 168 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 169 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 170 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 171 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 172 项任务描述为空，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 173 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,376 - __main__ - WARNING - 第 174 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 175 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 176 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 177 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 178 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 179 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 180 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 181 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 182 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 183 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 184 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 185 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 186 项任务描述为空，跳过
+2025-12-30 21:13:53,377 - __main__ - WARNING - 第 187 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 188 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 189 项解析任务描述失败: Invalid \escape: line 1 column 64 (char 63)，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 190 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 191 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 192 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 193 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 194 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 195 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 196 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 197 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 198 项任务描述为空，跳过
+2025-12-30 21:13:53,378 - __main__ - WARNING - 第 199 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 200 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 201 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 202 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 203 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 204 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 205 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 206 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 207 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 208 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 209 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 210 项任务描述为空，跳过
+2025-12-30 21:13:53,379 - __main__ - WARNING - 第 211 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 212 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 213 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 214 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 215 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 216 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 217 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 218 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 219 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 220 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 221 项任务描述为空，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 222 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,380 - __main__ - WARNING - 第 223 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 224 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 225 项解析任务描述失败: Invalid \escape: line 2 column 35 (char 36)，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 226 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 227 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 228 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 229 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 230 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 231 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 232 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 233 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 234 项任务描述为空，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 235 项解析任务描述失败: Expecting ',' delimiter: line 1 column 182 (char 181)，跳过
+2025-12-30 21:13:53,381 - __main__ - WARNING - 第 236 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 237 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 238 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 239 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 240 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 241 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 242 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 243 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 244 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 245 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 246 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 247 项任务描述为空，跳过
+2025-12-30 21:13:53,382 - __main__ - WARNING - 第 248 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 249 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 250 项解析任务描述失败: Invalid \escape: line 2 column 87 (char 88)，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 251 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 252 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 253 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 254 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 255 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 256 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 257 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 258 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 259 项任务描述为空，跳过
+2025-12-30 21:13:53,383 - __main__ - WARNING - 第 260 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 261 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 262 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 263 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 264 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 265 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 266 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 267 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 268 项解析任务描述失败: Invalid \escape: line 2 column 52 (char 53)，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 269 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 270 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 271 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 272 项任务描述为空，跳过
+2025-12-30 21:13:53,384 - __main__ - WARNING - 第 273 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 274 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 275 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 276 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 277 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 278 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 279 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 280 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 281 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 282 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 283 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 284 项任务描述为空，跳过
+2025-12-30 21:13:53,385 - __main__ - WARNING - 第 285 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 286 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 287 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 288 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 289 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 290 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 291 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 292 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 293 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 294 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 295 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 296 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 297 项任务描述为空，跳过
+2025-12-30 21:13:53,386 - __main__ - WARNING - 第 298 项任务描述为空，跳过
+2025-12-30 21:13:53,387 - __main__ - WARNING - 第 299 项任务描述为空，跳过
+2025-12-30 21:13:53,387 - __main__ - WARNING - 第 300 项任务描述为空，跳过
+2025-12-30 21:13:53,387 - __main__ - WARNING - 第 301 项任务描述为空，跳过
+2025-12-30 21:13:53,387 - __main__ - WARNING - 第 302 项任务描述为空，跳过
+2025-12-30 21:13:53,387 - __main__ - WARNING - 第 303 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 305 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 306 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 307 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 308 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 309 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 310 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 311 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 312 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 313 项任务描述为空，跳过
+2025-12-30 21:14:50,238 - __main__ - WARNING - 第 314 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 315 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 316 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 317 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 318 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 319 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 320 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 321 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 322 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 323 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 324 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 325 项任务描述为空，跳过
+2025-12-30 21:14:50,239 - __main__ - WARNING - 第 326 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 327 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 328 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 329 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 330 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 331 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 332 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 333 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 334 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 335 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 336 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 337 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 338 项任务描述为空，跳过
+2025-12-30 21:14:50,240 - __main__ - WARNING - 第 339 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 340 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 341 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 342 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 343 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 344 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 345 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 346 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 347 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 348 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 349 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 350 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 351 项任务描述为空，跳过
+2025-12-30 21:14:50,241 - __main__ - WARNING - 第 352 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 353 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 354 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 355 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 356 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 357 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 358 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 359 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 360 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 361 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 362 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 363 项任务描述为空，跳过
+2025-12-30 21:14:50,242 - __main__ - WARNING - 第 364 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 365 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 366 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 367 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 368 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 369 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 370 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 371 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 372 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 373 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 374 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 375 项任务描述为空，跳过
+2025-12-30 21:14:50,243 - __main__ - WARNING - 第 376 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 377 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 378 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 379 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 380 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 381 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 382 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 383 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 384 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 385 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 386 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 387 项任务描述为空，跳过
+2025-12-30 21:14:50,244 - __main__ - WARNING - 第 388 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 389 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 390 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 391 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 392 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 393 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 394 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 395 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 396 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - WARNING - 第 397 项任务描述为空，跳过
+2025-12-30 21:14:50,245 - __main__ - INFO - Memory更新完成
+2025-12-30 21:14:50,247 - __main__ - INFO - 程序执行完成
+2025-12-30 21:14:52,610 - inference.local_inference - INFO - 清理vLLM模型...
+2025-12-30 21:14:52,635 - inference.local_inference - INFO - CUDA缓存已清理
+2025-12-30 21:38:36,615 - __main__ - INFO - ============================================================
+2025-12-30 21:38:36,615 - __main__ - INFO - Step 2: 开始更新Memory
+2025-12-30 21:38:36,615 - __main__ - INFO - ============================================================
+2025-12-30 21:38:36,616 - __main__ - INFO - MemoryManager 初始化完成
+2025-12-30 21:38:36,624 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2025-12-30 21:38:36,636 - __main__ - INFO - 准备批处理 398 条数据
+2025-12-30 21:38:36,637 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2025-12-30 21:38:36,637 - __main__ - INFO - 批量生成任务描述...
+2025-12-30 21:38:41,036 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2025-12-30 21:38:41,036 - inference.local_inference - INFO - ============================================================
+2025-12-30 21:38:41,037 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2025-12-30 21:38:41,037 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2025-12-30 21:38:41,037 - inference.local_inference - INFO - ============================================================
+2025-12-30 21:39:38,603 - inference.local_inference - INFO - vLLM模型初始化完成
+2025-12-30 21:40:36,787 - __main__ - INFO - 提取 chosen 原则...
+2025-12-30 21:40:36,793 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
+2025-12-30 21:40:36,812 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
+2025-12-30 21:40:54,467 - __main__ - WARNING - 第 1 项无法提取任务描述JSON，跳过
+2025-12-30 21:43:16,376 - __main__ - WARNING - 第 8 项无法提取任务描述JSON，跳过
+2025-12-30 21:44:12,899 - __main__ - WARNING - 第 10 项无法提取任务描述JSON，跳过
+2025-12-30 21:44:12,899 - __main__ - WARNING - 第 11 项无法提取任务描述JSON，跳过
+2025-12-30 21:44:12,899 - __main__ - WARNING - 第 12 项无法提取任务描述JSON，跳过
+2025-12-30 21:49:43,288 - __main__ - WARNING - 第 29 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:50:00,969 - __main__ - WARNING - 第 31 项无法提取任务描述JSON，跳过
+2025-12-30 21:50:00,969 - __main__ - WARNING - 第 32 项无法提取任务描述JSON，跳过
+2025-12-30 21:50:39,400 - __main__ - WARNING - 第 35 项无法提取任务描述JSON，跳过
+2025-12-30 21:50:39,400 - __main__ - WARNING - 第 36 项无法提取任务描述JSON，跳过
+2025-12-30 21:51:31,784 - __main__ - WARNING - 第 40 项无法提取任务描述JSON，跳过
+2025-12-30 21:51:31,785 - __main__ - WARNING - 第 41 项无法提取任务描述JSON，跳过
+2025-12-30 21:53:04,718 - __main__ - WARNING - 第 45 项无法提取任务描述JSON，跳过
+2025-12-30 21:53:42,518 - __main__ - WARNING - 第 48 项无法提取任务描述JSON，跳过
+2025-12-30 21:53:42,518 - __main__ - WARNING - 第 49 项解析任务描述失败: Invalid \escape: line 1 column 58 (char 57)，跳过
+2025-12-30 21:53:42,518 - __main__ - WARNING - 第 50 项无法提取任务描述JSON，跳过
+2025-12-30 21:54:03,970 - __main__ - WARNING - 第 52 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:55:35,394 - __main__ - WARNING - 第 56 项无法提取任务描述JSON，跳过
+2025-12-30 21:55:54,838 - __main__ - WARNING - 第 58 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:55:54,838 - __main__ - WARNING - 第 59 项解析任务描述失败: Invalid \escape: line 1 column 63 (char 62)，跳过
+2025-12-30 21:58:12,426 - __main__ - WARNING - 第 66 项无法提取任务描述JSON，跳过
+2025-12-30 21:58:52,042 - __main__ - WARNING - 第 69 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:59:10,962 - __main__ - WARNING - 第 71 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 21:59:45,702 - __main__ - WARNING - 第 74 项无法提取任务描述JSON，跳过
+2025-12-30 22:00:23,847 - __main__ - WARNING - 第 77 项解析任务描述失败: Invalid \escape: line 2 column 50 (char 51)，跳过
+2025-12-30 22:02:29,001 - __main__ - WARNING - 第 84 项无法提取任务描述JSON，跳过
+2025-12-30 22:02:29,002 - __main__ - WARNING - 第 85 项无法提取任务描述JSON，跳过
+2025-12-30 22:02:29,002 - __main__ - WARNING - 第 86 项无法提取任务描述JSON，跳过
+2025-12-30 22:03:48,763 - __main__ - WARNING - 第 90 项无法提取任务描述JSON，跳过
+2025-12-30 22:09:17,197 - __main__ - WARNING - 第 100 项无法提取任务描述JSON，跳过
+2025-12-30 22:09:17,198 - __main__ - WARNING - 第 101 项无法提取任务描述JSON，跳过
+2025-12-30 22:09:17,198 - __main__ - WARNING - 第 102 项无法提取任务描述JSON，跳过
+2025-12-30 22:09:17,198 - __main__ - WARNING - 第 103 项无法提取任务描述JSON，跳过
+2025-12-30 22:11:17,094 - __main__ - WARNING - 第 107 项无法提取任务描述JSON，跳过
+2025-12-30 22:11:17,095 - __main__ - WARNING - 第 108 项无法提取任务描述JSON，跳过
+2025-12-30 22:11:35,947 - __main__ - WARNING - 第 110 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:12:55,800 - __main__ - WARNING - 第 114 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:15:36,486 - __main__ - WARNING - 第 122 项无法提取任务描述JSON，跳过
+2025-12-30 22:15:36,486 - __main__ - WARNING - 第 123 项无法提取任务描述JSON，跳过
+2025-12-30 22:17:17,151 - __main__ - WARNING - 第 128 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:17:17,151 - __main__ - WARNING - 第 129 项无法提取任务描述JSON，跳过
+2025-12-30 22:17:36,190 - __main__ - WARNING - 第 131 项无法提取任务描述JSON，跳过
+2025-12-30 22:17:36,190 - __main__ - WARNING - 第 132 项无法提取任务描述JSON，跳过
+2025-12-30 22:17:36,190 - __main__ - WARNING - 第 133 项无法提取任务描述JSON，跳过
+2025-12-30 22:17:36,190 - __main__ - WARNING - 第 134 项无法提取任务描述JSON，跳过
+2025-12-30 22:18:57,286 - __main__ - WARNING - 第 138 项无法提取任务描述JSON，跳过
+2025-12-30 22:18:57,286 - __main__ - WARNING - 第 139 项无法提取任务描述JSON，跳过
+2025-12-30 22:19:36,907 - __main__ - WARNING - 第 142 项无法提取任务描述JSON，跳过
+2025-12-30 22:20:16,541 - __main__ - WARNING - 第 145 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:20:36,011 - __main__ - WARNING - 第 147 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:20:36,011 - __main__ - WARNING - 第 148 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:22:44,598 - __main__ - WARNING - 第 155 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:23:59,325 - __main__ - WARNING - 第 158 项无法提取任务描述JSON，跳过
+2025-12-30 22:24:36,152 - __main__ - WARNING - 第 161 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:25:42,163 - __main__ - WARNING - 第 165 项无法提取任务描述JSON，跳过
+2025-12-30 22:25:42,164 - __main__ - WARNING - 第 166 项无法提取任务描述JSON，跳过
+2025-12-30 22:27:09,192 - __main__ - WARNING - 第 171 项无法提取任务描述JSON，跳过
+2025-12-30 22:27:29,426 - __main__ - WARNING - 第 173 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:27:49,366 - __main__ - WARNING - 第 175 项无法提取任务描述JSON，跳过
+2025-12-30 22:29:38,506 - __main__ - WARNING - 第 181 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:30:23,123 - __main__ - WARNING - 第 184 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:30:23,123 - __main__ - WARNING - 第 185 项无法提取任务描述JSON，跳过
+2025-12-30 22:32:58,987 - __main__ - WARNING - 第 191 项无法提取任务描述JSON，跳过
+2025-12-30 22:36:35,394 - __main__ - WARNING - 第 199 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:36:35,394 - __main__ - WARNING - 第 200 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:36:35,394 - __main__ - WARNING - 第 201 项无法提取任务描述JSON，跳过
+2025-12-30 22:43:28,745 - __main__ - WARNING - 第 219 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:43:49,185 - __main__ - WARNING - 第 221 项无法提取任务描述JSON，跳过
+2025-12-30 22:43:49,186 - __main__ - WARNING - 第 222 项无法提取任务描述JSON，跳过
+2025-12-30 22:45:41,862 - __main__ - WARNING - 第 227 项无法提取任务描述JSON，跳过
+2025-12-30 22:47:39,287 - __main__ - WARNING - 第 232 项任务描述为空，跳过
+2025-12-30 22:48:53,980 - __main__ - WARNING - 第 235 项无法提取任务描述JSON，跳过
+2025-12-30 22:48:53,980 - __main__ - WARNING - 第 236 项无法提取任务描述JSON，跳过
+2025-12-30 22:48:53,980 - __main__ - WARNING - 第 237 项无法提取任务描述JSON，跳过
+2025-12-30 22:48:53,980 - __main__ - WARNING - 第 238 项无法提取任务描述JSON，跳过
+2025-12-30 22:50:54,466 - __main__ - WARNING - 第 243 项无法提取任务描述JSON，跳过
+2025-12-30 22:51:31,787 - __main__ - WARNING - 第 245 项无法提取任务描述JSON，跳过
+2025-12-30 22:53:25,030 - __main__ - WARNING - 第 250 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:53:25,031 - __main__ - WARNING - 第 251 项无法提取任务描述JSON，跳过
+2025-12-30 22:53:25,031 - __main__ - WARNING - 第 252 项无法提取任务描述JSON，跳过
+2025-12-30 22:54:05,717 - __main__ - WARNING - 第 255 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 22:54:29,218 - __main__ - WARNING - 第 257 项无法提取任务描述JSON，跳过
+2025-12-30 23:00:15,360 - __main__ - WARNING - 第 268 项解析任务描述失败: Invalid \escape: line 2 column 52 (char 53)，跳过
+2025-12-30 23:02:24,630 - __main__ - WARNING - 第 273 项无法提取任务描述JSON，跳过
+2025-12-30 23:02:24,631 - __main__ - WARNING - 第 274 项无法提取任务描述JSON，跳过
+2025-12-30 23:03:10,002 - __main__ - WARNING - 第 276 项无法提取任务描述JSON，跳过
+2025-12-30 23:07:45,111 - __main__ - WARNING - 第 286 项无法提取任务描述JSON，跳过
+2025-12-30 23:08:41,227 - __main__ - WARNING - 第 289 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:11:39,614 - __main__ - WARNING - 第 295 项解析任务描述失败: Expecting ',' delimiter: line 1 column 99 (char 98)，跳过
+2025-12-30 23:13:31,790 - __main__ - WARNING - 第 300 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:13:56,947 - __main__ - WARNING - 第 302 项无法提取任务描述JSON，跳过
+2025-12-30 23:14:51,220 - __main__ - WARNING - 第 305 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:16:00,335 - __main__ - WARNING - 第 309 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:16:00,336 - __main__ - WARNING - 第 310 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:17:16,663 - __main__ - WARNING - 第 314 项无法提取任务描述JSON，跳过
+2025-12-30 23:17:59,634 - __main__ - WARNING - 第 316 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:18:47,739 - __main__ - WARNING - 第 318 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:18:47,740 - __main__ - WARNING - 第 319 项无法提取任务描述JSON，跳过
+2025-12-30 23:18:47,740 - __main__ - WARNING - 第 320 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:19:13,551 - __main__ - WARNING - 第 322 项无法提取任务描述JSON，跳过
+2025-12-30 23:19:13,551 - __main__ - WARNING - 第 323 项解析任务描述失败: Expecting ',' delimiter: line 1 column 233 (char 232)，跳过
+2025-12-30 23:19:37,744 - __main__ - WARNING - 第 325 项无法提取任务描述JSON，跳过
+2025-12-30 23:20:22,566 - __main__ - WARNING - 第 328 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:21:09,394 - __main__ - WARNING - 第 331 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:22:56,388 - __main__ - WARNING - 第 335 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:22:56,388 - __main__ - WARNING - 第 336 项无法提取任务描述JSON，跳过
+2025-12-30 23:22:56,388 - __main__ - WARNING - 第 337 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:23:44,998 - __main__ - WARNING - 第 340 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:23:44,998 - __main__ - WARNING - 第 341 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:24:08,612 - __main__ - WARNING - 第 343 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:24:56,484 - __main__ - WARNING - 第 345 项无法提取任务描述JSON，跳过
+2025-12-30 23:25:23,747 - __main__ - WARNING - 第 347 项无法提取任务描述JSON，跳过
+2025-12-30 23:25:46,963 - __main__ - WARNING - 第 349 项无法提取任务描述JSON，跳过
+2025-12-30 23:26:50,335 - __main__ - WARNING - 第 352 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:27:31,535 - __main__ - WARNING - 第 354 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:28:15,352 - __main__ - WARNING - 第 357 项无法提取任务描述JSON，跳过
+2025-12-30 23:30:07,144 - __main__ - WARNING - 第 362 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:30:56,063 - __main__ - WARNING - 第 365 项无法提取任务描述JSON，跳过
+2025-12-30 23:30:56,063 - __main__ - WARNING - 第 366 项无法提取任务描述JSON，跳过
+2025-12-30 23:31:44,734 - __main__ - WARNING - 第 369 项无法提取任务描述JSON，跳过
+2025-12-30 23:32:07,971 - __main__ - WARNING - 第 371 项无法提取任务描述JSON，跳过
+2025-12-30 23:36:19,287 - __main__ - WARNING - 第 380 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:36:19,287 - __main__ - WARNING - 第 381 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:37:40,599 - __main__ - WARNING - 第 385 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:39:27,351 - __main__ - WARNING - 第 388 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2025-12-30 23:43:06,406 - __main__ - WARNING - 第 397 项无法提取任务描述JSON，跳过
+2025-12-30 23:43:06,407 - __main__ - INFO - Memory更新完成
+2025-12-30 23:43:06,410 - __main__ - INFO - 程序执行完成
+2025-12-30 23:43:08,784 - inference.local_inference - INFO - 清理vLLM模型...
+2025-12-30 23:43:08,814 - inference.local_inference - INFO - CUDA缓存已清理
