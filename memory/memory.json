@@ -12,11 +12,12 @@
     "Present the final simplified form in a clear, boxed format to enhance readability and adherence to mathematical conventions."
   ],
   "Calculate the sum of the equal angles in two isosceles triangles given specific angle conditions.": [
-    "Provide a comprehensive reasoning process for each step in solving geometric problems to ensure correctness and completeness.",
     "Verify that the solution meets all specified conditions (e.g., even or odd constraints) before finalizing the answer.",
+    "Double-check the final calculations to ensure they are based on the correct intermediate values derived from the problem constraints.",
     "Ensure all possible configurations of given conditions are explored before concluding the problem constraints cannot be met.",
-    "Correctly calculate and sum the values of variables (S and T) based on the valid configurations and constraints identified.",
-    "Double-check the final calculations to ensure they are based on the correct intermediate values derived from the problem constraints."
+    "Provide a comprehensive reasoning process for each step in solving geometric problems to ensure correctness and completeness.",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Correctly calculate and sum the values of variables (S and T) based on the valid configurations and constraints identified."
   ],
   "Determine the tangent of angle PAB for a point P inside triangle ABC such that angles PAB, PBC, and PCA are congruent, given the side lengths of the triangle.": [
     "Always simplify fractions to their lowest terms to ensure accuracy in subsequent calculations.",
@@ -81,13 +82,14 @@
     "Ensure the use of correct and relevant formulas when calculating geometric properties."
   ],
   "Identify the number that is a multiple of every integer.": [
-    "Address both positive and negative aspects to provide a comprehensive analysis\nGround claims in verifiable evidence\nConsider temporal scope in impact analysis",
-    "Anchor explanations in verified scientific concepts rather than common misconceptions",
-    "Structure explanations using component analysis",
     "Illustrate abstract concepts with concrete, context-relevant examples",
+    "Structure explanations using component analysis",
     "Address both capabilities and limitations",
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Include transformation patterns for practical relevance",
+    "Address both positive and negative aspects to provide a comprehensive analysis\nGround claims in verifiable evidence\nConsider temporal scope in impact analysis",
     "Prioritize functional comparison over vague qualitative statements",
-    "Include transformation patterns for practical relevance"
+    "Organize comparative information into distinct categories using clear formatting"
   ],
   "Evaluate the sine of the sum of π and an angle whose terminal side passes through a given point.": [
     "",
@@ -176,9 +178,8 @@
     "Avoid unnecessary calculations and discussions about rounding in favor of clear, direct answers."
   ],
   "Determine the largest integer n for which the factorial of (2004!) is divisible by the factorial of (n!).": [
-    "Ensure each step in the solution is clearly explained and logically structured to enhance clarity and understanding for the reader.",
-    "Verify the calculations of intermediate values (like k) to ensure the final answer is accurate.",
-    "Ensure the correct identification and solving of roots to maintain the accuracy of the final solution."
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements"
   ],
   "Determine the number of digits in the product of two given large numbers.": [
     "Ensure the final answer aligns with the provided options and task constraints to maintain correctness and relevance."
@@ -325,8 +326,14 @@
   ],
   "Determine the sum of all possible integer values of n within a specified range.": [
     "When calculating combinations involving groups with different sizes, ensure to account for the unique constraints of each group to avoid overcounting or undercounting scenarios.",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Establish contextual relevance through explicit connections to application scenarios",
     "Use standard presentation formats for final answers, such as boxing the result, to clearly delineate the solution and improve readability.",
-    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies"
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies",
+    "Enhance practical utility through actionable implementation guidance"
   ],
   "Determine the value of angle β given trigonometric values of α and α - β.": [
     "Provide detailed step-by-step explanations for each part of the solution to ensure clarity and completeness of reasoning."
@@ -359,13 +366,16 @@
   ],
   "Determine the value of a function at a specific integer point given a functional equation and initial conditions.": [
     "",
-    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
-    "Enhance practical utility through actionable implementation guidance",
-    "Address multidimensional impacts by considering both technical specifications and human factors",
     "Always verify that the final calculated value of f(n) adheres to all provided constraints, especially upper bounds.",
-    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Differentiate fact from interpretation using clear attribution. Use phrases like 'studies show' for established knowledge and 'this suggests' for analytical insights.",
     "Organize comparative information into distinct categories using clear formatting",
-    "Ensure that the values of f(n) for prime factors satisfy all given constraints, particularly when calculating composite numbers."
+    "Anchor explanations in concrete examples to increase comprehensibility. Provide specific instances or scenarios that illustrate abstract concepts for different knowledge levels.",
+    "Surface implicit assumptions to strengthen argument validity. Explicitly state foundational premises before building conclusions to prevent reasoning gaps.",
+    "Ensure that the values of f(n) for prime factors satisfy all given constraints, particularly when calculating composite numbers.",
+    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies",
+    "Maintain scope alignment through regular relevance checks. Periodically verify that all details directly contribute to answering the core question being addressed.",
+    "Prioritize explicit connections between concepts to enhance logical flow. Link ideas using transitional phrases or causal language to demonstrate relationships between points.",
+    "Address multidimensional impacts by considering both technical specifications and human factors"
   ],
   "Determine the number of integer solutions to a given quadratic inequality.": [
     "Ensure answers are clear and concise, avoiding unnecessary repetition of information.",
@@ -529,24 +539,22 @@
   ],
   "Determine the number of times 24 divides into 100!": [
     "",
-    "Address multidimensional impacts by considering both technical specifications and human factors",
-    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
-    "Structure analysis through multiple temporal lenses",
-    "Maintain strict factual precision through quantitative specifications and qualified statements",
-    "Conclude with a reinforcing summary",
-    "Anchor historical claims with specific events and actors",
-    "Structure explanations using benefit-oriented framing for user relevance",
-    "Ensure that geometric properties, such as the angle formed by a tangent and a radius at the point of contact being 90 degrees, are correctly applied in calculations.",
-    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
-    "Differentiate core mechanisms from supporting elements",
     "Implement scope limitation for complex processes",
     "To construct the smallest possible number with specific digit constraints, place the required digits in the rightmost positions while keeping the leftmost digits as small as possible.",
-    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
     "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
-    "Enhance practical utility through actionable implementation guidance",
+    "Anchor historical claims with specific events and actors",
+    "Personalize recommendations through qualification criteria",
+    "Surface implicit assumptions to strengthen argument validity. Explicitly state foundational premises before building conclusions to prevent reasoning gaps.",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Conclude with a reinforcing summary",
     "Establish contextual relevance through explicit connections to application scenarios",
-    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
-    "Personalize recommendations through qualification criteria"
+    "N/A",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts Maintain strict factual precision through quantitative specifications and qualified statements Address multidimensional impacts by considering both technical specifications and human factors Enhance practical utility through actionable implementation guidance Establish contextual relevance through explicit connections to application scenarios",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies",
+    "Enhance practical utility through actionable implementation guidance"
   ],
   "Determine the ratio of the maximum to minimum possible values of the sum of cubes of a sequence of integers given constraints on their sum and sum of squares.": [
     "Ensure solutions include detailed, step-by-step explanations to enhance clarity and facilitate verification.",
@@ -638,7 +646,7 @@
     "Focus on concise presentation of the final answer to enhance clarity and task-appropriateness, avoiding unnecessary steps that may distract from the solution."
   ],
   "Solve for x in the equation involving exponential expressions when y is given.": [
-    "Ensure answers have a clear logical structure and flow, introducing the problem, explaining the steps, and concluding with the final result. Explicitly state the final answer to improve clarity and completeness. While correctness is essential, clarity and completeness in explanation and presentation are crucial for understanding and usability."
+    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies"
   ],
   "Determine a quadratic polynomial given specific function values at different points.": [
     "Always verify the solution by explicitly showing that it satisfies all given conditions to ensure completeness and correctness."
@@ -771,7 +779,8 @@
   ],
   "Calculate the sum of the first 10 terms of a recursively defined sequence.": [
     "Ensure accurate calculation of all terms in the sequence, especially those that follow a specific pattern, to avoid incorrect assumptions that can lead to significant errors in the final result.",
-    "Provide a detailed derivation of the general term and intermediate steps to ensure clarity and completeness in the solution."
+    "Provide a detailed derivation of the general term and intermediate steps to ensure clarity and completeness in the solution.",
+    "Organize comparative information into distinct categories using clear formatting"
   ],
   "Determine the first term in a sequence that exceeds a given threshold, where each term is the sum of all previous terms plus the square of the first term.": [
     "Ensure all derived patterns are explicitly verified and used to solve for the final answer, providing clear steps and conclusions.",
@@ -834,12 +843,17 @@
     "Focus on providing a concise and direct answer to improve clarity and precision, avoiding unnecessary steps that do not add value to the solution."
   ],
   "Calculate the result of a nested operation defined by a custom binary operation.": [
-    "Provide balanced analysis of multiple perspectives",
-    "Support explanations with concrete examples",
+    "",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
+    "Explicitly link mechanisms to consequences",
     "Organize information into logical sections with clear formatting\nProvide concrete implementation examples for abstract strategies\nExplicitly state the rationale behind recommendations\nAddress multiple dimensions of effectiveness",
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Provide actionable mitigation strategies",
+    "Include specific examples to substantiate general claims",
     "Include specific examples to substantiate general claims\nExplicitly link mechanisms to consequences\nAddress both short-term and long-term perspectives\nProvide actionable mitigation strategies",
     "Conclude with a reinforcing summary",
-    "Structure information using clear formatting for better readability"
+    "Address both short-term and long-term perspectives",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes."
   ],
   "Multiply a whole number by a mixed number.": [
     "Ensure the final answer is clearly boxed and formatted as requested, without additional unnecessary text, to meet task requirements.",
@@ -1122,10 +1136,13 @@
     "Focus on clarity and conciseness by providing the final answer directly and clearly, omitting unnecessary introductory or concluding phrases, and always include a boxed final expression for clarity and formality."
   ],
   "Determine the count of three-digit integers that include at least one '4' and exclude any '6'.": [
-    "Complete all necessary steps in the solution process, including final calculations, to reach the correct and final answer.",
-    "Ensure the final answer is explicitly stated and directly addresses the question asked, not just intermediate steps.",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Provide a clear and concise explanation of the method used to derive the final answer, ensuring all critical steps are included.",
     "Organize comparative information into distinct categories using clear formatting",
-    "Provide a clear and concise explanation of the method used to derive the final answer, ensuring all critical steps are included."
+    "Structure explanations using benefit-oriented framing for user relevance",
+    "Complete all necessary steps in the solution process, including final calculations, to reach the correct and final answer.",
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Ensure the final answer is explicitly stated and directly addresses the question asked, not just intermediate steps."
   ],
   "Determine the coefficient of a specific term in a binomial expansion.": [
     "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies"
@@ -1216,7 +1233,8 @@
     "Assess the context and audience's needs to determine whether a step-by-step breakdown is necessary or if a concise answer is more appropriate."
   ],
   "Determine the number and sum of possible values of a specific function output given a functional equation.": [
-    "Ensure solutions include a clear, structured approach and verification step to confirm the correctness of the derived results."
+    "Ensure solutions include a clear, structured approach and verification step to confirm the correctness of the derived results.",
+    "Organize comparative information into distinct categories using clear formatting"
   ],
   "Determine the value of the function g at a specific point using given functional equations and properties.": [
     "Ensure each intermediate calculation is derived using the given properties to maintain correctness and completeness."
@@ -1320,7 +1338,14 @@
     "Avoid redundant restatements of the final answer to maintain clarity and conciseness."
   ],
   "Determine the maximum value of a given expression under specified constraints.": [
-    "Anchor historical claims with specific events and actors Explicitly connect causes to downstream effects Structure analysis through multiple temporal lenses"
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
+    "Address both positive and negative aspects to provide a comprehensive analysis",
+    "Consider temporal scope in impact analysis",
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation Prioritize concrete numerical examples to demonstrate functional understanding Structure explanations using benefit-oriented framing for user relevance",
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Ground claims in verifiable evidence",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Structure information using clear formatting for better readability Support explanations with concrete examples Provide balanced analysis of multiple perspectives Conclude with a reinforcing summary"
   ],
   "Determine the exponent to which 7 must be raised to equal the given expression.": [
     "Ensure all critical steps in the calculation are clearly shown to enhance transparency and understanding."
@@ -1470,20 +1495,20 @@
     "Ensure the final ratio of areas is correctly derived from the coefficients in the vector equation. Misinterpreting these coefficients will lead to an incorrect ratio."
   ],
   "Evaluate a complex mathematical expression involving arithmetic operations and fractions.": [
-    "Provide balanced analysis of multiple perspectives",
-    "Begin with a clear and concise restatement of the problem to ensure the reader understands the context and requirements before diving into the solution.",
-    "Perform arithmetic operations, especially divisions, exactly to ensure the correctness of the solution.",
-    "Ensure all intermediate steps are clearly shown to maintain transparency and facilitate verification, especially when simplifying expressions or solving equations.",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Explicitly link mechanisms to consequences",
     "Formulate the problem with a clear and precise equation or setup to ensure a structured and systematic approach to solving. Perform systematic checks and calculations to ensure the correct answer is found, avoiding repetitive and incorrect calculations. Ensure the conclusion is supported by logical steps and correct calculations, providing clarity and validation of the answer.",
-    "Provide detailed steps for solving systems of equations to ensure the reasoning process is rigorous and comprehensible.",
-    "Avoid rounding or approximating intermediate values to preserve the precision of the final result.",
-    "Ensure clarity and precision in handling complex expressions by maintaining exact values at each step.",
-    "Provide specific historical context with dates and key figures to establish credibility and depth. Highlight pivotal historical events associated with the subject to demonstrate its broader significance. Use concrete examples of notable individuals or artifacts linked to the subject to support claims. Include references to enduring features or lasting impacts to ensure comprehensive coverage of the subject's relevance.",
-    "Structure explanations using benefit-oriented framing for user relevance",
-    "Conclude with a reinforcing summary",
-    "Double-check the final calculations to ensure the correct and simplified form of the answer is provided, avoiding any arithmetic or logical errors.",
     "Maintain exact values and precise calculations throughout the problem-solving process to ensure the accuracy of the final answer.",
-    "Structure information using clear formatting for better readability"
+    "Include specific examples to substantiate general claims",
+    "Provide actionable mitigation strategies",
+    "Provide detailed steps for solving systems of equations to ensure the reasoning process is rigorous and comprehensible.",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Conclude with a reinforcing summary",
+    "Begin with a clear and concise restatement of the problem to ensure the reader understands the context and requirements before diving into the solution.",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Ensure all intermediate steps are clearly shown to maintain transparency and facilitate verification, especially when simplifying expressions or solving equations.",
+    "Double-check the final calculations to ensure the correct and simplified form of the answer is provided, avoiding any arithmetic or logical errors.",
+    "Address both short-term and long-term perspectives"
   ],
   "Calculate the product of trigonometric expressions involving sine functions at specific angles.": [
     "Break down complex calculations into clear, distinct steps to ensure clarity and correctness.",
@@ -1577,11 +1602,12 @@
   ],
   "Find the value of a given expression under specified algebraic conditions.": [
     "",
-    "Prioritize concrete numerical examples to demonstrate functional understanding",
-    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
-    "Clearly box and present the final answer to ensure clarity and correctness in the response.",
     "Structure explanations using benefit-oriented framing for user relevance",
-    "Structure information with clear headings and logical flow to enhance readability and comprehension."
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Clearly box and present the final answer to ensure clarity and correctness in the response.",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Organize comparative information into distinct categories using clear formatting"
   ],
   "Determine the value of A-3B under given conditions and identify x for which A-3B is independent of y.": [
     "Ensure the final answer is clearly boxed and labeled for easy identification."
@@ -1660,9 +1686,13 @@
     "Focus on the primary task and avoid unnecessary details that deviate from the core question. For instance, if asked to calculate an average, provide the average and the steps to reach it without detailing specific distribution plans unless explicitly asked."
   ],
   "Determine the number of subsets of a given set that satisfy specific ordering constraints.": [
-    "Maintain conciseness and clarity in problem-solving explanations to enhance understanding and verification.",
     "Conclude with a clear final statement to provide a streamlined logical flow and avoid confusion.",
-    "Ensure the final answer is explicitly stated for clarity and completeness."
+    "Use concrete examples of notable individuals or artifacts linked to the subject to support claims.",
+    "Ensure the final answer is explicitly stated for clarity and completeness.",
+    "Include references to enduring features or lasting impacts to ensure comprehensive coverage of the subject's relevance.",
+    "Provide specific historical context with dates and key figures to establish credibility and depth.",
+    "Maintain conciseness and clarity in problem-solving explanations to enhance understanding and verification.",
+    "Highlight pivotal historical events associated with the subject to demonstrate its broader significance."
   ],
   "Determine the number of valid scheduling sequences for six projects with specific precedence constraints.": [
     "Provide a detailed step-by-step calculation to demonstrate how the final answer is derived, including any adjustments for constraints.",
@@ -1911,11 +1941,11 @@
   ],
   "Calculate the sum of the squares of the sides and diagonals of a quadrilateral given the sum of the squares of the distances from the centroid to the vertices.": [
     "",
-    "Address multiple dimensions of effectiveness",
     "Explicitly state the rationale behind recommendations",
+    "Illustrate abstract concepts with concrete, context-relevant examples\nStructure explanations using component analysis\nAddress both capabilities and limitations\nPrioritize functional comparison over vague qualitative statements\nInclude transformation patterns for practical relevance",
+    "Address multiple dimensions of effectiveness",
     "Provide concrete implementation examples for abstract strategies",
-    "Organize information into logical sections with clear formatting",
-    "Illustrate abstract concepts with concrete, context-relevant examples\nStructure explanations using component analysis\nAddress both capabilities and limitations\nPrioritize functional comparison over vague qualitative statements\nInclude transformation patterns for practical relevance"
+    "Organize comparative information into distinct categories using clear formatting"
   ],
   "Calculate the sum of two relatively prime integers representing the dimensions of a rectangular box given the area of a triangle formed by the center points of three meeting faces.": [
     "Ensure each step in the calculation process is clearly explained, including the cross product calculation, to enhance understanding and transparency.",
@@ -1950,8 +1980,7 @@
     "Ensure each step in the reasoning process is clearly explained and logically follows from the given conditions and previous steps to enhance clarity and completeness."
   ],
   "Calculate the probability of a specific sequence of outcomes in a binomial distribution.": [
-    "For conditional probability problems, correctly identify and use the relevant total number of outcomes that satisfy the given conditions, rather than the total number of possible outcomes without conditions.",
-    "Avoid including unnecessary steps and explanations that do not contribute to solving the specific problem given the conditions."
+    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies"
   ],
   "Calculate the probability of selecting a tile with a letter from the word 'CALM' from a set of tiles containing the letters of 'MATHEMATICS'.": [
     "Ensure all stated information is directly relevant to the problem at hand, avoiding unnecessary details that do not contribute to the solution."
@@ -2297,7 +2326,8 @@
     "Provide actionable mitigation strategies"
   ],
   "Calculate the number of different sequences in which items can be removed one by one.": [
-    "Structure information with clear headings and logical flow to enhance readability and comprehension."
+    "Include specific examples to substantiate general claims Explicitly link mechanisms to consequences Address both short-term and long-term perspectives Provide actionable mitigation strategies",
+    "Structure information using clear formatting for better readability"
   ],
   "Determine the number of pairs (n, k) for which n people, after moving k chairs clockwise in a circle of 20 chairs, occupy the same set of chairs as before.": [
     "Include specific examples to substantiate general claims",
@@ -2871,7 +2901,12 @@
     "Provide multi-layered explanations for complex phenomena"
   ],
   "Determine the maximum number of elements in a set of distinct positive integers where removing any element results in an integer arithmetic mean, given the smallest and largest elements.": [
-    "Organize comparative information into distinct categories using clear formatting"
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance"
   ],
   "Determine the values of a for which a quadratic equation has two distinct integer roots and find the product of these values.": [
     "Include specific examples to substantiate general claims",
@@ -2911,7 +2946,12 @@
     "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
   ],
   "Determine the number of integer pairs (a, b) such that the system of inequalities has exactly the integer solutions 1, 2, and 3.": [
-    "Organize comparative information into distinct categories using clear formatting"
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance"
   ],
   "Determine the value of a_4 b_4 given a system of linear equations and a specific product value.": [
     "Anchor historical claims with specific events and actors",
@@ -3004,11 +3044,15 @@
     "Organize comparative information into distinct categories using clear formatting"
   ],
   "Calculate the value of the trigonometric expression given the angle and side relationship in a triangle.": [
-    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "",
     "Maintain strict factual precision through quantitative specifications and qualified statements",
-    "Address multidimensional impacts by considering both technical specifications and human factors",
-    "Enhance practical utility through actionable implementation guidance",
-    "Establish contextual relevance through explicit connections to application scenarios"
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Support explanations with concrete examples",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Conclude with a reinforcing summary",
+    "Provide balanced analysis of multiple perspectives",
+    "Enhance practical utility through actionable implementation guidance"
   ],
   "Determine the product of three complex numbers given their pairwise relationships.": [
     "Structure information using clear formatting for better readability",
@@ -3064,6 +3108,8 @@
     "Structure explanations using benefit-oriented framing for user relevance"
   ],
   "Evaluate a mathematical expression involving square roots, exponents, and absolute values.": [
+    "Structure explanations using conceptual scaffolding",
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
     "Organize comparative information into distinct categories using clear formatting"
   ],
   "Calculate a nested radical expression.": [
@@ -3308,5 +3354,1144 @@
     "Address both positive and negative aspects to provide a comprehensive analysis",
     "Ground claims in verifiable evidence",
     "Consider temporal scope in impact analysis"
+  ],
+  "Determine the smallest integer n for which the set {2,3,4,...,n} cannot be partitioned into two subsets such that neither subset contains three elements a, b, c satisfying a^b = c.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Find the minimum possible value of the largest number among 8 integers, given constraints on multiples of 2, 3, 5, and 7.": [
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies",
+    "Include specific examples to substantiate general claims"
+  ],
+  "Find the unique positive integer a such that the sum of floor((n^2 - na)/5) from n=1 to 2023 lies between -1000 and 1000, then compute a + U.": [
+    "Support explanations with concrete examples",
+    "Structure information using clear formatting for better readability",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the minimum value of a function defined by a series involving the floor function and powers of two, for all inputs in a specified interval.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Solve a system of linear equations with integer solutions to find the sum of the variables.": [
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance"
+  ],
+  "Find the smallest positive integer N such that x^2 + x + 1 divides 166 minus the sum of x^d for all positive divisors d of N, and determine N modulo 1000.": [
+    "Structure analysis through multiple temporal lenses",
+    "Explicitly connect causes to downstream effects",
+    "Anchor historical claims with specific events and actors"
+  ],
+  "Determine the largest real number c(n) such that the inequality holds for all polynomials of degree n mapping integers to integers and for any distinct integer inputs.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Determine the maximum number of pairs of subsets (B_i, C_i) from a set A with n elements, where each B_i has exactly k elements, C_i is a subset of B_i, and the intersections B_i ∩ C_j and B_j ∩ C_i are distinct for all i ≠ j.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the minimal common ratio r such that the ratio of final values A and B, obtained through specific geometric mean operations on a sequence, is an integer, and find the closest integer to the log base 2 of the number of positive factors of r.": [
+    "Structure responses using clear hierarchical organization (e.g., categorizing points by theme or chronology).",
+    "Differentiate between established facts and theoretical interpretations.",
+    "Optimize technical depth based on the question's phrasing and likely audience expertise.",
+    "Anticipate and address potential follow-up questions implicitly within the answer.",
+    "Prioritize factual accuracy by verifying information against reliable sources before inclusion. Structure responses using clear hierarchical organization (e.g., categorizing points by theme or chronology). Anticipate and address potential follow-up questions implicitly within the answer. Differentiate between established facts and theoretical interpretations. Optimize technical depth based on the question's phrasing and likely audience expertise.",
+    "Prioritize factual accuracy by verifying information against reliable sources before inclusion."
+  ],
+  "Determine the maximum number of kids who can each select 2 candies of different colors from a vending machine, given that any k+1 kids share at least one candy color.": [
+    "Support explanations with concrete examples",
+    "Structure information using clear formatting for better readability",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the probability of selecting a multiple of 11 from a set of integers and express the result in simplest form to compute a derived value.": [
+    "Anchor historical claims with specific events and actors",
+    "Explicitly connect causes to downstream effects",
+    "Structure analysis through multiple temporal lenses"
+  ],
+  "Find the minimum value of |P(20) + P(70)| for a polynomial P with integer coefficients given that P(0) + P(90) = 2018.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the maximum product of A and B for a six-digit number A2021B that is divisible by 9.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Determine the number of 6-digit integers whose digits are a permutation of {1,2,3,4,5,6} and where the first k digits are divisible by k for k = 1 to 6.": [
+    "Anchor explanations in fundamental causes rather than surface-level factors",
+    "Establish clear causal relationships",
+    "Address common misconceptions proactively",
+    "Maintain consistent scientific terminology",
+    "Provide multi-layered explanations for complex phenomena"
+  ],
+  "Determine the number of positive integer divisors of the smallest integer k such that 1/k has exactly n digits after the decimal point in base 6.": [
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies",
+    "Include specific examples to substantiate general claims"
+  ],
+  "Perform arithmetic operations including addition, subtraction, multiplication, and division on integers.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the value of ω and the axis of symmetry for a given trigonometric function, and find the sine value of a transformed angle based on a specific function value.": [
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance"
+  ],
+  "Calculate the area swept by a line segment connecting a fixed point to a point moving along a parametric path as the parameter varies within a given range.": [
+    "Anchor historical claims with specific events and actors",
+    "Explicitly connect causes to downstream effects",
+    "Structure analysis through multiple temporal lenses"
+  ],
+  "Determine the minimum value of the sum of the floor functions of the ratios of the sums of pairs of positive variables to the third variable.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the values of a and b that make the given function an odd function.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the maximum number of edges in a simple graph with 100 vertices where each vertex has a neighbor with no shared neighbors.": [
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance"
+  ],
+  "Calculate the value of an expression involving logarithms and exponents.": [
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies",
+    "Include specific examples to substantiate general claims"
+  ],
+  "Find the maximum size of a subset from a given integer range that does not include any three elements summing to zero.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible."
+  ],
+  "Determine the coefficients of a cubic polynomial given a tangent line at a specific point and find the extreme values of the polynomial.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Structure explanations using benefit-oriented framing for user relevance",
+    "Prioritize concrete numerical examples to demonstrate functional understanding"
+  ],
+  "Calculate the number of valid paths from the top-left to the bottom-right corner of a grid, avoiding specific forbidden segments.": [
+    "Support explanations with concrete examples",
+    "Structure information using clear formatting for better readability",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the solution set of an inequality involving a quadratic function and find the maximum value of the function within a specified interval given its minimum value.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible."
+  ],
+  "Determine the constant term in a binomial expansion and find the sum of coefficients in a polynomial transformation.": [
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies",
+    "Include specific examples to substantiate general claims"
+  ],
+  "Determine the intervals of monotonic increase and the maximum and minimum values of a given trigonometric function within a specified interval.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the range of a trigonometric function and use the maximum and minimum values to find the area of an acute-angled triangle given the circumradius.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible."
+  ],
+  "Determine if triangle ABC is a right triangle and find the maximum area given the perimeter constraint.": [
+    "Support explanations with concrete examples",
+    "Structure information using clear formatting for better readability",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the range of angle A and find the maximum value of a trigonometric function involving angle A.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Determine angle B and calculate sin C in a triangle given trigonometric relationships between sides and angles.": [
+    "Maintain scope alignment through regular relevance checks. Periodically verify that all details directly contribute to answering the core question being addressed.",
+    "Differentiate fact from interpretation using clear attribution. Use phrases like 'studies show' for established knowledge and 'this suggests' for analytical insights.",
+    "Anchor explanations in concrete examples to increase comprehensibility. Provide specific instances or scenarios that illustrate abstract concepts for different knowledge levels.",
+    "Prioritize explicit connections between concepts to enhance logical flow. Link ideas using transitional phrases or causal language to demonstrate relationships between points.",
+    "Surface implicit assumptions to strengthen argument validity. Explicitly state foundational premises before building conclusions to prevent reasoning gaps."
+  ],
+  "Calculate the expected value of the smallest positive integer n for which a randomly chosen bijection f from a set S to itself satisfies f^(n)(1)=1.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the probability of selecting a multiple of 11 from a uniform distribution over the first k integers, express it in simplest form, and compute a specific linear combination of the numerator and denominator.": [
+    "Anchor historical claims with specific events and actors",
+    "Explicitly connect causes to downstream effects",
+    "Structure analysis through multiple temporal lenses"
+  ],
+  "Determine the maximum product of digits A and B in a six-digit number divisible by 9.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Find the minimum value of the largest sum among pairs of consecutive variables from a set of positive integers that sum to a given total.": [
+    "Prioritize precise terminology over vague descriptions"
+  ],
+  "Calculate the area swept by a line segment connecting a fixed point to a point moving on a circular path as the angle varies.": [
+    "Structure analysis through multiple temporal lenses",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Explicitly connect causes to downstream effects",
+    "Anchor historical claims with specific events and actors"
+  ],
+  "Determine the range of angle A in a triangle given a trigonometric relationship and area constraint, and find the maximum value of a trigonometric function involving angle A.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Determine the value of sin C and the area of triangle ABC given the side ratios and trigonometric relationship.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Simplify a complex trigonometric expression involving logarithms and imaginary numbers.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Find the maximum length of the third side of a triangle given two sides and a trigonometric condition on its angles.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Find the minimum value of the Euclidean distance squared between two points defined by given equations involving exponential functions.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the symmetry center and the minimum and maximum values of a given trigonometric function within a specified interval.": [
+    "Provide specific historical context with dates and key figures to establish credibility and depth.",
+    "Highlight pivotal historical events associated with the subject to demonstrate its broader significance.",
+    "Use concrete examples of notable individuals or artifacts linked to the subject to support claims.",
+    "Include references to enduring features or lasting impacts to ensure comprehensive coverage of the subject's relevance."
+  ],
+  "Calculate the length of a side in a triangle given trigonometric ratios of two angles and the length of another side.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the permutation of given numbers to maximize a nested fraction expression and calculate a weighted sum of the permutation.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate the first two decimal places of the product of ten fractions, each being two-thirds.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the range of k for which g(x) is non-monotonic in (1,2) and find the maximum k ensuring f(x) ≥ g(x) for x in [0,∞).": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Divide a given number into parts according to specified ratios and identify the middle part.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the total fraction of work completed and remaining after two weeks of road repair.": [
+    "Anchor historical claims with specific events and actors",
+    "Explicitly connect causes to downstream effects",
+    "Structure analysis through multiple temporal lenses"
+  ],
+  "Determine the value of a that makes two given lines parallel or perpendicular.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Evaluate the nested fraction expression.": [
+    "Structure analysis through multiple temporal lenses",
+    "Explicitly link mechanisms to consequences",
+    "Anchor historical claims with specific events and actors",
+    "Organize comparative information into distinct categories using clear formatting",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Provide actionable mitigation strategies",
+    "Conclude with a reinforcing summary",
+    "Explicitly connect causes to downstream effects"
+  ],
+  "Calculate the number of valid tower configurations using 8 cubes with distinct edge lengths, adhering to specific placement rules, and find the remainder of this number when divided by 1000.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine a possible value of x that satisfies the given inequalities.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the number of monkeys that told the truth in both questions about the presence of tigers and foxes in their groups.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the maximum value of a logarithmic function under specific coefficients, find the range of a parameter for a given slope condition, and identify a positive constant for a unique solution to an equation involving a logarithmic function.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Simplify and evaluate a given algebraic expression with a specified value for x.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Calculate the distance between the centers of two circles inside a triangle, where one circle is tangent to two sides and the included side, and the other is tangent to the extensions of the two sides and the included side.": [
+    "Prioritize explicit connections between concepts to enhance logical flow. Link ideas using transitional phrases or causal language to demonstrate relationships between points.",
+    "Anchor explanations in concrete examples to increase comprehensibility. Provide specific instances or scenarios that illustrate abstract concepts for different knowledge levels.",
+    "Surface implicit assumptions to strengthen argument validity. Explicitly state foundational premises before building conclusions to prevent reasoning gaps.",
+    "Maintain scope alignment through regular relevance checks. Periodically verify that all details directly contribute to answering the core question being addressed.",
+    "Differentiate fact from interpretation using clear attribution. Use phrases like 'studies show' for established knowledge and 'this suggests' for analytical insights."
+  ],
+  "Calculate the distance between two points where a person alternates walking towards and away from a destination.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Calculate the limiting amount of wine in the first container after infinitely repeating a process of transferring and mixing liquids between two containers.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Structure explanations using benefit-oriented framing for user relevance",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the maximum number of points in a plane where any selection of three points includes at least one pair that is exactly one unit apart.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the distance between two points given the speeds of two cars and the distance they have traveled after a certain time.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the number of seating arrangements under given constraints.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the ratio of the area of a convex quadrilateral to the area of a quadrilateral formed by the circumcenters of triangles created by the intersection of its diagonals.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Approximate the product of a number and a sum.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the area of quadrilateral ADEC in a right triangle ABC with given side lengths.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate the sum of the absolute values of a function f(k) for k from 1 to 19, given specific properties and conditions of the function.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Calculate the value of x in an exponential equation using logarithms.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the side length of a smaller cube inscribed between a sphere and one face of a larger cube, given the side length of the larger cube and the radius of the sphere.": [
+    "Anchor explanations in fundamental causes rather than surface-level factors",
+    "Maintain consistent scientific terminology",
+    "Address common misconceptions proactively",
+    "Establish clear causal relationships",
+    "Provide multi-layered explanations for complex phenomena"
+  ],
+  "Determine the general term of a sequence given its partial sum, find the sum of a new sequence formed by the product of terms from two sequences, and identify the minimum value of a specific expression involving the sum of this new sequence.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the total length of a bike route given the lengths of its segments.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the number of ways to seat four ambassadors and their respective advisors at a round table with specific seating constraints, and find the remainder when this number is divided by 1000.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the range of values for the parameter 'a' such that the inequality f(x) >= 0 holds for all real numbers x.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the number of ordered integer triples (a, b, c) that satisfy two given equations.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the number of Hamiltonian paths in a 4-dimensional hypercube that start and end at different vertices.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the number of ways to arrange seven distinct acts in a sequence such that three specific acts are not adjacent to each other.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the maximum distance between two points, one on each of two given spheres.": [
+    "Address both positive and negative aspects to provide a comprehensive analysis",
+    "Ground claims in verifiable evidence",
+    "Consider temporal scope in impact analysis"
+  ],
+  "Determine the general formula of an arithmetic sequence given specific conditions and find the maximum value of a related sequence's sum divided by a term of the original sequence.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the minimum amount of nutrient solution required to maintain an effective concentration over a specified period.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Calculate the investment amount in real estate given the total investment and the ratio of investments between real estate and mutual funds.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the allocation of vehicles to maximize daily rental income while meeting minimum income requirements.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Find the area of the triangle formed by the intersection of tangents drawn from the centers of two externally tangent circles to each other's circles.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Calculate the area of a quadrilateral formed by intersecting diagonals in a specific 12-sided polygon.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the number of ways to select and arrange groups of boys and girls under given constraints.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Determine the sample size X for stratified and systematic sampling without discarding individuals, given that increasing the sample size by 1 requires discarding one individual.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the number of ways to park two trucks and two buses in seven spaces such that no two vehicles of the same type are adjacent.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Solve for x in the given exponential equation and then calculate (3x)^x.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the number of marbles transferred from Tyrone to Eric to achieve a specific ratio of marbles between them.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Calculate the probability of school A winning the championship and determine the distribution and expectation of school B's total score in a three-event sports competition.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine how to redistribute removed cheese among mice to ensure equal shares.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Arrange a sequence of programs such that non-singing programs are not adjacent and the first and last programs are singing.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the value of m for which the function f(x) = x(x - m)^2 has a maximum at x = -2.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Determine the sum of the fifth terms of two geometric progressions given the sum of their sixth terms and the sum of their common ratios.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the value of a quadratic function at a given point.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Determine the minimum value of the coefficient a for a quadratic equation with given constraints on its roots and coefficients.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Translate a given message into a new encoding system.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Find the parametric equation of a line and the Cartesian equation of a curve in a polar coordinate system, then calculate the sum of the reciprocals of the distances from a given point to the intersection points of the line and the curve.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate distances in a cube involving midpoints and specific points on edges.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the equation of an ellipse given its eccentricity and a point it passes through, and find the maximum area of a triangle formed by the ellipse and a line.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Find the maximum area of quadrilateral OAPF where P is a point on the ellipse in the first quadrant.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the probability that one randomly chosen number is greater than another but less than three times the other within the interval [0,1].": [
+    "Prioritize explicit connections between concepts to enhance logical flow. Link ideas using transitional phrases or causal language to demonstrate relationships between points.",
+    "Anchor explanations in concrete examples to increase comprehensibility. Provide specific instances or scenarios that illustrate abstract concepts for different knowledge levels.",
+    "Surface implicit assumptions to strengthen argument validity. Explicitly state foundational premises before building conclusions to prevent reasoning gaps.",
+    "Maintain scope alignment through regular relevance checks. Periodically verify that all details directly contribute to answering the core question being addressed.",
+    "Differentiate fact from interpretation using clear attribution. Use phrases like 'studies show' for established knowledge and 'this suggests' for analytical insights."
+  ],
+  "Find the minimum value of the area of triangle PAB minus the length of AB, where P is the tangency point of a line parallel to the chord AB on the parabola x^2=4y.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Determine the equation of an ellipse given its eccentricity and a focus, and find the minimum value of the sum of lengths of two perpendicular chords through the foci.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the slope of one side of a parallelogram inscribed in an ellipse given the slope of an adjacent side.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the absolute difference between AE and FD in an equilateral triangle where a circle is inscribed and intersects a line from a vertex to the opposite side.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the length of the crease formed when a right triangle is folded such that one vertex lands on another.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Find the maximum value of the product of distances from the intersection point to two fixed points.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the number of parts a regular tetrahedron is divided into by planes passing through division points of its edges and parallel to non-adjacent faces.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Find the length of segment AB where AB equals AC and both lie on a line through the intersection point of two circles with given radii and center distance.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the ratio of the areas of two triangles given specific points and angle congruence.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the eccentricity of a hyperbola given conditions on its asymptotes and a line perpendicular to one asymptote.": [
+    "Provide specific historical context with dates and key figures to establish credibility and depth.",
+    "Highlight pivotal historical events associated with the subject to demonstrate its broader significance.",
+    "Use concrete examples of notable individuals or artifacts linked to the subject to support claims.",
+    "Include references to enduring features or lasting impacts to ensure comprehensive coverage of the subject's relevance."
+  ],
+  "Convert a three-digit base fourteen number to its binary representation and determine the number of digits in the binary number.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the number of ways to arrange a group of people such that no two members of a specified subgroup are adjacent.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the expected number of trials to find all required items in a random selection.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Calculate the ratio of the area of triangle DFE to the area of quadrilateral ABEF in a rectangle ABCD.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the value of a given expression based on arithmetic relationships within a structured grid.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Solve a system of equations to find the value of x using the elimination method.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Determine the maximum value of t such that for each student-teacher pair who know each other, the ratio of the number of students known by the teacher to the number of teachers known by the student is at least t.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the maximum number of distinct function values for a periodic function over a specified range.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the smallest positive difference between a sum computed without carrying over tens and the correct sum of two three-digit numbers.": [
+    "Prioritize factual accuracy by verifying information against reliable sources before inclusion.",
+    "Structure responses using clear hierarchical organization (e.g., categorizing points by theme or chronology).",
+    "Anticipate and address potential follow-up questions implicitly within the answer.",
+    "Differentiate between established facts and theoretical interpretations.",
+    "Optimize technical depth based on the question's phrasing and likely audience expertise."
+  ],
+  "Determine the minimum number of friendships in a group where excluding any member allows the rest to be divided into 33 groups of three mutual friends.": [
+    "Prioritize precise terminology over vague descriptions"
+  ],
+  "Determine the minimum number of colors required to color the vertices of a regular nonagon under given constraints and calculate the product of this minimum number and the total number of valid colorings.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the audio content per CD for a given total duration, given the storage capacity of each CD.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the value of λ for which three given vectors are coplanar.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the minimum number of mice required on each face of a cube, ensuring each face has at least one mouse and adjacent faces differ by at least two mice.": [
+    "Prioritize precise terminology over vague descriptions"
+  ],
+  "Calculate the number of ways to arrange a set of books with specific grouping constraints.": [
+    "Anchor explanations in fundamental causes rather than surface-level factors",
+    "Maintain consistent scientific terminology",
+    "Address common misconceptions proactively",
+    "Establish clear causal relationships",
+    "Provide multi-layered explanations for complex phenomena"
+  ],
+  "Calculate the probability of a 3x3 grid having at least one saddle point, where each cell contains a random real number from [0,1].": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the number of distinct paths from (0,0) to (2010,2010) using specified diagonal moves over 4020 steps.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the count of n-digit numbers with unique digits that meet specific divisibility criteria.": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Determine the missing letter in a grid where each letter appears exactly once per row and column.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the total surface area of a sculpture formed by cubes, excluding any non-exposed surfaces.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate the total perimeter of four given paper pieces with known area relationships when assembled into a large rectangle of a specified area.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the ratio of black to white tiles after adding a border of white tiles around an existing rectangular pattern.": [
+    "Prioritize concrete examples and actionable steps over vague generalities to enhance practical utility."
+  ],
+  "Calculate the percentage of the flag's area that is green, given the total area occupied by the cross and the area of the yellow center.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the number of ways to tile a 2x24 grid with dominoes, ensuring each domino covers two adjacent white squares without overlapping.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine all integers n for which the given polynomial expression is a perfect square.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate trigonometric values and vector magnitudes based on given coordinates and conditions.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Find the projection of vector a onto vector b given the magnitudes of a and b and the orthogonality condition between a and (a+b).": [
+    "Explicitly incorporate key domain-specific terminology and essential features to ensure comprehensive explanation",
+    "Prioritize concrete numerical examples to demonstrate functional understanding",
+    "Structure explanations using benefit-oriented framing for user relevance"
+  ],
+  "Determine the ratio of sines of angles A and C, and find the cosine of angle B given vector dot product conditions and a trigonometric equation in a triangle.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate expressions involving permutations and combinations.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Find the minimum value of the sum of products of consecutive terms in a sequence of 10 distinct positive integers that sum to a given total.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the measure of an angle in a sequence of points where each point is defined as the midpoint of a segment formed by previous points in an equilateral triangle.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the value of m and the sum of the first 6 terms of a sequence that is initially arithmetic and then geometric.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the sum of the first few terms and the general formula of a sequence given a recursive relation, and find the minimum value of a constant that satisfies an inequality involving a transformed sequence.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension."
+  ],
+  "Determine the count of integers within a specified range that satisfy a given condition based on a defined sequence.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Find the area of triangle MON in a cyclic quadrilateral ABCD with given segment lengths and perpendicular diagonals.": [
+    "Organize information into logical sections with clear formatting",
+    "Provide concrete implementation examples for abstract strategies",
+    "Explicitly state the rationale behind recommendations",
+    "Address multiple dimensions of effectiveness"
+  ],
+  "Determine the maximum value of the product of terms from an arithmetic and a geometric sequence given initial products.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the locus of the center of an equilateral triangle formed by the intersection of lines through points on a parabola with a specific slope.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Find the measure of angle A in an isosceles triangle ABC given the length of the legs, the height dropped from vertex B to base AC, and the length of a segment in the inscribed circle of triangle BDE.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Find the ratio of the side length of an equilateral triangle inscribed in an ellipse to the distance between the ellipse's foci, given specific geometric constraints.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the measure of angle A and the length of side a in a triangle given specific trigonometric and geometric conditions.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the angle of rotation and the center of rotation that transforms one triangle to another in the coordinate plane.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate the probability of forming a triangle with at least one side being an edge of the octagon from three randomly selected vertices.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Express the ratio MN/BC in terms of the circumradius R and inradius r of triangle ABC.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the length of side AC in a triangle where the median, angle bisector, and altitude intersect in a specific ratio, given the length of another side.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the relationship between the probability of an event and the outcomes of repeated experiments.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the probability that a specific label is on top after randomly refolding a piece of paper previously folded into quarters.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the probability of having two adjacent balls of the same color in a random arrangement of 3 red, 2 white, and 2 blue balls.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Estimate the probability of making exactly two out of four shots using random simulation.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the probabilities of specific question types being drawn by two participants in a competition.": [
+    "Prioritize structural breakdown over vague generalities",
+    "Anchor explanations in causal relationships",
+    "Personalize recommendations through qualification criteria",
+    "Differentiate core mechanisms from supporting elements",
+    "Implement scope limitation for complex processes"
+  ],
+  "Calculate the probability of rolling at least three dice with the same value out of five six-sided dice.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Calculate the probability of rolling at least a five at least five times in six rolls of a fair die.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the probability of a specific sequence of events in a probability problem and determine the expected number of rounds in a best-of-five game with given win probabilities.": [
+    "Address both positive and negative aspects to provide a comprehensive analysis",
+    "Ground claims in verifiable evidence",
+    "Consider temporal scope in impact analysis"
+  ],
+  "Determine the probability value p for B guessing an idiom correctly and calculate the probability distribution and expectation of the total number of idioms guessed correctly by the team in two rounds.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate the probability of randomly selecting two students who are enrolled in both German and Italian language classes.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the probability of exactly 5 out of 10 letters being correctly placed in their intended envelopes.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the maximum number of fifth power divisors among a given set of divisors of a natural number, after removing some initial and final divisors.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the maximum possible difference between the second largest and second smallest numbers in a sequence of 8 distinct natural numbers given specific average constraints.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Find the equation of the line passing through two given complex numbers in the form az + b\\overline{z} = c and determine the product ab.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine how many numbers from 1 to 2019, when added to 8866, produce at least one carry.": [
+    "Consider temporal scope in impact analysis",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Establish contextual relevance through explicit connections to application scenarios",
+    "Address both positive and negative aspects to provide a comprehensive analysis",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Ground claims in verifiable evidence",
+    "Enhance practical utility through actionable implementation guidance"
+  ],
+  "Find the maximum value of the difference between two variables given their sum and the sum of their pairwise products.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Find the minimum value of the product of three positive real numbers whose sum is 2 and no number exceeds three times any other.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Find the minimum value of f(0) for quadratic functions f(x) that satisfy f(1)=16 and are greater than or equal to both (x+3)^2 and x^2+9 for all x.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the total number of natural numbers formed from digits 0, 1, and 2 without repetition.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Determine the maximum possible sum of numbers in a white square of an n x n grid, where each number represents the count of adjacent black squares sharing a vertex.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the area of a cyclic quadrilateral with perpendicular diagonals, given the circle's radius, one diagonal's length, and the distance from the circle's center to the diagonals' intersection point.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the sum of two positive real numbers m and n given that f(m) = f(n) for the function f(x) = |log_2 x| and the maximum value of f(x) on [m^2, n] is 2.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Calculate the radius of a larger circle that contains four smaller, tangent circles of equal radius.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the maximum volume of a sphere that can fit inside a cone with a circular base of radius 1 and an apex at a given point in space.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Find the y-intercept of a line tangent to two given circles in the first quadrant.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the minimum value of f for the given inequality involving x, y, z, and w.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the number of sets from S_0 to S_999 that do not include any perfect squares.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the number of distinct integer outputs of a given function over a specified interval.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the number of distinct possible heights for a tower constructed from 94 bricks, each of which can contribute one of three possible heights.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Compute the ratio of factorials.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Determine the number of ways to select and color five points from a 5x5 grid such that the distance between any two points is not an integer.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the percentage increase needed to restore an original wage after sequential reductions.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the highest power of 2 that divides a given number.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the probability of landing on a dime given specific jumping probabilities and stopping conditions.": [
+    "Prioritize concrete examples and actionable steps over vague generalities to enhance practical utility."
+  ],
+  "Calculate the number of 2-configurations of a set with 10 elements, containing exactly 2 cells.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Determine the number of ways to divide a structure into two or more contiguous pieces along specified boundaries.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the area of a quadrilateral given side lengths and a ratio of diagonals' segments.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Find the ratio of segments AM to BM in a right-angled trapezoid given specific angle relationships.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the area of a rectangle given specific geometric conditions after folding.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Calculate the length of a segment given the circumference of a circle and an angle measure.": [
+    "Anchor historical claims with specific events and actors",
+    "Explicitly connect causes to downstream effects",
+    "Structure analysis through multiple temporal lenses"
+  ],
+  "Calculate the ratio of sides AB to AC in a triangle ABC given angle relationships and a specific ratio involving angle bisectors.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Find the height of an isosceles triangle given a segment intercepted by a line through the midpoint of the base at a specific angle.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Determine the angle P AQ given geometric constraints on triangle ABC and points P, Q on BC.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Calculate the angle between the diagonals of a quadrilateral given its area and the lengths of its diagonals.": [
+    "Anchor historical claims with specific events and actors",
+    "Explicitly connect causes to downstream effects",
+    "Structure analysis through multiple temporal lenses"
+  ],
+  "Determine the measure of angle BAD in a trapezoid where the angle bisector of angle BAD intersects BC at E, and an inscribed circle in triangle ABE has a specific segment length.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Determine the number of sides of a convex polygon given the arithmetic progression of its interior angles, common difference, and the largest angle.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Find the minimum value of a function subject to a linear constraint with positive variables.": [
+    "Prioritize structural breakdown over vague generalities",
+    "Anchor explanations in causal relationships",
+    "Personalize recommendations through qualification criteria",
+    "Differentiate core mechanisms from supporting elements",
+    "Implement scope limitation for complex processes"
+  ],
+  "Calculate the approximate value of a square root expression.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the length of a side in a geometric figure using given angle and side measurements.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Perform trigonometric and algebraic operations including simplification and evaluation.": [
+    "Anchor explanations in fundamental causes rather than surface-level factors",
+    "Maintain consistent scientific terminology",
+    "Address common misconceptions proactively",
+    "Establish clear causal relationships",
+    "Provide multi-layered explanations for complex phenomena"
+  ],
+  "Find the minimum value of a function subject to a circular constraint.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the probability of a specific equation holding true for randomly selected values from a given set.": [
+    "Structure information using clear formatting for better readability",
+    "Support explanations with concrete examples",
+    "Provide balanced analysis of multiple perspectives",
+    "Conclude with a reinforcing summary"
+  ],
+  "Calculate the product of a sequence of fractions.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the values of a and t in the given equation involving square roots.": [
+    "Use concrete examples instead of vague references to enhance clarity and demonstrate understanding. Provide specific named instances (e.g., 'red herring') rather than generic categories ('some fallacies').",
+    "Structure explanations using explicit organizational labels to improve navigability. Use headings or bullet points to separate distinct analytical components (e.g., Logical Structure, Relevance).",
+    "Maintain explicit connections to the original argument to ensure contextual grounding. For each analytical point, directly reference how it relates to the question's specific context.",
+    "Preserve formal tone appropriate to analytical rigor. Avoid colloquial phrases ('sort of') and use precise terminology suited to academic discourse.",
+    "Conclude with synthesized judgment that integrates analysis components. End with an evaluative statement showing how individual points collectively impact the argument's validity."
+  ],
+  "Simplify given radical expressions.": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Find the minimum value of a trigonometric expression involving the tangents of the angles in an acute-angled triangle.": [
+    "Provide specific historical context with dates and key figures to establish credibility and depth.",
+    "Highlight pivotal historical events associated with the subject to demonstrate its broader significance.",
+    "Use concrete examples of notable individuals or artifacts linked to the subject to support claims.",
+    "Include references to enduring features or lasting impacts to ensure comprehensive coverage of the subject's relevance."
+  ],
+  "Determine the digits represented by each letter in the given equation and use them to decode the GPS coordinates.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Simplify a trigonometric function and evaluate it given a specific value of tan(alpha).": [
+    "Include specific examples to substantiate general claims",
+    "Explicitly link mechanisms to consequences",
+    "Address both short-term and long-term perspectives",
+    "Provide actionable mitigation strategies"
+  ],
+  "Determine the time required for Alpha and Beta to complete a job together, given their individual and combined work rates relative to Gamma.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
+  ],
+  "Find the x-coordinate of a symmetric center of a cosine function after a horizontal translation.": [
+    "Structure information with clear headings and logical flow to enhance readability and comprehension.",
+    "Use concrete examples to illustrate abstract concepts, making them more accessible.",
+    "Ensure technical accuracy by verifying factual claims and avoiding oversimplifications that distort key processes.",
+    "Maintain conciseness by eliminating redundant phrases while preserving informational completeness."
+  ],
+  "Calculate the probability that a randomly selected permutation of a set fixes a specific element when applied twice.": [
+    "Organize comparative information into distinct categories using clear formatting"
+  ],
+  "Calculate the area of the circumcircle of an isosceles triangle given the lengths of its equal sides and the radius of an inscribed circle.": [
+    "Anchor explanations in verified scientific concepts rather than common misconceptions",
+    "Structure explanations using conceptual scaffolding"
+  ],
+  "Express a given sum of complex exponentials in polar form and determine the angle theta.": [
+    "Prioritize logical progression by structuring answers around core causal relationships rather than isolated facts",
+    "Maintain strict factual precision through quantitative specifications and qualified statements",
+    "Address multidimensional impacts by considering both technical specifications and human factors",
+    "Enhance practical utility through actionable implementation guidance",
+    "Establish contextual relevance through explicit connections to application scenarios"
   ]
 }
