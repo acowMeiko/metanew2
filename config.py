@@ -7,9 +7,9 @@ check_root = os.path.join(Project_ROOT, 'checkpoints')  #模型检查点目录
 output_dir = os.path.join(Project_ROOT, 'output')  #输出目录
 data_dir = os.path.join(Project_ROOT, 'data')  #数据集目录
 BASE_MODEL_NAME = os.getenv('BASE_MODEL_NAME', "/home/share/hcz/qwen2.5-14b-awq")
-lora_model_path = os.getenv('LORA_MODEL_PATH', "/home/models/qwen_dpo2_lora")  #LoRA模型路径
+lora_model_path = os.getenv('LORA_MODEL_PATH', "/home/models/qwen_dpo3_lora")  #LoRA模型路径
 MAX_MODEL_LEN = 32768  # 提升到 32K，充分利用 80G A800 显存
-MEMORY_FILE =os.path.join(Project_ROOT, 'memory', 'memory_round2.json')  #Memory文件路径
+MEMORY_FILE =os.path.join(Project_ROOT, 'memory', 'memory_round3.json')  #Memory文件路径
 
 # ==================== 强模型API配置（用于生成Chosen） ====================
 STRONG_MODEL_NAME = os.getenv('STRONG_MODEL_NAME', 'DeepSeek-R1')
