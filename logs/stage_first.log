@@ -2265,3 +2265,75 @@ NameError: name 'checkpoint_file' is not defined
 2025-12-31 15:57:48,112 - __main__ - INFO - 程序执行完成
 2025-12-31 15:57:52,099 - inference.local_inference - INFO - 清理vLLM模型...
 2025-12-31 15:57:52,127 - inference.local_inference - INFO - CUDA缓存已清理
+2026-01-02 18:48:07,670 - __main__ - INFO - 加载数据集: data/test/test_filter.json
+2026-01-02 18:48:07,675 - __main__ - INFO - 数据集加载成功（JSON格式），共 400 条数据
+2026-01-02 18:48:07,675 - __main__ - INFO - 数据字段: ['problem', 'answer', 'solution', 'grading_log', 'difficulty', 'tags']
+2026-01-02 18:48:07,675 - __main__ - INFO - ============================================================
+2026-01-02 18:48:07,675 - __main__ - INFO - Step 3: 开始推理（批处理模式）
+2026-01-02 18:48:07,675 - __main__ - INFO - ============================================================
+2026-01-02 18:48:07,677 - __main__ - INFO - MemoryManager 初始化完成
+2026-01-02 18:48:07,677 - __main__ - INFO - 批处理大小: 256
+2026-01-02 18:48:07,677 - __main__ - INFO - ============================================================
+2026-01-02 18:48:07,677 - __main__ - INFO - 步骤 1/3: 批量生成任务描述
+2026-01-02 18:48:07,677 - __main__ - INFO - ============================================================
+2026-01-02 18:48:07,677 - __main__ - INFO - 有效数据: 400 条
+2026-01-02 18:48:07,677 - __main__ - INFO - 将分 2 批处理（每批 256 条）
+2026-01-02 18:48:12,101 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2026-01-02 18:48:12,101 - inference.local_inference - INFO - ============================================================
+2026-01-02 18:48:12,101 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2026-01-02 18:48:12,101 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2026-01-02 18:48:12,101 - inference.local_inference - INFO - ============================================================
+2026-01-02 18:50:22,612 - inference.local_inference - INFO - vLLM模型初始化完成
+2026-01-02 18:51:49,985 - __main__ - INFO - 任务描述生成完成: 400 条
+2026-01-02 18:51:49,999 - __main__ - INFO - 任务描述已保存到: /home/metanew2/output/task_descriptions.json
+2026-01-02 18:51:49,999 - __main__ - INFO - ============================================================
+2026-01-02 18:51:49,999 - __main__ - INFO - 步骤 2/3: 解析任务描述并检索原则
+2026-01-02 18:51:49,999 - __main__ - INFO - ============================================================
+2026-01-02 18:52:21,137 - __main__ - WARNING - 第 3 项: 未找到JSON格式，原始响应: To solve the problem, we need to follow the structured analysis steps:
+
+1. **Analyze the domain of the question:**
+   - The question involves geometry and algebra, specifically dealing with lines and ...
+2026-01-02 18:52:21,138 - __main__ - WARNING - 第 4 项: 未找到JSON格式，原始响应: To solve the problem, we will follow the structured analysis steps:
+
+1. **Analyze the domain of the question:**
+   - The question is related to geometry, specifically dealing with the area of a trapez...
+2026-01-02 18:54:52,258 - __main__ - WARNING - 第 13 项: 未找到JSON格式，原始响应: To solve the problem, we need to follow the structured analysis steps:
+
+1. **Analyze the domain of the question:**
+   - The question involves number theory and properties of integers.
+
+2. **Categorize...
+2026-01-02 19:57:02,029 - __main__ - INFO - 成功解析任务描述: 245 条
+2026-01-02 19:57:02,030 - __main__ - INFO -   - 找到原则: 101 条
+2026-01-02 19:57:02,030 - __main__ - INFO -   - 未找到原则（将直接回答）: 144 条
+2026-01-02 19:57:02,030 - __main__ - INFO - 解析失败: 155 条
+2026-01-02 19:57:02,030 - __main__ - INFO -   - 空响应: 0 条
+2026-01-02 19:57:02,030 - __main__ - INFO -   - JSON解析失败: 155 条
+2026-01-02 19:57:02,030 - __main__ - INFO - ============================================================
+2026-01-02 19:57:02,031 - __main__ - INFO - 步骤 3/3: 批量生成答案
+2026-01-02 19:57:02,031 - __main__ - INFO - ============================================================
+2026-01-02 19:57:02,031 - __main__ - INFO - 将分 1 批处理（每批 256 条）
+2026-01-02 19:58:02,843 - __main__ - INFO - 答案生成完成: 245 条
+2026-01-02 19:58:02,843 - __main__ - INFO - ============================================================
+2026-01-02 19:58:02,843 - __main__ - INFO - 组装结果
+2026-01-02 19:58:02,843 - __main__ - INFO - ============================================================
+2026-01-02 19:58:02,860 - __main__ - INFO - ============================================================
+2026-01-02 19:58:02,860 - __main__ - INFO - 开始计算准确率
+2026-01-02 19:58:02,860 - __main__ - INFO - ============================================================
+2026-01-02 19:58:02,886 - __main__ - INFO - 
+============================================================
+2026-01-02 19:58:02,886 - __main__ - INFO - 准确率报告
+2026-01-02 19:58:02,886 - __main__ - INFO - ============================================================
+2026-01-02 19:58:02,887 - __main__ - INFO - 总体准确率: 84/245 = 34.29%
+2026-01-02 19:58:02,887 - __main__ - INFO - 
+结果已保存:
+2026-01-02 19:58:02,887 - __main__ - INFO -   - 推理结果: /home/metanew2/output/local_inference_round2.json
+2026-01-02 19:58:02,887 - __main__ - INFO -   - 带准确率标注: /home/metanew2/output/local_inference_with_accuracy.json
+2026-01-02 19:58:02,887 - __main__ - INFO -   - 准确率统计: /home/metanew2/output/accuracy_stats.json
+2026-01-02 19:58:02,887 - __main__ - INFO - 
+推理完成!
+2026-01-02 19:58:02,887 - __main__ - INFO -   - 成功推理: 245 项
+2026-01-02 19:58:02,887 - __main__ - INFO -   - 未找到原则: 155 项
+2026-01-02 19:58:02,887 - __main__ - INFO -   - 总数据量: 400 项
+2026-01-02 19:58:07,728 - inference.local_inference - INFO - 清理vLLM模型...
+2026-01-02 19:58:07,759 - inference.local_inference - INFO - CUDA缓存已清理
