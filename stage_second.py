@@ -8,6 +8,7 @@ import logging
 import re
 from tqdm import tqdm  
 import sys
+from concurrent.futures import ThreadPoolExecutor, as_completed
 PROJECT_ROOT = str(Path(__file__).resolve().parent)
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -61,6 +62,10 @@ def prepare_step2_update_memory_from_dpo():
         if not isinstance(dpo_data, list):
             logger.error(f"数据格式错误: 期望列表格式，实际为 {type(dpo_data)}")
             return
+        
+        # 只处理前64个数据
+        dpo_data = dpo_data[:64]
+        logger.info(f"限制处理前64个数据，实际数据量: {len(dpo_data)}")
             
     except Exception as e:
         logger.error(f"读取JSON文件失败: {e}")
@@ -190,118 +195,141 @@ def prepare_step2_update_memory_from_dpo():
         # ===== 阶段3: 解析结果并更新Memory =====
         logger.info("阶段3/3: 解析结果并更新Memory")
         
-        for idx, item in enumerate(tqdm(batch_data, desc="更新Memory")):
+        # 定义解析函数
+        def parse_single_item(idx, item, task_desc_new, regenerated):
+            """解析单个任务描述和原则"""
             i = item['index']
-            task_desc_new = task_descs[idx]
-            regenerated = regenerated_list[idx]
+            result = {
+                'index': i,
+                'desc': None,
+                'principles': None,
+                'error': None
+            }
             
-            # 从生成的文本中提取JSON（模型可能生成解释性文本和重复内容）
-            # 预处理：去除 markdown 代码块标记
+            # 解析任务描述
             task_desc_clean = task_desc_new.strip()
             if task_desc_clean.startswith('```json'):
-                task_desc_clean = task_desc_clean[7:]  # 去掉 ```json
+                task_desc_clean = task_desc_clean[7:]
             elif task_desc_clean.startswith('```'):
-                task_desc_clean = task_desc_clean[3:]  # 去掉 ```
+                task_desc_clean = task_desc_clean[3:]
             if task_desc_clean.endswith('```'):
-                task_desc_clean = task_desc_clean[:-3]  # 去掉结尾的 ```
+                task_desc_clean = task_desc_clean[:-3]
             task_desc_clean = task_desc_clean.strip()
-
             
             try:
-                # 尝试直接解析清理后的内容
                 task_obj = json.loads(task_desc_clean)
-                desc = task_obj.get("taskDescription", {}).get("description")
+                result['desc'] = task_obj.get("taskDescription", {}).get("description")
             except (json.JSONDecodeError, KeyError, AttributeError):
-                # 如果直接解析失败，尝试提取第一个完整JSON块
                 try:
-                    # 策略1: 查找第一个包含 taskDescription 的完整JSON对象
                     json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_clean, re.DOTALL)
                     if not json_match:
-                        # 策略2: 查找第一个包含 taskDescription 的完整JSON对象
                         json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_new, re.DOTALL)
                     if not json_match:
-                        # 策略3: 查找任意第一个 { ... } 结构
                         json_match = re.search(r'(\{(?:[^{}]|\{[^{}]*\})*\})', task_desc_new, re.DOTALL)
                     
                     if json_match:
                         json_str = json_match.group(1) if json_match.groups() else json_match.group(0)
-                        # 只保留第一个JSON，截断重复内容
                         if json_str.count('{') > json_str.count('}'):
-                            # 如果括号不匹配，尝试修复
                             json_str = json_str[:json_str.rfind('}')+1]
                         task_obj = json.loads(json_str)
-                        desc = task_obj.get("taskDescription", {}).get("description")
+                        result['desc'] = task_obj.get("taskDescription", {}).get("description")
                     else:
-                        logger.warning(f"第 {i} 项无法提取任务描述JSON，跳过")
-                        continue
+                        result['error'] = f"无法提取任务描述JSON"
+                        return result
                 except Exception as e:
-                    logger.warning(f"第 {i} 项解析任务描述失败: {e}，跳过")
-                    continue
-
-            if not desc:
-                logger.warning(f"第 {i} 项任务描述为空，跳过")
-                continue
-
-            # 获取已有 memory
-            existing_key, existing_principles = memory.retrieve(desc)
-            canonical_key = existing_key if existing_principles else desc
-
-            # 从生成的文本中提取原则JSON（处理重复输出）
-            # 预处理：去除 markdown 代码块标记
+                    result['error'] = f"解析任务描述失败: {e}"
+                    return result
+            
+            if not result['desc']:
+                result['error'] = "任务描述为空"
+                return result
+            
+            # 解析原则
             regenerated_clean = regenerated.strip()
             if regenerated_clean.startswith('```json'):
-                regenerated_clean = regenerated_clean[7:]  # 去掉 ```json
+                regenerated_clean = regenerated_clean[7:]
             elif regenerated_clean.startswith('```'):
-                regenerated_clean = regenerated_clean[3:]  # 去掉 ```
+                regenerated_clean = regenerated_clean[3:]
             if regenerated_clean.endswith('```'):
-                regenerated_clean = regenerated_clean[:-3]  # 去掉结尾的 ```
+                regenerated_clean = regenerated_clean[:-3]
             regenerated_clean = regenerated_clean.strip()
             
             try:
-                # 尝试直接解析清理后的内容
                 principles_obj = json.loads(regenerated_clean)
                 output_list = principles_obj.get("output", [])
-                regenerated_parsed = [x.get("Principle") for x in output_list
-                                      if isinstance(x, dict) and "Principle" in x]
+                result['principles'] = [x.get("Principle") for x in output_list
+                                       if isinstance(x, dict) and "Principle" in x]
             except (json.JSONDecodeError, KeyError, AttributeError):
-                # 如果直接解析失败，尝试提取第一个完整JSON块
                 try:
-                    # 策略1: 查找第一个包含 output 数组的完整JSON对象
                     json_match = re.search(r'\{\s*"output"\s*:\s*\[[^\]]*?\{[^}]*?"Principle"[^}]*?\}[^\]]*?\]\s*\}', regenerated_clean, re.DOTALL)
                     if not json_match:
-                        # 策略2: 查找第一个包含 output 数组的完整JSON对象
                         json_match = re.search(r'\{\s*"output"\s*:\s*\[[^\]]*?\{[^}]*?"Principle"[^}]*?\}[^\]]*?\]\s*\}', regenerated, re.DOTALL)
                     if not json_match:
-                        # 策略3: 查找任意第一个包含"output"的JSON
                         json_match = re.search(r'(\{(?:[^{}]|\{[^{}]*\})*"output"(?:[^{}]|\{[^{}]*\})*\})', regenerated, re.DOTALL)
                     
                     if json_match:
                         json_str = json_match.group(1) if json_match.groups() else json_match.group(0)
-                        # 截断重复的JSON内容（如果存在多个相同的JSON块）
                         first_closing = json_str.find('}\n}')
                         if first_closing > 0:
                             json_str = json_str[:first_closing+2]
                         principles_obj = json.loads(json_str)
                         output_list = principles_obj.get("output", [])
-                        regenerated_parsed = [x.get("Principle") for x in output_list
-                                              if isinstance(x, dict) and "Principle" in x]
+                        result['principles'] = [x.get("Principle") for x in output_list
+                                               if isinstance(x, dict) and "Principle" in x]
                     else:
                         logger.warning(f"第 {i} 项无法提取原则JSON")
-                        regenerated_parsed = None
                 except Exception as e:
                     logger.warning(f"第 {i} 项解析原则失败: {e}")
-                    regenerated_parsed = None
-
+            
+            return result
+        
+        # 并发解析所有项
+        logger.info("并发解析任务描述和原则...")
+        parsed_results = []
+        max_workers = min(32, len(batch_data))  # 最多32个并发
+        
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            futures = {
+                executor.submit(parse_single_item, idx, item, task_descs[idx], regenerated_list[idx]): idx
+                for idx, item in enumerate(batch_data)
+            }
+            
+            for future in tqdm(as_completed(futures), total=len(futures), desc="解析中"):
+                idx = futures[future]
+                try:
+                    result = future.result()
+                    parsed_results.append((idx, result))
+                except Exception as e:
+                    logger.error(f"解析第 {idx} 项时发生异常: {e}")
+                    parsed_results.append((idx, {'index': batch_data[idx]['index'], 'error': str(e)}))
+        
+        # 按原始顺序排序
+        parsed_results.sort(key=lambda x: x[0])
+        
+        # 串行更新Memory（避免并发写入冲突）
+        logger.info("更新Memory...")
+        for idx, result in tqdm(parsed_results, desc="更新Memory"):
+            if result.get('error'):
+                logger.warning(f"第 {result['index']} 项{result['error']}，跳过")
+                continue
+            
+            desc = result['desc']
+            principles = result['principles']
+            
+            # 获取已有 memory
+            existing_key, existing_principles = memory.retrieve(desc)
+            canonical_key = existing_key if existing_principles else desc
+            
             # 合并并保存
-            if regenerated_parsed:
-                memory.merge_principles(canonical_key, regenerated_parsed)
+            if principles:
+                memory.merge_principles(canonical_key, principles)
                 memory.save()
-
+            
             # 定期保存断点
             if (idx + 1) % config.SAVE_FREQUENCY == 0:
                 checkpoint_file.parent.mkdir(parents=True, exist_ok=True)
                 with open(checkpoint_file, 'w') as cf:
-                    json.dump({"last_index": i + 1}, cf)
+                    json.dump({"last_index": result['index'] + 1}, cf)
 
         logger.info("Memory更新完成")
         
