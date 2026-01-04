@@ -221,21 +221,55 @@ def prepare_step2_update_memory_from_dpo():
                 result['desc'] = task_obj.get("taskDescription", {}).get("description")
             except (json.JSONDecodeError, KeyError, AttributeError):
                 try:
-                    json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_clean, re.DOTALL)
-                    if not json_match:
-                        json_match = re.search(r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?\}[^{}]*?\}', task_desc_new, re.DOTALL)
-                    if not json_match:
-                        json_match = re.search(r'(\{(?:[^{}]|\{[^{}]*\})*\})', task_desc_new, re.DOTALL)
+                    # 策略1: 使用更精确的正则，查找所有完整的 taskDescription JSON，取最后一个
+                    # 匹配模式: { "taskDescription": { "description": "..." } }
+                    pattern = r'\{\s*"taskDescription"\s*:\s*\{\s*"description"\s*:\s*"([^"]+)"\s*\}\s*\}'
+                    matches = list(re.finditer(pattern, task_desc_new, re.DOTALL))
                     
-                    if json_match:
-                        json_str = json_match.group(1) if json_match.groups() else json_match.group(0)
-                        if json_str.count('{') > json_str.count('}'):
-                            json_str = json_str[:json_str.rfind('}')+1]
+                    if matches:
+                        # 取最后一个匹配（最可能是实际答案而非示例）
+                        last_match = matches[-1]
+                        json_str = last_match.group(0)
                         task_obj = json.loads(json_str)
                         result['desc'] = task_obj.get("taskDescription", {}).get("description")
                     else:
-                        result['error'] = f"无法提取任务描述JSON"
+                        # 策略2: 宽松匹配，查找包含 taskDescription 的所有 JSON 块
+                        loose_pattern = r'\{[^{}]*?"taskDescription"[^{}]*?:\s*\{[^{}]*?"description"[^{}]*?:[^{}]*?"[^"]*?"[^{}]*?\}[^{}]*?\}'
+                        loose_matches = list(re.finditer(loose_pattern, task_desc_new, re.DOTALL))
+                        
+                        if loose_matches:
+                            json_str = loose_matches[-1].group(0)
+                            # 清理可能的尾部不完整内容
+                            if json_str.count('{') > json_str.count('}'):
+                                json_str = json_str[:json_str.rfind('}')+1]
+                            task_obj = json.loads(json_str)
+                            result['desc'] = task_obj.get("taskDescription", {}).get("description")
+                        else:
+                            # 策略3: 最宽松匹配，查找所有 JSON 对象，从后往前找包含必要字段的
+                            all_json_matches = list(re.finditer(r'\{(?:[^{}]|\{[^{}]*\})*\}', task_desc_new, re.DOTALL))
+                            json_str = None
+                            for match in reversed(all_json_matches):
+                                candidate = match.group(0)
+                                if '"taskDescription"' in candidate and '"description"' in candidate:
+                                    try:
+                                        test_obj = json.loads(candidate)
+                                        if test_obj.get("taskDescription", {}).get("description"):
+                                            json_str = candidate
+                                            break
+                                    except:
+                                        continue
+                            
+                            if json_str:
+                                task_obj = json.loads(json_str)
+                                result['desc'] = task_obj.get("taskDescription", {}).get("description")
+                            else:
+                                result['error'] = f"无法提取任务描述JSON"
+                                return result
+                    
+                    if not result['desc']:
+                        result['error'] = f"JSON中缺少description字段"
                         return result
+                        
                 except Exception as e:
                     result['error'] = f"解析任务描述失败: {e}"
                     return result
