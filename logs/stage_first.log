@@ -2407,3 +2407,189 @@ NameError: name 'checkpoint_file' is not defined
 2026-01-02 21:35:29,550 - __main__ - INFO -   - 总数据量: 400 项
 2026-01-02 21:35:34,391 - inference.local_inference - INFO - 清理vLLM模型...
 2026-01-02 21:35:34,422 - inference.local_inference - INFO - CUDA缓存已清理
+2026-01-02 21:43:28,929 - __main__ - INFO - 加载数据集: data/test/test_filter.json
+2026-01-02 21:43:28,933 - __main__ - INFO - 数据集加载成功（JSON格式），共 400 条数据
+2026-01-02 21:43:28,933 - __main__ - INFO - 数据字段: ['problem', 'answer', 'solution', 'grading_log', 'difficulty', 'tags']
+2026-01-02 21:43:28,934 - __main__ - INFO - ============================================================
+2026-01-02 21:43:28,934 - __main__ - INFO - Step 3: 开始推理（批处理模式）
+2026-01-02 21:43:28,934 - __main__ - INFO - ============================================================
+2026-01-02 21:43:28,936 - __main__ - INFO - MemoryManager 初始化完成
+2026-01-02 21:43:28,937 - __main__ - INFO - 批处理大小: 256
+2026-01-02 21:43:28,937 - __main__ - INFO - ============================================================
+2026-01-02 21:43:28,937 - __main__ - INFO - 步骤 1/3: 批量生成任务描述
+2026-01-02 21:43:28,937 - __main__ - INFO - ============================================================
+2026-01-02 21:43:28,937 - __main__ - INFO - 有效数据: 400 条
+2026-01-02 21:43:28,937 - __main__ - INFO - 将分 2 批处理（每批 256 条）
+2026-01-02 21:43:33,646 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2026-01-02 21:43:33,646 - inference.local_inference - INFO - ============================================================
+2026-01-02 21:43:33,646 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2026-01-02 21:43:33,646 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2026-01-02 21:43:33,646 - inference.local_inference - INFO - ============================================================
+2026-01-02 21:44:41,506 - inference.local_inference - INFO - vLLM模型初始化完成
+2026-01-02 21:46:12,077 - __main__ - INFO - 任务描述生成完成: 400 条
+2026-01-02 21:46:12,091 - __main__ - INFO - 任务描述已保存到: /home/metanew2/output/task_descriptions.json
+2026-01-02 21:46:12,091 - __main__ - INFO - ============================================================
+2026-01-02 21:46:12,091 - __main__ - INFO - 步骤 2/3: 解析任务描述并检索原则
+2026-01-02 21:46:12,091 - __main__ - INFO - ============================================================
+2026-01-02 21:50:48,663 - __main__ - WARNING - 第 14 项: 未找到JSON格式，原始响应: To solve the problem, we need to follow the structured analysis steps:
+
+1. **Analyze the domain of the question:**
+   - The question is related to number theory and sequences, specifically the Fibonac...
+2026-01-02 21:53:07,891 - __main__ - WARNING - 第 21 项: JSON解析失败
+2026-01-02 21:53:07,892 - __main__ - WARNING -   候选JSON数量: 3
+2026-01-02 21:53:07,892 - __main__ - WARNING -   最后一个候选: {{
+  "taskDescription": {{
+    "description": "Determine the sum of the roots of a specified equation involving polynomial and logarithmic terms."
+  }...
+2026-01-02 21:54:52,481 - __main__ - WARNING - 第 28 项: 未找到JSON格式，原始响应: To solve the problem, we need to follow the structured analysis steps:
+
+1. **Analyze the domain of the question:**
+   - The question is related to geometry and trigonometry, specifically dealing with ...
+2026-01-02 23:36:04,138 - __main__ - INFO - 成功解析任务描述: 307 条
+2026-01-02 23:36:04,139 - __main__ - INFO -   - 找到原则: 134 条
+2026-01-02 23:36:04,139 - __main__ - INFO -   - 未找到原则（将直接回答）: 173 条
+2026-01-02 23:36:04,140 - __main__ - INFO - 解析失败: 93 条
+2026-01-02 23:36:04,140 - __main__ - INFO -   - 空响应: 0 条
+2026-01-02 23:36:04,140 - __main__ - INFO -   - JSON解析失败: 93 条
+2026-01-02 23:36:04,140 - __main__ - INFO - ============================================================
+2026-01-02 23:36:04,140 - __main__ - INFO - 步骤 3/3: 批量生成答案
+2026-01-02 23:36:04,140 - __main__ - INFO - ============================================================
+2026-01-02 23:36:04,140 - __main__ - INFO - 将分 2 批处理（每批 256 条）
+2026-01-02 23:37:56,973 - __main__ - INFO - 答案生成完成: 307 条
+2026-01-02 23:37:56,974 - __main__ - INFO - ============================================================
+2026-01-02 23:37:56,974 - __main__ - INFO - 组装结果
+2026-01-02 23:37:56,974 - __main__ - INFO - ============================================================
+2026-01-02 23:37:57,000 - __main__ - INFO - ============================================================
+2026-01-02 23:37:57,000 - __main__ - INFO - 开始计算准确率
+2026-01-02 23:37:57,000 - __main__ - INFO - ============================================================
+2026-01-02 23:37:57,034 - __main__ - INFO - 
+============================================================
+2026-01-02 23:37:57,034 - __main__ - INFO - 准确率报告
+2026-01-02 23:37:57,034 - __main__ - INFO - ============================================================
+2026-01-02 23:37:57,035 - __main__ - INFO - 总体准确率: 103/307 = 33.55%
+2026-01-02 23:37:57,035 - __main__ - INFO - 
+结果已保存:
+2026-01-02 23:37:57,035 - __main__ - INFO -   - 推理结果: /home/metanew2/output/local_inference_round2.json
+2026-01-02 23:37:57,035 - __main__ - INFO -   - 带准确率标注: /home/metanew2/output/local_inference_with_accuracy.json
+2026-01-02 23:37:57,035 - __main__ - INFO -   - 准确率统计: /home/metanew2/output/accuracy_stats.json
+2026-01-02 23:37:57,035 - __main__ - INFO - 
+推理完成!
+2026-01-02 23:37:57,035 - __main__ - INFO -   - 成功推理: 307 项
+2026-01-02 23:37:57,035 - __main__ - INFO -   - 未找到原则: 93 项
+2026-01-02 23:37:57,035 - __main__ - INFO -   - 总数据量: 400 项
+2026-01-02 23:38:02,124 - inference.local_inference - INFO - 清理vLLM模型...
+2026-01-02 23:38:02,169 - inference.local_inference - INFO - CUDA缓存已清理
+2026-01-04 09:32:12,961 - __main__ - INFO - ============================================================
+2026-01-04 09:32:12,961 - __main__ - INFO - Step 2: 开始更新Memory
+2026-01-04 09:32:12,961 - __main__ - INFO - ============================================================
+2026-01-04 09:32:12,964 - __main__ - INFO - MemoryManager 初始化完成
+2026-01-04 09:32:12,976 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2026-01-04 09:32:12,996 - __main__ - INFO - 准备批处理 397 条数据
+2026-01-04 09:32:12,997 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2026-01-04 09:32:12,997 - __main__ - INFO - 批量生成任务描述...
+2026-01-04 09:32:17,558 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2026-01-04 09:32:17,558 - inference.local_inference - INFO - ============================================================
+2026-01-04 09:32:17,558 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2026-01-04 09:32:17,558 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2026-01-04 09:32:17,558 - inference.local_inference - INFO - ============================================================
+2026-01-04 09:33:15,567 - inference.local_inference - INFO - vLLM模型初始化完成
+2026-01-04 09:34:27,538 - __main__ - INFO - 提取 chosen 原则...
+2026-01-04 09:34:27,543 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
+2026-01-04 09:34:27,576 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
+2026-01-04 09:34:27,578 - __main__ - WARNING - 第 0 项任务描述为空，跳过
+2026-01-04 09:40:15,150 - __main__ - WARNING - 第 11 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:50:03,129 - __main__ - WARNING - 第 24 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:52:40,226 - __main__ - WARNING - 第 28 项无法提取任务描述JSON，跳过
+2026-01-04 09:52:40,226 - __main__ - WARNING - 第 29 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:53:09,983 - __main__ - WARNING - 第 31 项无法提取任务描述JSON，跳过
+2026-01-04 09:53:40,821 - __main__ - WARNING - 第 33 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:54:36,561 - __main__ - WARNING - 第 36 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:55:51,774 - __main__ - WARNING - 第 39 项无法提取任务描述JSON，跳过
+2026-01-04 09:57:02,984 - __main__ - WARNING - 第 42 项无法提取任务描述JSON，跳过
+2026-01-04 09:57:02,984 - __main__ - WARNING - 第 43 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:57:02,985 - __main__ - WARNING - 第 44 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:57:02,985 - __main__ - WARNING - 第 45 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:57:02,985 - __main__ - WARNING - 第 46 项无法提取任务描述JSON，跳过
+2026-01-04 09:57:34,694 - __main__ - WARNING - 第 48 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 09:57:49,511 - __main__ - WARNING - 程序被用户中断
+2026-01-04 09:57:50,168 - inference.local_inference - INFO - 清理vLLM模型...
+2026-01-04 09:57:50,202 - inference.local_inference - INFO - CUDA缓存已清理
+2026-01-04 09:58:12,597 - __main__ - INFO - ============================================================
+2026-01-04 09:58:12,597 - __main__ - INFO - Step 2: 开始更新Memory
+2026-01-04 09:58:12,597 - __main__ - INFO - ============================================================
+2026-01-04 09:58:12,600 - __main__ - INFO - MemoryManager 初始化完成
+2026-01-04 09:58:12,611 - __main__ - INFO - 限制处理前64个数据，实际数据量: 64
+2026-01-04 09:58:12,611 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2026-01-04 09:58:12,615 - __main__ - INFO - 准备批处理 64 条数据
+2026-01-04 09:58:12,615 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2026-01-04 09:58:12,615 - __main__ - INFO - 批量生成任务描述...
+2026-01-04 09:58:17,095 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2026-01-04 09:58:17,095 - inference.local_inference - INFO - ============================================================
+2026-01-04 09:58:17,095 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2026-01-04 09:58:17,095 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2026-01-04 09:58:17,096 - inference.local_inference - INFO - ============================================================
+2026-01-04 09:59:13,488 - inference.local_inference - INFO - vLLM模型初始化完成
+2026-01-04 09:59:59,640 - __main__ - INFO - 提取 chosen 原则...
+2026-01-04 09:59:59,641 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
+2026-01-04 09:59:59,652 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
+2026-01-04 09:59:59,652 - __main__ - INFO - 并发解析任务描述和原则...
+2026-01-04 09:59:59,666 - __main__ - INFO - 更新Memory...
+2026-01-04 09:59:59,667 - __main__ - WARNING - 第 0 项任务描述为空，跳过
+2026-01-04 10:01:29,759 - __main__ - WARNING - 第 3 项无法提取任务描述JSON，跳过
+2026-01-04 10:02:49,919 - __main__ - INFO - ============================================================
+2026-01-04 10:02:49,920 - __main__ - INFO - Step 2: 开始更新Memory
+2026-01-04 10:02:49,920 - __main__ - INFO - ============================================================
+2026-01-04 10:02:49,923 - __main__ - INFO - MemoryManager 初始化完成
+2026-01-04 10:02:49,934 - __main__ - INFO - 限制处理前64个数据，实际数据量: 64
+2026-01-04 10:02:49,934 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2026-01-04 10:02:49,938 - __main__ - INFO - 准备批处理 64 条数据
+2026-01-04 10:02:49,938 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2026-01-04 10:02:49,938 - __main__ - INFO - 批量生成任务描述...
+2026-01-04 10:02:54,410 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2026-01-04 10:02:54,411 - inference.local_inference - INFO - ============================================================
+2026-01-04 10:02:54,411 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2026-01-04 10:02:54,411 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2026-01-04 10:02:54,411 - inference.local_inference - INFO - ============================================================
+2026-01-04 10:06:20,034 - __main__ - INFO - ============================================================
+2026-01-04 10:06:20,034 - __main__ - INFO - Step 2: 开始更新Memory
+2026-01-04 10:06:20,034 - __main__ - INFO - ============================================================
+2026-01-04 10:06:20,038 - __main__ - INFO - MemoryManager 初始化完成
+2026-01-04 10:06:20,050 - __main__ - INFO - 限制处理前64个数据，实际数据量: 64
+2026-01-04 10:06:20,051 - __main__ - INFO - 阶段1/3: 数据预处理和过滤
+2026-01-04 10:06:20,054 - __main__ - INFO - 准备批处理 64 条数据
+2026-01-04 10:06:20,055 - __main__ - INFO - 阶段2/3: 批量生成任务描述和原则
+2026-01-04 10:06:20,055 - __main__ - INFO - 批量生成任务描述...
+2026-01-04 10:06:24,383 - inference.local_inference - INFO - 使用环境变量 CUDA_VISIBLE_DEVICES: 0,1,2,3
+2026-01-04 10:06:24,384 - inference.local_inference - INFO - ============================================================
+2026-01-04 10:06:24,384 - inference.local_inference - INFO - 初始化vLLM本地模型...
+2026-01-04 10:06:24,384 - inference.local_inference - INFO - 模型路径: /home/share/hcz/qwen2.5-14b-awq
+2026-01-04 10:06:24,384 - inference.local_inference - INFO - ============================================================
+2026-01-04 10:07:20,456 - inference.local_inference - INFO - vLLM模型初始化完成
+2026-01-04 10:08:09,031 - __main__ - INFO - 提取 chosen 原则...
+2026-01-04 10:08:09,032 - __main__ - INFO - 保存中间生成结果到: /home/metanew2/output/stage2_generated.json
+2026-01-04 10:08:09,044 - __main__ - INFO - 阶段3/3: 解析结果并更新Memory
+2026-01-04 10:08:09,044 - __main__ - INFO - 并发解析任务描述和原则...
+2026-01-04 10:08:09,058 - __main__ - INFO - 更新Memory...
+2026-01-04 10:09:32,746 - __main__ - WARNING - 第 3 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:15:31,702 - __main__ - WARNING - 第 11 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:17:48,951 - __main__ - WARNING - 第 15 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:24:06,542 - __main__ - WARNING - 第 24 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:26:05,064 - __main__ - WARNING - 第 28 项无法提取任务描述JSON，跳过
+2026-01-04 10:26:05,065 - __main__ - WARNING - 第 29 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:27:11,134 - __main__ - WARNING - 第 31 项无法提取任务描述JSON，跳过
+2026-01-04 10:28:18,040 - __main__ - WARNING - 第 33 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:34:52,817 - __main__ - WARNING - 第 42 项无法提取任务描述JSON，跳过
+2026-01-04 10:35:22,567 - __main__ - WARNING - 第 44 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:35:22,567 - __main__ - WARNING - 第 45 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:35:22,567 - __main__ - WARNING - 第 46 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:36:29,900 - __main__ - WARNING - 第 48 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:36:29,900 - __main__ - WARNING - 第 49 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:40:10,118 - __main__ - WARNING - 第 55 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:40:10,118 - __main__ - WARNING - 第 56 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:40:40,636 - __main__ - WARNING - 第 58 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:41:03,426 - __main__ - WARNING - 第 60 项解析任务描述失败: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)，跳过
+2026-01-04 10:42:05,230 - __main__ - WARNING - 第 63 项无法提取任务描述JSON，跳过
+2026-01-04 10:42:05,230 - __main__ - INFO - Memory更新完成
+2026-01-04 10:42:05,232 - __main__ - INFO - 程序执行完成
+2026-01-04 10:42:06,705 - inference.local_inference - INFO - 清理vLLM模型...
+2026-01-04 10:42:06,732 - inference.local_inference - INFO - CUDA缓存已清理
