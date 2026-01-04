@@ -64,24 +64,26 @@ ${principles}
 format = Template("""<|im_start|>user\n$query<|im_end|>\n<|im_start|>assistant\n""")
 
 TASK_DESC_PROMPT = Template('''
-Your task is to identify and extract the main task description from a given question. First, analyze the domain of the question, categorize it into a relevant subcategory, and then generate a concise, clear, and abstract task description that reflects the core objective.
-
-**Steps to Perform Structured Analysis:**
-1. **Analyze the domain of the question:** Determine the field or category the question belongs to
-2. **Categorize the task:** Identify the specific type of problem within that domain
-3. **Generate the task description:** Based on the identified domain and subcategory, create a task description that is:
-   - Concise and clear
-   - Abstract and general
-   - Focused on the core objective
-   - Free of unnecessary details or background information
+Your task is to identify and extract the main task description from a given question.
 
 **Question:** 
 $question
 
-**Output Format (JSON only, no extra text):**
+**Instructions:**
+1. Analyze the domain and categorize the task type
+2. Create a concise, abstract task description focusing on the core objective
+3. **YOU MUST output the result in the exact JSON format below. Do NOT stop after analysis.**
+
+**CRITICAL OUTPUT REQUIREMENTS:**
+- Output MUST be valid JSON only
+- Do NOT use markdown code blocks (```json)
+- Do NOT include explanatory text before or after the JSON
+- Output the raw JSON directly
+
+**Required Output Format:**
 {{
   "taskDescription": {{
-    "description": "Clear, abstract, and specific description of the task, focusing on the core action or objective."
+    "description": "Clear, abstract, and specific description of the task"
   }}
 }}
 ''')

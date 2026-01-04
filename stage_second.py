@@ -159,13 +159,26 @@ def prepare_step2_update_memory_from_dpo():
         intermediate_output_file = Path(config.output_dir) / "stage2_generated.json"
         logger.info(f"保存中间生成结果到: {intermediate_output_file}")
         intermediate_data = []
+        
+        # 定义清理函数
+        def clean_markdown(text):
+            """清理 markdown 代码块标记"""
+            text_clean = text.strip()
+            if text_clean.startswith('```json'):
+                text_clean = text_clean[7:]
+            elif text_clean.startswith('```'):
+                text_clean = text_clean[3:]
+            if text_clean.endswith('```'):
+                text_clean = text_clean[:-3]
+            return text_clean.strip()
+        
         for i, (q, d, td, rl) in enumerate(zip(questions, diffs, task_descs, regenerated_list)):
             intermediate_data.append({
                 "index": batch_data[i]['index'],
                 "question": q,
                 "diff": d,
-                "task_desc": td,
-                "regenerated_principles": rl
+                "task_desc": clean_markdown(td),  # 清理 markdown 标记
+                "regenerated_principles": clean_markdown(rl)  # 清理 markdown 标记
             })
         
         # 确保输出目录存在

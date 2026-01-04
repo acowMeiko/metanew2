@@ -22,10 +22,10 @@ DEFAULT_TOP_P = float(os.getenv('DEFAULT_TOP_P', '0.95  '))  # top_p 必须在 (
 # ==================== 生成长度限制配置 ====================
 DEFAULT_MAX_TOKENS = int(os.getenv('DEFAULT_MAX_TOKENS', '4096'))  # 从8192降到2048，避免重复生成
 # 专用生成长度限制（用于特定任务）
-TASK_DESC_MAX_TOKENS = 2560     # 任务描述生成（level3需要更长，增加到2560）
-DIFF_ANALYSIS_MAX_TOKENS = 1024  # 差异分析生成  
-PRINCIPLE_MAX_TOKENS = 2560     # 原则生成（level3需要更长，增加到2560）
-ANSWER_MAX_TOKENS = 2048         # 答案生成
+TASK_DESC_MAX_TOKENS = 4096     # 任务描述生成（level3需要更长，增加到2560）
+DIFF_ANALYSIS_MAX_TOKENS = 2048  # 差异分析生成  
+PRINCIPLE_MAX_TOKENS = 4096     # 原则生成（level3需要更长，增加到2560）
+ANSWER_MAX_TOKENS = 4096         # 答案生成
 
 # ==================== Memory配置 ====================
  
